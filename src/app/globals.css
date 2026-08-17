@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --dark-purple: #5a64d8;
+    --dark-indigo: #323c84;
+    --text-color: #323247;
+    --white: white;
+    --dark-purple-tint: #4249a5;
+    --light-green: #99ff99;
+    --light-purple-grey: #efeff1;
+    --red: #ff8156;
+    --medium-grey: #929292;
+    --light-purple: #d7d7f4;
+    --medium-purple: #b6b6ff;
+    --dark-green: #317139;
+    --dark-purple-tint-2: #404064;
+    --medium-green: #6faa8c;
+    --light-green-tint: #f2f7f4;
+    --dark-grey: #706f6f;
+    --footer: #262833;
+  }
+
+  body {
+    color: var(--text-color);
+    background-color: var(--white);
+    font-family: var(--font-satoshi), Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-fredoka), sans-serif;
+  }
+
+  h1 { @apply text-4xl md:text-[75px] leading-tight font-medium; }
+  h2 { @apply text-3xl md:text-[50px] leading-tight font-medium; }
+  h3 { @apply text-2xl md:text-3xl font-medium text-wl-darkPurple; }
+  h4 { @apply text-xl font-normal text-wl-darkIndigo; }
+  p { @apply text-lg font-light leading-relaxed font-display; }
+}
+
+@layer components {
+  .cta-light {
+    @apply inline-block bg-wl-lightGreen text-wl-darkIndigo rounded-full px-5 py-3.5 font-display text-lg shadow-sm transition-all duration-200;
+  }
+  .cta-light:hover {
+    @apply bg-[#84ec84] scale-[1.01] shadow-md;
+  }
+  .cta-light:active {
+    @apply scale-[0.98] shadow-sm;
+  }
+
+  .cta-purple {
+    @apply inline-block bg-wl-darkIndigo text-white rounded-full px-5 py-3.5 font-display text-lg shadow-sm transition-all duration-200;
+  }
+  .cta-purple:hover {
+    @apply bg-wl-darkPurpleTint2 scale-[1.01] shadow-md;
+  }
+  .cta-purple:active {
+    @apply scale-[0.98] shadow-sm;
+  }
+
+  .hero-gradient {
+    background-image: linear-gradient(180deg, var(--dark-purple-tint), var(--dark-indigo));
+  }
+  
+  .footer-gradient {
+    background-image: linear-gradient(180deg, #262833, #1f2027);
+  }
+
+  .section-grey {
+    background-color: #f5f5f5;
+  }
+
+  .card {
+    @apply bg-wl-lightPurpleGrey rounded-[30px] p-4 md:p-6;
+  }
+  
+  .card-white {
+    @apply bg-white rounded-[20px] p-6 shadow-sm;
+  }
+
+  .stat-circle {
+    background-color: var(--light-green);
+    background-image: linear-gradient(180deg, var(--light-green), rgba(111, 170, 140, 0.24));
+    @apply rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-sm;
+  }
+}
