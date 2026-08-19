@@ -82,8 +82,8 @@
   }
 
   .stat-circle {
-    background-color: var(--light-green);
-    background-image: linear-gradient(180deg, var(--light-green), rgba(111, 170, 140, 0.24));
-    @apply rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-sm;
+    background-color: var(--dark-purple);
+    background-image: linear-gradient(180deg, var(--dark-purple), var(--dark-indigo));
+    @apply rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg border-4 border-white text-white;
   }
 }

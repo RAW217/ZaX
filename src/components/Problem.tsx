@@ -1,6 +1,7 @@
 "use client";
 
-import { Trash2, HelpCircle } from "lucide-react";
+import { Trash2, TrendingDown } from "lucide-react";
+import Image from "next/image";
 
 export default function Problem() {
   return (
@@ -16,13 +17,23 @@ export default function Problem() {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center gap-10 mt-10">
+        <div className="flex justify-center -mb-2 -mt-4 relative z-0">
+          <Image 
+            src="/split-arrow.png" 
+            alt="Splits into two causes" 
+            width={100} 
+            height={100} 
+            className="object-contain opacity-80" 
+          />
+        </div>
+
+        <div className="flex flex-col lg:flex-row justify-center gap-10 mt-4">
           
           <div className="flex flex-col items-start w-full lg:w-1/2">
-            <div className="bg-white rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-10 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-20 shadow-sm border border-gray-100">
               <Trash2 className="text-wl-darkGrey w-7 h-7" />
             </div>
-            <div className="bg-white rounded-[20px] w-full p-8 pt-12 shadow-sm border border-gray-100 h-full">
+            <div className="bg-white rounded-[20px] w-full p-8 pt-12 shadow-sm border border-gray-100 h-full relative">
               <h3 className="text-wl-darkPurple font-display text-2xl font-medium mb-4">5% disappears into expired stock</h3>
               <p className="text-wl-textColor">
                 Disposing of almost-expired products is costly, harmful to the environment, and widely disliked by customers.
@@ -31,10 +42,10 @@ export default function Problem() {
           </div>
 
           <div className="flex flex-col items-start w-full lg:w-1/2">
-            <div className="bg-white rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-10 shadow-sm border border-gray-100">
-              <HelpCircle className="text-wl-darkGrey w-7 h-7" />
+            <div className="bg-white rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-20 shadow-sm border border-gray-100">
+              <TrendingDown className="text-wl-darkGrey w-7 h-7" />
             </div>
-            <div className="bg-white rounded-[20px] w-full p-8 pt-12 shadow-sm border border-gray-100 h-full">
+            <div className="bg-white rounded-[20px] w-full p-8 pt-12 shadow-sm border border-gray-100 h-full relative">
               <h3 className="text-wl-darkPurple font-display text-2xl font-medium mb-4">4% is lost to guesswork</h3>
               <p className="text-wl-textColor">
                 Guesswork on shelf quantities drives lost sales opportunities, missed revenue, and inefficient operations.
