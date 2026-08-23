@@ -2,8 +2,27 @@
 
 import { useState } from "react";
 import InteractiveChart from "./InteractiveChart";
-import { UserPlus, Lock, UploadCloud, Settings, Cpu, BarChart3 } from "lucide-react";
+import { UserPlus, Lock, UploadCloud, Settings, Cpu, BarChart3, BarChart2, Droplet, ShoppingCart, PieChart, Thermometer, Gauge, Smartphone, FileText, ShoppingBasket, Beef, Microscope, Receipt } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const floatingIcons = [
+  // Left side
+  { icon: BarChart2, delay: 0.1, x: -380, y: -100, size: 100 },
+  { icon: Droplet, delay: 0.2, x: -480, y: -30, size: 70 },
+  { icon: ShoppingCart, delay: 0.3, x: -550, y: 40, size: 60 },
+  { icon: PieChart, delay: 0.4, x: -460, y: 120, size: 80 },
+  { icon: Thermometer, delay: 0.5, x: -350, y: 80, size: 110 },
+  { icon: Gauge, delay: 0.6, x: -400, y: 200, size: 60 },
+  
+  // Right side
+  { icon: Smartphone, delay: 0.1, x: 380, y: -100, size: 110 },
+  { icon: FileText, delay: 0.2, x: 480, y: -20, size: 80 },
+  { icon: ShoppingBasket, delay: 0.3, x: 550, y: 50, size: 60 },
+  { icon: Beef, delay: 0.4, x: 450, y: 100, size: 70 },
+  { icon: Microscope, delay: 0.5, x: 500, y: 190, size: 90 },
+  { icon: Receipt, delay: 0.6, x: 370, y: 170, size: 60 },
+];
 
 export default function Solution() {
   const [activeTab, setActiveTab] = useState("Demand Forecasting");
@@ -12,8 +31,8 @@ export default function Solution() {
 
   return (
     <>
-      <section id="solution" className="py-24 bg-wl-lightPurpleGrey">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
+      <section id="solution" className="pt-24 pb-10 bg-wl-lightPurpleGrey overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
           <h2 className="text-wl-darkPurple mb-8 text-center max-w-4xl">
             ZabonEx gives you the perfect quantity for that exact moment
           </h2>
@@ -21,21 +40,32 @@ export default function Solution() {
             Traditional guessing almost always misses the mark: too little or too much. Using thousands of data points from your own store, ZabonEx AI calculates the precise amounts that will maximize your revenue and minimize your food waste.
           </p>
 
-          <div className="w-full bg-white rounded-[20px] p-8 md:p-12 shadow-sm border border-gray-100">
-            <InteractiveChart />
-          </div>
-        </div>
-      </section>
+          <div className="relative w-full flex justify-center items-center pt-10 pb-4 lg:pt-20 lg:pb-4 min-h-[400px] mb-12">
+            {floatingIcons.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.2, x: 0, y: 0 }}
+                whileInView={{ opacity: 1, scale: 1, x: item.x, y: item.y }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: item.delay, type: "spring", bounce: 0.3 }}
+                className="absolute bg-white/70 rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-center border border-wl-lightPurpleGrey z-0 hidden lg:flex"
+                style={{ width: item.size, height: item.size }}
+              >
+                <item.icon className="text-wl-mediumPurple opacity-80" style={{ width: item.size * 0.4, height: item.size * 0.4 }} />
+              </motion.div>
+            ))}
 
-      {/* Setup Flow like Wasteless */}
-      <section className="py-24 bg-wl-lightPurpleGrey">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col items-center">
-          <h3 className="mb-14 text-center max-w-2xl text-[32px] leading-tight">
+            <div className="w-full max-w-3xl bg-white rounded-[20px] p-6 md:p-8 shadow-md border border-gray-100 relative z-10">
+              <InteractiveChart />
+            </div>
+          </div>
+
+          <h3 className="mb-10 text-center max-w-2xl text-[32px] leading-tight">
             ...all that, and it's probably the easiest thing you've ever implemented
           </h3>
 
           {/* Setup Row */}
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full mb-16">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full mb-8">
             <div className="bg-white rounded-[20px] p-10 shadow-sm flex flex-col items-center w-full max-w-4xl relative overflow-hidden lg:overflow-visible">
               <h4 className="text-[30px] font-medium text-wl-darkIndigo mb-2 relative z-20">Setup</h4>
               <div className="text-wl-darkPurple font-display text-base mb-4 relative z-20">One time • Just a couple of days</div>
@@ -58,21 +88,29 @@ export default function Solution() {
                   <UserPlus className="w-10 h-10 text-wl-darkPurple mb-4" />
                   <div className="font-display text-wl-darkIndigo text-center font-medium">Register</div>
                 </div>
-                <div className="text-gray-300 hidden sm:block relative z-10 px-2">➔</div>
+                <div className="hidden sm:block relative z-10 px-4">
+                  <svg width="18" height="36" viewBox="0 0 18 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L18 18L0 36V0Z" fill="currentColor" className="text-wl-mediumPurple opacity-50" />
+                  </svg>
+                </div>
                 <div className="bg-wl-lightPurpleGrey/95 backdrop-blur-md rounded-[60px] w-[140px] h-[220px] flex flex-col items-center justify-center p-4 relative z-10 shadow-sm border-2 border-white">
                   <Lock className="w-10 h-10 text-wl-darkPurple mb-4" />
                   <div className="font-display text-wl-darkIndigo text-center font-medium">Get Access</div>
                 </div>
-                <div className="text-gray-300 hidden sm:block relative z-10 px-2">➔</div>
+                <div className="hidden sm:block relative z-10 px-4">
+                  <svg width="18" height="36" viewBox="0 0 18 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L18 18L0 36V0Z" fill="currentColor" className="text-wl-mediumPurple opacity-50" />
+                  </svg>
+                </div>
                 <div className="bg-wl-lightPurpleGrey/95 backdrop-blur-md rounded-[60px] w-[140px] h-[220px] flex flex-col items-center justify-center p-4 relative z-10 shadow-sm border-2 border-white">
                   <UploadCloud className="w-10 h-10 text-wl-darkPurple mb-4" />
-                  <div className="font-display text-wl-darkIndigo text-center font-medium leading-tight">Upload Inventory Data</div>
+                  <div className="font-display text-wl-darkIndigo text-center font-medium">Upload Data</div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex justify-center mb-16 opacity-30 mix-blend-multiply">
-            <Image src="/triple-arrow.png" alt="Next Step" width={60} height={80} className="object-contain invert" />
+          <div className="flex justify-center w-full mb-6">
+            <Image src="/triple-arrow.png" alt="Transition" width={80} height={80} className="invert opacity-30 mix-blend-multiply" />
           </div>
           {/* Prediction Row */}
           <div className="flex flex-col lg:flex-row items-center justify-center gap-10 w-full mb-16">
@@ -104,12 +142,20 @@ export default function Solution() {
                   <Settings className="w-10 h-10 text-wl-darkPurple mb-4" />
                   <div className="font-display text-wl-darkIndigo text-center font-medium">Configure</div>
                 </div>
-                <div className="text-gray-300 hidden sm:block relative z-10 px-2">➔</div>
+                <div className="hidden sm:block relative z-10 px-4">
+                  <svg width="18" height="36" viewBox="0 0 18 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L18 18L0 36V0Z" fill="currentColor" className="text-wl-mediumPurple opacity-50" />
+                  </svg>
+                </div>
                 <div className="bg-wl-lightPurple/95 backdrop-blur-md rounded-[60px] w-[140px] h-[220px] flex flex-col items-center justify-center p-4 relative z-10 shadow-sm border-2 border-white">
                   <Cpu className="w-10 h-10 text-wl-darkPurple mb-4" />
                   <div className="font-display text-wl-darkIndigo text-center font-bold">ZabonEx AI</div>
                 </div>
-                <div className="text-gray-300 hidden sm:block relative z-10 px-2">➔</div>
+                <div className="hidden sm:block relative z-10 px-4">
+                  <svg width="18" height="36" viewBox="0 0 18 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L18 18L0 36V0Z" fill="currentColor" className="text-wl-mediumPurple opacity-50" />
+                  </svg>
+                </div>
                 <div className="bg-wl-lightPurple/95 backdrop-blur-md rounded-[60px] w-[140px] h-[220px] flex flex-col items-center justify-center p-4 relative z-10 shadow-sm border-2 border-white">
                   <BarChart3 className="w-10 h-10 text-wl-darkPurple mb-4" />
                   <div className="font-display text-wl-darkIndigo text-center font-medium">Predict</div>
@@ -118,7 +164,9 @@ export default function Solution() {
             </div>
           </div>
 
-          <div className="text-gray-300 text-3xl mb-16">⬇</div>
+          <div className="flex justify-center w-full mb-6">
+            <Image src="/triple-arrow.png" alt="Transition" width={80} height={80} className="invert opacity-30 mix-blend-multiply" />
+          </div>
 
           <h3 className="mb-14 text-center max-w-2xl text-[32px] leading-tight">
             That's it.<br />And the results are simply transformational.

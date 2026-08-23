@@ -1,16 +1,47 @@
 "use client";
 
 import { useState } from "react";
-import { Linkedin, Mail, Phone } from "lucide-react";
+import { Linkedin, Mail, Phone, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`New Contact Request from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:hatim.alabri@zabonex.com?subject=${subject}&body=${body}`;
+    setStatus("loading");
+    
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "b5bcef87-d6c9-49eb-a4e8-a254975fc543",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Contact Request from ${formData.name}`,
+          from_name: "ZabonEx Website"
+        })
+      });
+
+      const json = await res.json();
+      if (json.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -18,8 +49,8 @@ export default function Contact() {
       {/* Upsell Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-wl-lightGreen rounded-[24px] py-8 px-8 sm:px-12 flex flex-col sm:flex-row items-center justify-between min-h-[120px]">
-            <h3 className="text-wl-darkPurple text-center sm:text-left mb-6 sm:mb-0">
+          <div className="bg-wl-lightGreen rounded-[24px] py-12 px-8 sm:px-12 flex flex-col items-center justify-center min-h-[160px]">
+            <h3 className="text-wl-darkPurple text-center mb-8">
               Ready to waste less with ZabonEx?
             </h3>
             <a href="#contact" className="cta-purple whitespace-nowrap">
@@ -48,7 +79,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500 font-display">Email us at</div>
-                    <a href="mailto:hatim.alabri@zabonex.com" className="text-wl-darkIndigo font-medium hover:text-wl-mediumPurple transition-colors">hatim.alabri@zabonex.com</a>
+                    <a href="mailto:inquiries@zabonex.com" className="text-wl-darkIndigo font-medium hover:text-wl-mediumPurple transition-colors">inquiries@zabonex.com</a>
                   </div>
                 </div>
                 
@@ -58,7 +89,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-gray-500 font-display">Call us</div>
-                    <a href="tel:+96893610211" className="text-wl-darkIndigo font-medium hover:text-wl-mediumPurple transition-colors">(+968) 93610211</a>
+                    <a href="tel:+96877706770" className="text-wl-darkIndigo font-medium hover:text-wl-mediumPurple transition-colors">+968 7770 6770</a>
                   </div>
                 </div>
               </div>
@@ -106,9 +137,24 @@ export default function Contact() {
                   ></textarea>
                 </div>
                 
-                <button type="submit" className="cta-purple w-full text-center mt-2 cursor-pointer">
-                  Send Message
+                <button 
+                  type="submit" 
+                  disabled={status === "loading"}
+                  className="cta-purple w-full text-center mt-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                >
+                  {status === "loading" ? "Sending..." : "Send Message"}
                 </button>
+
+                {status === "success" && (
+                  <div className="p-4 bg-green-50 text-green-700 rounded-xl border border-green-200 text-center font-medium">
+                    Message sent successfully! We will get back to you soon.
+                  </div>
+                )}
+                {status === "error" && (
+                  <div className="p-4 bg-red-50 text-red-700 rounded-xl border border-red-200 text-center font-medium">
+                    Something went wrong. Please try again or email us directly.
+                  </div>
+                )}
               </form>
             </div>
 
@@ -142,18 +188,32 @@ export default function Contact() {
 
           <div className="flex flex-col items-center gap-6">
             <div className="flex gap-6">
-              <a href="#" className="text-white hover:text-wl-lightGreen transition-colors">
+              <a href="https://www.linkedin.com/company/zabonex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="mailto:hatim.alabri@zabonex.com" className="text-white hover:text-wl-lightGreen transition-colors">
+              <a href="https://www.instagram.com/zabonex.io/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.facebook.com/people/ZabonEx/100090619776003/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://x.com/ZabonEx" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors flex items-center justify-center">
+                <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/channel/UCEh4jAegYvvppSA4gIzw0ag" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="mailto:inquiries@zabonex.com" className="text-white hover:text-wl-lightGreen transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
             
             <div className="text-center">
-              <a href="mailto:hatim.alabri@zabonex.com" className="text-wl-lightPurpleGrey hover:text-white transition-colors">hatim.alabri@zabonex.com</a>
+              <a href="mailto:inquiries@zabonex.com" className="text-wl-lightPurpleGrey hover:text-white transition-colors">inquiries@zabonex.com</a>
               <span className="text-wl-lightPurpleGrey mx-2">•</span>
-              <span className="text-wl-lightPurpleGrey">(+968) 93610211</span>
+              <span className="text-wl-lightPurpleGrey">+968 7770 6770</span>
               <div className="text-wl-lightPurpleGrey mt-2">© ZabonEx Inc. 2026</div>
             </div>
           </div>
