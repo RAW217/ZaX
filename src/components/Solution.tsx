@@ -26,8 +26,16 @@ const floatingIcons = [
 
 export default function Solution() {
   const [activeTab, setActiveTab] = useState("Demand Forecasting");
-
   const tabs = ["Demand Forecasting", "Waste Reduction", "Smart Routing", "Inventory Sync", "Sales Analytics", "Distribution Planning"];
+  
+  const tabImages: Record<string, string> = {
+    "Demand Forecasting": "/solution-bg-1.jpg",
+    "Waste Reduction": "/solution-bg-2.jpg",
+    "Smart Routing": "/solution-bg-3.jpg",
+    "Inventory Sync": "/solution-bg-4.jpg",
+    "Sales Analytics": "/solution-bg-1.jpg",
+    "Distribution Planning": "/solution-bg-2.jpg"
+  };
 
   return (
     <>
@@ -234,8 +242,12 @@ export default function Solution() {
                   </p>
                   <a href="#contact" className="cta-purple">Learn more</a>
                 </div>
-                <div className="bg-white rounded-xl h-[300px] shadow-sm flex items-center justify-center">
-                  <span className="text-gray-400 font-display">Dashboard Preview</span>
+                <div className="bg-white rounded-xl h-[300px] shadow-sm flex items-center justify-center relative overflow-hidden border border-gray-200">
+                  <img 
+                    src={tabImages[activeTab]} 
+                    alt={activeTab} 
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+                  />
                 </div>
               </div>
             </div>

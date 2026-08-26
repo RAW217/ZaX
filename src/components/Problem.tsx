@@ -9,10 +9,10 @@ export default function Problem() {
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="flex flex-col items-center mb-16">
-          <div className="bg-wl-lightPurpleGrey rounded-[30px] px-6 py-3 mb-6">
-            <span className="text-wl-darkPurpleTint font-display text-xl font-medium">The Problem</span>
+          <div className="bg-wl-lightPurple rounded-[30px] px-6 py-3 mb-6">
+            <span className="text-wl-darkIndigo font-display text-xl font-medium">The Problem</span>
           </div>
-          <h2 className="text-center max-w-3xl">
+          <h2 className="text-center max-w-3xl text-wl-darkPurple leading-tight">
             Waste & poor inventory decisions cost F&B businesses <span className="text-wl-red">9%</span> of revenue
           </h2>
         </div>
@@ -31,7 +31,7 @@ export default function Problem() {
           
           <div className="flex flex-col items-start w-full lg:w-1/2">
             <div className="bg-white rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-20 shadow-sm border border-gray-100">
-              <Trash2 className="text-wl-darkGrey w-7 h-7" />
+              <Trash2 className="text-wl-mediumPurple w-7 h-7" />
             </div>
             <div className="bg-white rounded-[20px] w-full shadow-sm border border-gray-100 h-full relative overflow-hidden flex flex-col">
               <div className="w-full h-48 sm:h-64 relative">
@@ -48,7 +48,7 @@ export default function Problem() {
 
           <div className="flex flex-col items-start w-full lg:w-1/2">
             <div className="bg-white rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-20 shadow-sm border border-gray-100">
-              <TrendingDown className="text-wl-darkGrey w-7 h-7" />
+              <TrendingDown className="text-wl-mediumPurple w-7 h-7" />
             </div>
             <div className="bg-white rounded-[20px] w-full shadow-sm border border-gray-100 h-full relative overflow-hidden flex flex-col">
               <div className="w-full h-48 sm:h-64 relative">
