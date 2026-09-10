@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import { Linkedin, Mail, Phone, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -12,35 +14,32 @@ export default function Contact() {
     setStatus("loading");
     
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json"
         },
         body: JSON.stringify({
-          access_key: "85f04461-f6f8-4a8e-a6eb-1d180c15c41e",
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          subject: `New Contact Request from ${formData.name}`,
-          from_name: "ZabonEx Website"
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
         })
       });
 
       const json = await res.json();
-      if (json.success) {
+      if (res.ok && json.success) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => setStatus("idle"), 5000);
+        setTimeout(() => setStatus("idle"), 6000);
       } else {
         setStatus("error");
-        setTimeout(() => setStatus("idle"), 5000);
+        setTimeout(() => setStatus("idle"), 6000);
       }
     } catch (err) {
-      console.error(err);
+      console.error("Form submission error:", err);
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 5000);
+      setTimeout(() => setStatus("idle"), 6000);
     }
   };
 
@@ -49,89 +48,89 @@ export default function Contact() {
       {/* Upsell Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-wl-lightGreen rounded-[24px] py-12 px-8 sm:px-12 flex flex-col items-center justify-center min-h-[160px]">
-            <h3 className="text-wl-darkPurple text-center mb-8">
-              Ready to waste less with ZabonEx?
+          <div className="bg-[#BFDCF0] border border-[#86B3D1]/40 rounded-[24px] py-12 px-8 sm:px-12 flex flex-col items-center justify-center min-h-[160px]">
+            <h3 className="text-[#0C3D5E] text-center mb-8 font-display text-2xl sm:text-3xl font-medium">
+              {t.contact.upsellTitle}
             </h3>
             <a href="#contact" className="cta-purple whitespace-nowrap">
-              Get started today
+              {t.contact.upsellCta}
             </a>
           </div>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact" className="bg-wl-lightPurpleGrey py-24">
+      <section id="contact" className="bg-[#F4FAFD] py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16">
             
             {/* Contact Info */}
             <div>
-              <h2 className="text-[40px] text-wl-darkIndigo mb-6">Get in touch</h2>
-              <p className="text-wl-textColor mb-10 max-w-md">
-                Have questions about how ZabonEx can optimize your inventory and reduce waste? Send us a message and our team will get back to you shortly.
+              <h2 className="text-[40px] text-[#0C3D5E] mb-6">{t.contact.title}</h2>
+              <p className="text-[#0C3D5E]/80 mb-10 max-w-md">
+                {t.contact.description}
               </p>
               
               <div className="flex flex-col gap-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
-                    <Mail className="w-5 h-5 text-wl-darkPurple" />
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-[#D2E9F9]">
+                    <Mail className="w-5 h-5 text-[#0A72C4]" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-500 font-display">Email us at</div>
-                    <a href="mailto:inquiries@zabonex.com" className="text-wl-darkIndigo font-medium hover:text-wl-mediumPurple transition-colors">inquiries@zabonex.com</a>
+                    <div className="text-sm text-[#4E8CB8] font-display">{t.contact.emailUs}</div>
+                    <a href="mailto:inquiries@zabonex.com" className="text-[#0C3D5E] font-medium hover:text-[#0A72C4] transition-colors">inquiries@zabonex.com</a>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
-                    <Phone className="w-5 h-5 text-wl-darkPurple" />
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-[#D2E9F9]">
+                    <Phone className="w-5 h-5 text-[#0A72C4]" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-500 font-display">Call us</div>
-                    <a href="tel:+96877706770" className="text-wl-darkIndigo font-medium hover:text-wl-mediumPurple transition-colors">+968 7770 6770</a>
+                    <div className="text-sm text-[#4E8CB8] font-display">{t.contact.callUs}</div>
+                    <a href="tel:+96877706770" className="text-[#0C3D5E] font-medium hover:text-[#0A72C4] transition-colors dir-ltr inline-block">+968 7770 6770</a>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Form */}
-            <div className="bg-white rounded-[20px] p-8 sm:p-10 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-[20px] p-8 sm:p-10 shadow-sm border border-[#D2E9F9]">
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-display text-gray-700 mb-2">Full Name</label>
+                  <label htmlFor="name" className="block text-sm font-display text-[#0C3D5E] mb-2 font-medium">{t.contact.fullName}</label>
                   <input 
                     type="text" 
                     id="name"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-wl-darkPurple focus:ring-1 focus:ring-wl-darkPurple transition-colors bg-gray-50 focus:bg-white"
-                    placeholder="John Doe"
+                    className="w-full px-4 py-3 rounded-xl border border-[#BFDCF0] focus:outline-none focus:border-[#0A72C4] focus:ring-1 focus:ring-[#0A72C4] transition-colors bg-[#F4FAFD] focus:bg-white text-[#0C3D5E]"
+                    placeholder={t.contact.namePlaceholder}
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-display text-gray-700 mb-2">Email Address</label>
+                  <label htmlFor="email" className="block text-sm font-display text-[#0C3D5E] mb-2 font-medium">{t.contact.emailAddress}</label>
                   <input 
                     type="email" 
                     id="email"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-wl-darkPurple focus:ring-1 focus:ring-wl-darkPurple transition-colors bg-gray-50 focus:bg-white"
-                    placeholder="john@company.com"
+                    className="w-full px-4 py-3 rounded-xl border border-[#BFDCF0] focus:outline-none focus:border-[#0A72C4] focus:ring-1 focus:ring-[#0A72C4] transition-colors bg-[#F4FAFD] focus:bg-white text-[#0C3D5E]"
+                    placeholder={t.contact.emailPlaceholder}
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-display text-gray-700 mb-2">Your Message</label>
+                  <label htmlFor="message" className="block text-sm font-display text-[#0C3D5E] mb-2 font-medium">{t.contact.yourMessage}</label>
                   <textarea 
                     id="message"
                     required
                     rows={4}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-wl-darkPurple focus:ring-1 focus:ring-wl-darkPurple transition-colors bg-gray-50 focus:bg-white resize-none"
-                    placeholder="Tell us about your needs..."
+                    className="w-full px-4 py-3 rounded-xl border border-[#BFDCF0] focus:outline-none focus:border-[#0A72C4] focus:ring-1 focus:ring-[#0A72C4] transition-colors bg-[#F4FAFD] focus:bg-white text-[#0C3D5E] resize-none"
+                    placeholder={t.contact.messagePlaceholder}
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                   ></textarea>
@@ -142,17 +141,17 @@ export default function Contact() {
                   disabled={status === "loading"}
                   className="cta-purple w-full text-center mt-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  {status === "loading" ? "Sending..." : "Send Message"}
+                  {status === "loading" ? t.contact.sending : t.contact.send}
                 </button>
 
                 {status === "success" && (
-                  <div className="p-4 bg-green-50 text-green-700 rounded-xl border border-green-200 text-center font-medium">
-                    Message sent successfully! We will get back to you soon.
+                  <div className="p-4 bg-[#E4F4EC] text-[#12855F] rounded-xl border border-[#B7E4CE] text-center font-medium">
+                    {t.contact.successMsg}
                   </div>
                 )}
                 {status === "error" && (
-                  <div className="p-4 bg-red-50 text-red-700 rounded-xl border border-red-200 text-center font-medium">
-                    Something went wrong. Please try again or email us directly.
+                  <div className="p-4 bg-[#FCF1DC] text-[#B77708] rounded-xl border border-[#F5DCA6] text-center font-medium">
+                    {t.contact.errorMsg}
                   </div>
                 )}
               </form>
@@ -173,49 +172,45 @@ export default function Contact() {
             </div>
             
             <div className="flex flex-col md:text-right gap-3">
-              <a href="#" className="text-wl-lightPurpleGrey hover:text-wl-mediumPurple font-display text-base transition-colors">Home</a>
-              <a href="#" className="text-wl-lightPurpleGrey hover:text-wl-mediumPurple font-display text-base transition-colors">About</a>
+              <a href="/#home" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.home}</a>
+              <a href="/about" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.about}</a>
             </div>
 
             <div className="flex flex-col md:text-right gap-3">
-              <a href="#" className="text-wl-lightPurpleGrey hover:text-wl-mediumPurple font-display text-base transition-colors">Success Stories</a>
-              <a href="#" className="text-wl-lightPurpleGrey hover:text-wl-mediumPurple font-display text-base transition-colors">News</a>
-              <a href="#contact" className="text-wl-lightPurpleGrey hover:text-wl-mediumPurple font-display text-base transition-colors">Contact</a>
+              <a href="/#benefits" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.successStories}</a>
+              <a href="/#contact" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.contactLink}</a>
             </div>
           </div>
 
-          <div className="border-t border-wl-darkPurpleTint2 my-8" />
+          <div className="border-t border-[#17679E] my-8" />
 
           <div className="flex flex-col items-center gap-6">
             <div className="flex gap-6">
-              <a href="https://www.linkedin.com/company/zabonex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors">
+              <a href="https://www.linkedin.com/company/zabonex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/zabonex.io/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors">
+              <a href="https://www.instagram.com/zabonex.io/" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/people/ZabonEx/100090619776003/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors">
+              <a href="https://www.facebook.com/people/ZabonEx/100090619776003/" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://x.com/ZabonEx" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors flex items-center justify-center">
+              <a href="https://x.com/ZabonEx" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors flex items-center justify-center">
                 <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
-              <a href="https://www.youtube.com/channel/UCEh4jAegYvvppSA4gIzw0ag" target="_blank" rel="noopener noreferrer" className="text-white hover:text-wl-lightGreen transition-colors">
+              <a href="https://www.youtube.com/channel/UCEh4jAegYvvppSA4gIzw0ag" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href="mailto:inquiries@zabonex.com" className="text-white hover:text-wl-lightGreen transition-colors">
+              <a href="mailto:inquiries@zabonex.com" className="text-[#BFDCF0] hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
             
-            <div className="text-center">
-              <a href="mailto:inquiries@zabonex.com" className="text-wl-lightPurpleGrey hover:text-white transition-colors">inquiries@zabonex.com</a>
-              <span className="text-wl-lightPurpleGrey mx-2">•</span>
-              <span className="text-wl-lightPurpleGrey">+968 7770 6770</span>
-              <div className="text-wl-lightPurpleGrey mt-2">© ZabonEx Inc. 2026</div>
-            </div>
+            <p className="text-[#86B3D1] text-sm">
+              &copy; {new Date().getFullYear()} ZabonEx. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

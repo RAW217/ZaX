@@ -37,18 +37,39 @@ export default {
           950: '#052e16',
         },
         wl: {
-          darkPurple: '#5a64d8',
-          darkIndigo: '#323c84',
-          textColor: '#323247',
-          darkPurpleTint: '#4249a5',
-          lightGreen: '#99ff99',
-          lightPurpleGrey: '#efeff1',
-          red: '#ff8156',
-          lightPurple: '#d7d7f4',
-          mediumPurple: '#b6b6ff',
-          darkPurpleTint2: '#404064',
-          darkGrey: '#706f6f',
-          footer: '#262833'
+          action: '#0A72C4',
+          navy: '#0C3D5E',
+          iceGround: '#F4FAFD',
+          structureDark: '#17679E',
+          structureMid: '#4E8CB8',
+          structureLight: '#86B3D1',
+          tintSoft: '#BFDCF0',
+          tintLight: '#D2E9F9',
+          electric: '#0C7CC7',
+          
+          // Accent: Green (Savings & Claims)
+          claim: '#12855F',
+          claimMid: '#39A97D',
+          claimTint: '#E4F4EC',
+          
+          // Accent: Amber (Urgency & Expiry & Waste)
+          urgency: '#B77708',
+          urgencyMid: '#E9A93B',
+          urgencyTint: '#FCF1DC',
+
+          // Core mapping
+          darkPurple: '#0C3D5E',
+          darkIndigo: '#0C3D5E',
+          textColor: '#0C3D5E',
+          darkPurpleTint: '#17679E',
+          darkPurpleTint2: '#0C3D5E',
+          lightGreen: '#E4F4EC',
+          lightPurpleGrey: '#F4FAFD',
+          red: '#B77708',
+          lightPurple: '#D2E9F9',
+          mediumPurple: '#4E8CB8',
+          darkGrey: '#17679E',
+          footer: '#0C3D5E'
         }
       },
       fontFamily: {

@@ -24,9 +24,9 @@ const data = [
 
 export default function InteractiveChart() {
   return (
-    <div className="w-full relative rounded-2xl overflow-hidden shadow-2xl border border-[var(--border-light)] bg-gradient-to-b from-[var(--bg-surface)] to-[var(--bg-secondary)]" style={{ fontFamily: 'var(--font-satoshi)' }}>
+    <div className="w-full relative rounded-2xl overflow-hidden shadow-2xl border border-[#BFDCF0]/60 bg-white" style={{ fontFamily: 'var(--font-satoshi)' }}>
       {/* Mock macOS Window Header */}
-      <div className="h-12 w-full border-b border-[var(--border-light)] bg-[var(--bg-surface)]/50 backdrop-blur flex items-center px-4 gap-2 absolute top-0 z-10">
+      <div className="h-12 w-full border-b border-[#BFDCF0]/60 bg-white flex items-center px-4 gap-2 absolute top-0 z-10">
         <div className="flex gap-1.5">
           <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
@@ -65,7 +65,7 @@ export default function InteractiveChart() {
                 padding: '12px 16px'
               }}
               itemStyle={{ fontWeight: 700, padding: '4px 0', fontSize: 13 }}
-              cursor={{ stroke: '#156afe', strokeWidth: 1, strokeDasharray: '4 4', opacity: 0.4 }}
+              cursor={{ stroke: '#1A8FD4', strokeWidth: 1, strokeDasharray: '4 4', opacity: 0.4 }}
             />
             <Legend
               verticalAlign="top"
@@ -76,19 +76,19 @@ export default function InteractiveChart() {
 
             <defs>
               <linearGradient id="actualGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#94a3b8" stopOpacity={0.15} />
-                <stop offset="95%" stopColor="#94a3b8" stopOpacity={0} />
+                <stop offset="5%" stopColor="#86B3D1" stopOpacity={0.2} />
+                <stop offset="95%" stopColor="#86B3D1" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="guessGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#f43f5e" stopOpacity={0.1} />
-                <stop offset="95%" stopColor="#f43f5e" stopOpacity={0} />
+                <stop offset="5%" stopColor="#E9A93B" stopOpacity={0.15} />
+                <stop offset="95%" stopColor="#E9A93B" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="zabonexGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#156afe" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#156afe" stopOpacity={0} />
+                <stop offset="5%" stopColor="#0A72C4" stopOpacity={0.35} />
+                <stop offset="95%" stopColor="#0A72C4" stopOpacity={0} />
               </linearGradient>
               <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="#156afe" floodOpacity="0.2" />
+                <feDropShadow dx="0" dy="6" stdDeviation="6" floodColor="#0A72C4" floodOpacity="0.25" />
               </filter>
             </defs>
 
@@ -109,30 +109,30 @@ export default function InteractiveChart() {
               type="monotone"
               dataKey="actual"
               name="Actual Sales"
-              stroke="#94a3b8"
+              stroke="#86B3D1"
               strokeWidth={2}
               strokeDasharray="4 4"
               dot={false}
-              activeDot={{ r: 6, fill: '#94a3b8', strokeWidth: 0 }}
+              activeDot={{ r: 6, fill: '#86B3D1', strokeWidth: 0 }}
             />
             <Line
               type="monotone"
               dataKey="guess"
               name="Manual Guesswork"
-              stroke="#f43f5e"
+              stroke="#E9A93B"
               strokeWidth={2}
-              dot={{ r: 4, fill: 'var(--bg-surface)', strokeWidth: 2, stroke: '#f43f5e' }}
-              activeDot={{ r: 6, fill: '#f43f5e', strokeWidth: 0 }}
+              dot={{ r: 4, fill: 'var(--bg-surface)', strokeWidth: 2, stroke: '#E9A93B' }}
+              activeDot={{ r: 6, fill: '#E9A93B', strokeWidth: 0 }}
             />
             <Line
               type="monotone"
               dataKey="zabonex"
               name="ZabonEx AI Predict"
-              stroke="#156afe"
+              stroke="#0A72C4"
               strokeWidth={4}
               filter="url(#shadow)"
-              dot={{ r: 5, fill: 'var(--bg-surface)', strokeWidth: 2, stroke: '#156afe' }}
-              activeDot={{ r: 8, fill: '#156afe', strokeWidth: 0 }}
+              dot={{ r: 5, fill: 'var(--bg-surface)', strokeWidth: 2, stroke: '#0A72C4' }}
+              activeDot={{ r: 8, fill: '#0A72C4', strokeWidth: 0 }}
             />
           </ComposedChart>
         </ResponsiveContainer>

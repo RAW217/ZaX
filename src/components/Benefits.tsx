@@ -1,29 +1,32 @@
 "use client";
 
 import Image from "next/image";
-
-const cases = [
-  {
-    title: "Margins soar by 25% at Omani wholesaler with real-time predictions",
-    image: "/benefits-img1.jpg"
-  },
-  {
-    title: "ZabonEx AI goes live in 640 stores to optimize fresh sales",
-    image: "/benefits-img2.jpg"
-  },
-  {
-    title: "Leading GCC retailer cuts waste by 32%",
-    image: "/benefits-img3.jpg"
-  }
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Benefits() {
+  const { t } = useLanguage();
+
+  const cases = [
+    {
+      title: t.benefits.case1,
+      image: "/benefits-img1.jpg"
+    },
+    {
+      title: t.benefits.case2,
+      image: "/benefits-img2.jpg"
+    },
+    {
+      title: t.benefits.case3,
+      image: "/benefits-img3.jpg"
+    }
+  ];
+
   return (
     <section id="benefits" className="py-24 hero-gradient text-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col items-center mb-16">
-          <h2 className="text-center max-w-2xl leading-tight">
-            Small predictive changes,<br />big business-changing results
+          <h2 className="text-center max-w-2xl leading-tight whitespace-pre-line">
+            {t.benefits.title}
           </h2>
         </div>
 
@@ -35,8 +38,8 @@ export default function Benefits() {
                 style={{ backgroundImage: `url('${c.image}')` }}
               >
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
-                <div className="relative bg-white/95 rounded-[12px] p-6 min-h-[140px]">
-                  <p className="text-wl-darkIndigo text-xl leading-tight">{c.title}</p>
+                <div className="relative bg-white/95 rounded-[12px] p-6 min-h-[140px] border border-white/40">
+                  <p className="text-[#0C3D5E] font-display font-medium text-xl leading-snug">{c.title}</p>
                 </div>
               </div>
             </a>
@@ -44,8 +47,8 @@ export default function Benefits() {
         </div>
 
         <div className="flex justify-center">
-          <a href="#contact" className="cta-light bg-wl-lightGreen text-wl-darkIndigo">
-            Read more case studies
+          <a href="#contact" className="cta-light">
+            {t.benefits.readMore}
           </a>
         </div>
       </div>
