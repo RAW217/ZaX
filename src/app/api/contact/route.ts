@@ -22,44 +22,81 @@ export async function POST(req: Request) {
       );
     }
 
-    const accessKey = process.env.WEB3FORMS_ACCESS_KEY || "85f04461-f6f8-4a8e-a6eb-1d180c15c41e";
+    const resendApiKey = process.env.RESEND_API_KEY || "re_38CRvm5J_Ps4XZGMfkr7dc9cvkwQW6W2j";
 
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "User-Agent": "ZabonEx-Web-App/1.0"
-        },
-        body: JSON.stringify({
-          access_key: accessKey,
-          name,
-          email,
-          message,
-          subject: `New Contact Request from ${name} - ZabonEx`,
-          from_name: "ZabonEx Portal",
-        }),
-      });
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${resendApiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "ZabonEx Contact <onboarding@resend.dev>",
+        to: ["hosnhosn2002@gmail.com"],
+        reply_to: email,
+        subject: `New Contact Request from ${name} - ZabonEx`,
+        html: `
+          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #BFDCF0; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(10, 114, 196, 0.08);">
+            <div style="background-color: #0A72C4; padding: 24px 32px; text-align: center;">
+              <h1 style="color: #ffffff; margin: 0; font-size: 22px; font-weight: 700; letter-spacing: 0.5px;">ZabonEx | New Contact Inquiry</h1>
+            </div>
+            
+            <div style="padding: 32px; color: #0C3D5E;">
+              <p style="font-size: 15px; margin-top: 0; margin-bottom: 24px; color: #4E8CB8;">
+                You received a new inquiry from the ZabonEx website contact form:
+              </p>
 
-      const contentType = response.headers.get("content-type");
-      if (contentType && contentType.includes("application/json")) {
-        const data = await response.json();
-        if (data.success) {
-          return NextResponse.json({ success: true, message: "Message sent successfully!" });
-        }
-      }
-    } catch (apiError) {
-      console.error("Web3Forms External Error:", apiError);
-    }
+              <div style="background-color: #F4FAFD; border: 1px solid #D2E9F9; border-radius: 10px; padding: 20px; margin-bottom: 24px;">
+                <table style="width: 100%; border-collapse: collapse;">
+                  <tr>
+                    <td style="padding: 8px 0; font-weight: 600; color: #0C3D5E; width: 100px; vertical-align: top;">Name:</td>
+                    <td style="padding: 8px 0; color: #1E293B;">${name}</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px 0; font-weight: 600; color: #0C3D5E; vertical-align: top;">Email:</td>
+                    <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #0A72C4; text-decoration: none; font-weight: 500;">${email}</a></td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 8px 0; font-weight: 600; color: #0C3D5E; vertical-align: top;">Date:</td>
+                    <td style="padding: 8px 0; color: #64748B;">${new Date().toLocaleString()}</td>
+                  </tr>
+                </table>
+              </div>
 
-    // If external service succeeded or logged, return success to user
-    console.log(`[Contact Form Received] Name: ${name}, Email: ${email}, Message: ${message}`);
-    return NextResponse.json({
-      success: true,
-      message: "Message received successfully. Our team will contact you soon."
+              <div style="margin-bottom: 24px;">
+                <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; color: #4E8CB8; margin-bottom: 8px;">Message Content</h3>
+                <div style="background-color: #ffffff; border-left: 4px solid #0A72C4; border-top: 1px solid #E2E8F0; border-right: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0; padding: 16px 20px; border-radius: 0 8px 8px 0; font-size: 15px; line-height: 1.6; color: #0C3D5E; white-space: pre-wrap;">${message}</div>
+              </div>
+
+              <div style="text-align: center; margin-top: 32px; padding-top: 20px; border-top: 1px solid #E2E8F0;">
+                <a href="mailto:${email}" style="display: inline-block; background-color: #0A72C4; color: #ffffff; text-decoration: none; font-weight: 600; padding: 12px 28px; border-radius: 9999px; font-size: 14px;">
+                  Reply to ${name}
+                </a>
+              </div>
+            </div>
+
+            <div style="background-color: #F8FAFC; border-top: 1px solid #E2E8F0; padding: 16px; text-align: center; font-size: 12px; color: #94A3B8;">
+              This notification was generated automatically from the ZabonEx Website Contact Form.
+            </div>
+          </div>
+        `
+      })
     });
 
+    const data = await response.json();
+
+    if (response.ok && data.id) {
+      return NextResponse.json({
+        success: true,
+        message: "Message sent successfully!"
+      });
+    } else {
+      console.error("Resend API Error:", data);
+      return NextResponse.json(
+        { success: false, message: data.message || "Failed to send email." },
+        { status: response.status || 500 }
+      );
+    }
   } catch (err: any) {
     console.error("Contact API Server Error:", err);
     return NextResponse.json(
