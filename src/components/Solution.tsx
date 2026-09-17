@@ -12,17 +12,17 @@ import { useLanguage } from "@/context/LanguageContext";
 // → the chart card (starting at x=210) covers that overflow → "peeking behind card" effect
 const leftIcons = [
   // 1. BarChart2 — LARGE (155px), upper-RIGHT, slightly exceeds column right → touches/peeks card
-  { icon: BarChart2,    delay: 0.1, x: 146, y: 90,  size: 155 },
+  { icon: BarChart2, delay: 0.1, x: 146, y: 90, size: 155 },
   // 2. Droplet — medium (80px), upper-LEFT
-  { icon: Droplet,      delay: 0.2, x: 52,  y: 65,  size: 80  },
+  { icon: Droplet, delay: 0.2, x: 52, y: 65, size: 80 },
   // 3. ShoppingCart — small (58px), far-LEFT middle
-  { icon: ShoppingCart, delay: 0.3, x: 24,  y: 192, size: 58  },
+  { icon: ShoppingCart, delay: 0.3, x: 24, y: 192, size: 58 },
   // 4. Thermometer — LARGE (142px), lower-RIGHT, slightly exceeds column right → peeks behind card
-  { icon: Thermometer,  delay: 0.4, x: 144, y: 298, size: 142 },
+  { icon: Thermometer, delay: 0.4, x: 144, y: 298, size: 142 },
   // 5. PieChart — medium (72px), lower-LEFT
-  { icon: PieChart,     delay: 0.5, x: 46,  y: 318, size: 72  },
+  { icon: PieChart, delay: 0.5, x: 46, y: 318, size: 72 },
   // 6. Gauge — small (52px), very bottom center-left
-  { icon: Gauge,        delay: 0.6, x: 90,  y: 382, size: 52  },
+  { icon: Gauge, delay: 0.6, x: 90, y: 382, size: 52 },
 ];
 
 // Right cluster icons positioned within a 210px × 420px container
@@ -30,17 +30,17 @@ const leftIcons = [
 // → the chart card (ending at x=0 from left of this column) covers that overflow → "peeking behind card"
 const rightIcons = [
   // 1. Smartphone — LARGE (155px), upper-LEFT, slightly exceeds column left → touches/peeks card
-  { icon: Smartphone,      delay: 0.1, x: 65,  y: 90,  size: 155 },
+  { icon: Smartphone, delay: 0.1, x: 65, y: 90, size: 155 },
   // 2. FileText — medium (78px), upper-RIGHT
-  { icon: FileText,        delay: 0.2, x: 156, y: 65,  size: 78  },
+  { icon: FileText, delay: 0.2, x: 156, y: 65, size: 78 },
   // 3. ShoppingBasket — small (58px), far-RIGHT middle
-  { icon: ShoppingBasket,  delay: 0.3, x: 186, y: 192, size: 58  },
+  { icon: ShoppingBasket, delay: 0.3, x: 186, y: 192, size: 58 },
   // 4. Beef — medium (68px), mid-LEFT (near chart side)
-  { icon: Beef,            delay: 0.4, x: 62,  y: 252, size: 68  },
+  { icon: Beef, delay: 0.4, x: 62, y: 252, size: 68 },
   // 5. Microscope — LARGE (142px), lower-RIGHT (away from chart, far side of cluster)
-  { icon: Microscope,      delay: 0.5, x: 148, y: 305, size: 142 },
+  { icon: Microscope, delay: 0.5, x: 148, y: 305, size: 142 },
   // 6. Receipt — small (52px), very bottom center
-  { icon: Receipt,         delay: 0.6, x: 106, y: 382, size: 52  },
+  { icon: Receipt, delay: 0.6, x: 106, y: 382, size: 52 },
 ];
 
 export default function Solution() {
@@ -55,7 +55,7 @@ export default function Solution() {
     "salesAnalytics",
     "distributionPlanning"
   ];
-  
+
   const tabImages: Record<string, string> = {
     demandForecasting: "/solution-bg-1.jpg",
     wasteReduction: "/solution-bg-2.jpg",
@@ -131,29 +131,29 @@ export default function Solution() {
 
           {/* Setup Row */}
           <div className="relative w-full max-w-4xl mx-auto mb-3 flex justify-center items-center">
-            
+
             {/* Top-Left Circular Image (BEHIND CARD, NO WHITE BORDER, brought further out) */}
             <div className="absolute -left-24 sm:-left-36 lg:-left-48 -top-12 sm:-top-18 lg:-top-24 z-0 hidden sm:block pointer-events-none">
               <div className="w-[210px] h-[210px] sm:w-[260px] sm:h-[260px] lg:w-[310px] lg:h-[310px] rounded-full overflow-hidden shadow-md">
-                <Image 
-                  src="/problem-img2.png" 
-                  alt="Retail" 
-                  width={310} 
-                  height={310} 
-                  className="w-full h-full object-cover" 
+                <Image
+                  src="/problem-img2.png"
+                  alt="Retail"
+                  width={310}
+                  height={310}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
-            
+
             {/* Bottom-Right Circular Image (BEHIND CARD, NO WHITE BORDER, brought further out) */}
             <div className="absolute -right-16 sm:-right-24 lg:-right-36 -bottom-10 sm:-bottom-14 lg:-bottom-18 z-0 hidden sm:block pointer-events-none">
               <div className="w-[170px] h-[170px] sm:w-[220px] sm:h-[220px] lg:w-[260px] lg:h-[260px] rounded-full overflow-hidden shadow-md">
-                <Image 
-                  src="/problem-img1.jpg" 
-                  alt="Shelves" 
-                  width={260} 
-                  height={260} 
-                  className="w-full h-full object-cover" 
+                <Image
+                  src="/problem-img1.jpg"
+                  alt="Shelves"
+                  width={260}
+                  height={260}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -206,29 +206,29 @@ export default function Solution() {
 
           {/* Markdowns / Prediction Row */}
           <div className="relative w-full max-w-4xl mx-auto mb-8 mt-0 flex justify-center items-center">
-            
+
             {/* Left Circular Image (BEHIND CARD, NO WHITE BORDER, brought further out) */}
             <div className="absolute -left-24 sm:-left-36 lg:-left-48 top-1/2 -translate-y-1/2 z-0 hidden sm:block pointer-events-none">
               <div className="w-[210px] h-[210px] sm:w-[260px] sm:h-[260px] lg:w-[310px] lg:h-[310px] rounded-full overflow-hidden shadow-md">
-                <Image 
-                  src="/prediction-img2.jpg" 
-                  alt="Shelf electronic price tag" 
-                  width={310} 
-                  height={310} 
-                  className="w-full h-full object-cover" 
+                <Image
+                  src="/prediction-img2.jpg"
+                  alt="Shelf electronic price tag"
+                  width={310}
+                  height={310}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
-            
+
             {/* Right Circular Image (BEHIND CARD, NO WHITE BORDER, brought further out) */}
             <div className="absolute -right-16 sm:-right-24 lg:-right-36 -bottom-10 sm:-bottom-14 lg:-bottom-18 z-0 hidden sm:block pointer-events-none">
               <div className="w-[170px] h-[170px] sm:w-[220px] sm:h-[220px] lg:w-[260px] lg:h-[260px] rounded-full overflow-hidden shadow-md">
-                <Image 
-                  src="/prediction-img1.jpg" 
-                  alt="Price markdowns printer" 
-                  width={260} 
-                  height={260} 
-                  className="w-full h-full object-cover" 
+                <Image
+                  src="/prediction-img1.jpg"
+                  alt="Price markdowns printer"
+                  width={260}
+                  height={260}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -330,12 +330,12 @@ export default function Solution() {
           </h3>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-10 lg:gap-16 mb-16 mt-10">
-            
+
             {/* Stat 1: 50% Reduction in food waste */}
             <div className="relative">
-              <div className="absolute -top-5 -right-5 z-0 pointer-events-none">
-                <div className="w-[92px] h-[92px] rounded-full overflow-hidden shadow-md">
-                  <Image src="/stat-img1.jpg" alt="Hands holding bottle" width={92} height={92} className="w-full h-full object-cover" />
+              <div className="absolute -top-5 -right-5 z-20 pointer-events-none">
+                <div className="w-[79px] h-[79px] rounded-full overflow-hidden shadow-md">
+                  <Image src="/stat-img1.jpg" alt="Hands holding bottle" width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-white bg-gradient-to-b from-[#0A72C4] to-[#0C3D5E] relative z-10">
@@ -343,12 +343,12 @@ export default function Solution() {
                 <div className="text-white/90 text-center font-display text-base font-light whitespace-pre-line">{t.solution.stat1Text}</div>
               </div>
             </div>
-            
+
             {/* Stat 2: 20% Increase in revenues */}
             <div className="relative">
-              <div className="absolute -top-5 -right-5 z-0 pointer-events-none">
-                <div className="w-[92px] h-[92px] rounded-full overflow-hidden shadow-md">
-                  <Image src="/stat-img2.jpg" alt="Shopping cart" width={92} height={92} className="w-full h-full object-cover" />
+              <div className="absolute -top-5 -right-5 z-20 pointer-events-none">
+                <div className="w-[79px] h-[79px] rounded-full overflow-hidden shadow-md">
+                  <Image src="/stat-img2.jpg" alt="Shopping cart" width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-white bg-gradient-to-b from-[#0A72C4] to-[#0C3D5E] relative z-10">
@@ -356,12 +356,12 @@ export default function Solution() {
                 <div className="text-white/90 text-center font-display text-base font-light whitespace-pre-line">{t.solution.stat2Text}</div>
               </div>
             </div>
-            
+
             {/* Stat 3: 9.1% Improvement in margins */}
             <div className="relative">
-              <div className="absolute -top-5 -right-5 z-0 pointer-events-none">
-                <div className="w-[92px] h-[92px] rounded-full overflow-hidden shadow-md">
-                  <Image src="/stat-img3.jpg" alt="Man in aisle" width={92} height={92} className="w-full h-full object-cover" />
+              <div className="absolute -top-5 -right-5 z-20 pointer-events-none">
+                <div className="w-[79px] h-[79px] rounded-full overflow-hidden shadow-md">
+                  <Image src="/stat-img3.jpg" alt="Man in aisle" width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-white bg-gradient-to-b from-[#0A72C4] to-[#0C3D5E] relative z-10">
@@ -379,12 +379,12 @@ export default function Solution() {
       <section id="solution" className="bg-white py-24 relative overflow-hidden scroll-mt-12">
         {/* Dotted Background Pattern */}
         <div className="absolute inset-0 z-0 opacity-25 bg-[radial-gradient(#BFDCF0_2px,transparent_2px)] bg-[length:24px_24px]"></div>
-        
+
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="flex justify-center mb-16">
             <h2 className="text-[40px] text-[#0C3D5E]">{t.solution.tabsHeadline}</h2>
           </div>
-          
+
           <div className="w-full">
             <div className="flex overflow-x-auto whitespace-nowrap border-b border-[#BFDCF0] mb-10 pb-1" style={{ scrollbarWidth: 'none' }}>
               {tabKeys.map(key => (
@@ -409,9 +409,9 @@ export default function Solution() {
                   <a href="#contact" className="cta-purple">{t.solution.learnMore}</a>
                 </div>
                 <div className="bg-white rounded-xl h-[300px] shadow-sm flex items-center justify-center relative overflow-hidden border border-gray-200">
-                  <img 
-                    src={tabImages[activeTabKey]} 
-                    alt={t.solution.tabs[activeTabKey]} 
+                  <img
+                    src={tabImages[activeTabKey]}
+                    alt={t.solution.tabs[activeTabKey]}
                     className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
                   />
                 </div>
