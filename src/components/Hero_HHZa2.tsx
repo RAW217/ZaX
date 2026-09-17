@@ -24,8 +24,8 @@ export default function Hero() {
               Predict demand. Grow margins.
             </h1>
             
-            <h3 className="text-white text-center max-w-[800px] mx-auto font-display text-xl sm:text-2xl md:text-[30px] font-normal leading-[1.4] mb-10">
-              Boost your products distribution and stocks availability by up to <span className="text-[#99ff99] font-bold">35%</span> with prediction platform from ZabonEx – seamless integration
+            <h3 className="text-white text-center max-w-[1000px] mx-auto font-display text-xl sm:text-2xl md:text-[28px] font-normal leading-[1.4] mb-10">
+              Boost your products distribution and stocks availability by up to <span className="text-[#99ff99] font-normal">35%</span> with prediction platform from ZabonEx – seamless integration
             </h3>
             
             <a href="#contact" className="cta-light relative z-50">

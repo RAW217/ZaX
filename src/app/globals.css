@@ -81,10 +81,10 @@
 @layer components {
   /* White on Dark Hero CTA */
   .cta-light {
-    @apply inline-block bg-white text-[#0A72C4] font-semibold rounded-full px-6 py-3.5 font-display text-lg shadow-sm transition-all duration-200;
+    @apply inline-block bg-[#99ff99] text-[#0C3D5E] font-semibold rounded-full px-6 py-3.5 font-display text-lg shadow-sm transition-all duration-200;
   }
   .cta-light:hover {
-    @apply bg-white/95 scale-[1.01] shadow-md;
+    @apply bg-[#8AE68A] scale-[1.01] shadow-md;
   }
   .cta-light:active {
     @apply scale-[0.98] shadow-sm;

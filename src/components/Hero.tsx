@@ -63,8 +63,8 @@ export default function Hero() {
               {t.hero.title}
             </h1>
             
-            <h3 className="text-white text-center max-w-[800px] mx-auto font-display text-xl sm:text-2xl md:text-[30px] font-normal leading-[1.4] mb-10">
-              {t.hero.subtitle} <span className="text-[#99ff99] font-bold">{t.hero.highlight}</span> {t.hero.suffix}
+            <h3 className="text-white text-center max-w-[1000px] mx-auto font-display text-xl sm:text-2xl md:text-[28px] font-normal leading-[1.4] mb-10">
+              {t.hero.subtitle} <span className="text-[#99ff99] font-normal">{t.hero.highlight}</span> {t.hero.suffix}
             </h3>
             
             <a href="#contact" className="cta-light relative z-50">
