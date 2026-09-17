@@ -32,7 +32,7 @@ export default function InteractiveChart() {
           <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
         </div>
-        <div className="mx-auto text-xs font-semibold text-tertiary">ZabonEx AI Forecasting Engine</div>
+        <div className="mx-auto text-xs font-semibold text-tertiary">ZabonEx AI Prediction Platform</div>
       </div>
 
       <div className="pt-16 pb-6 px-4 sm:px-6 w-full aspect-[14/8] min-h-[400px]">
@@ -80,8 +80,8 @@ export default function InteractiveChart() {
                 <stop offset="95%" stopColor="#86B3D1" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="guessGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#E9A93B" stopOpacity={0.15} />
-                <stop offset="95%" stopColor="#E9A93B" stopOpacity={0} />
+                <stop offset="5%" stopColor="#e75e6b" stopOpacity={0.15} />
+                <stop offset="95%" stopColor="#e75e6b" stopOpacity={0} />
               </linearGradient>
               <linearGradient id="zabonexGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#0A72C4" stopOpacity={0.35} />
@@ -97,12 +97,14 @@ export default function InteractiveChart() {
               dataKey="actual"
               fill="url(#actualGrad)"
               stroke="none"
+              legendType="none"
             />
             <Area
               type="monotone"
               dataKey="zabonex"
               fill="url(#zabonexGrad)"
               stroke="none"
+              legendType="none"
             />
 
             <Line
@@ -113,16 +115,17 @@ export default function InteractiveChart() {
               strokeWidth={2}
               strokeDasharray="4 4"
               dot={false}
+              legendType="none"
               activeDot={{ r: 6, fill: '#86B3D1', strokeWidth: 0 }}
             />
             <Line
               type="monotone"
               dataKey="guess"
               name="Manual Guesswork"
-              stroke="#E9A93B"
+              stroke="#e75e6b"
               strokeWidth={2}
-              dot={{ r: 4, fill: 'var(--bg-surface)', strokeWidth: 2, stroke: '#E9A93B' }}
-              activeDot={{ r: 6, fill: '#E9A93B', strokeWidth: 0 }}
+              dot={{ r: 4, fill: '#ffffff', strokeWidth: 2, stroke: '#e75e6b' }}
+              activeDot={{ r: 6, fill: '#e75e6b', strokeWidth: 0 }}
             />
             <Line
               type="monotone"
@@ -131,7 +134,7 @@ export default function InteractiveChart() {
               stroke="#0A72C4"
               strokeWidth={4}
               filter="url(#shadow)"
-              dot={{ r: 5, fill: 'var(--bg-surface)', strokeWidth: 2, stroke: '#0A72C4' }}
+              dot={{ r: 5, fill: '#ffffff', strokeWidth: 2, stroke: '#0A72C4' }}
               activeDot={{ r: 8, fill: '#0A72C4', strokeWidth: 0 }}
             />
           </ComposedChart>
