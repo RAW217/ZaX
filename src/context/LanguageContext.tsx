@@ -255,8 +255,8 @@ export const translations: Record<Language, Translations> = {
       pctRevenue: "9% of revenue",
       disappearsTitle: "5% disappears into expired stock",
       disappearsDesc: "Disposing of almost-expired products is costly, harmful to the environment, and widely disliked by customers.",
-      guessworkTitle: "4% lost to guesswork & markdowns",
-      guessworkDesc: "Without real-time demand insights, retailers discount too late or by too much, leaving money on the table.",
+      guessworkTitle: "4% sales lost through guesswork and stockouts",
+      guessworkDesc: "Without real-time demand insights, businesses often stock the wrong quantities, causing shortages; excess inventory; and missed sales opportunities.",
       footnote: "The figures are based on ZabonEx research data",
     },
     solution: {
@@ -468,8 +468,8 @@ export const translations: Record<Language, Translations> = {
       pctRevenue: "9% من إجمالي الإيرادات",
       disappearsTitle: "5% تضيع في المنتجات منتهية الصلاحية",
       disappearsDesc: "التخلص من المنتجات التالفة والمنتهية مكلف مادياً، ضار بالبيئة، وغير مرحب به من قبل العملاء.",
-      guessworkTitle: "4% تضيع في التخمين والخصومات العشوائية",
-      guessworkDesc: "بدون بيانات تنبؤية فورية، يضطر الموزعون والتجار لتقديم تخفيضات متأخرة أو مفرطة تبتلع هوامش الربح.",
+      guessworkTitle: "4% مبيعات مفقودة بسبب التخمين ونفاد المخزون",
+      guessworkDesc: "بدون بيانات تنبؤية فورية، تفشل الشركات في تحديد الكميات الصحيحة، مما يسبب النقص، وتراكم المخزون الفائض، وضياع فرص المبيعات.",
       footnote: "تستند هذه الأرقام إلى بيانات أبحاث زبون إكس",
     },
     solution: {
