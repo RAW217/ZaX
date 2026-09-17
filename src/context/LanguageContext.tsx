@@ -35,11 +35,14 @@ export interface Translations {
   problem: {
     badge: string;
     title: string;
+    pctNum: string;
+    pctText: string;
     pctRevenue: string;
     disappearsTitle: string;
     disappearsDesc: string;
     guessworkTitle: string;
     guessworkDesc: string;
+    footnote: string;
   };
   solution: {
     headline: string;
@@ -247,11 +250,14 @@ export const translations: Record<Language, Translations> = {
     problem: {
       badge: "The Problem",
       title: "Waste & poor inventory decisions cost F&B businesses",
+      pctNum: "9%",
+      pctText: "of revenue",
       pctRevenue: "9% of revenue",
       disappearsTitle: "5% disappears into expired stock",
       disappearsDesc: "Disposing of almost-expired products is costly, harmful to the environment, and widely disliked by customers.",
       guessworkTitle: "4% lost to guesswork & markdowns",
       guessworkDesc: "Without real-time demand insights, retailers discount too late or by too much, leaving money on the table.",
+      footnote: "The figures are based on ZabonEx research data",
     },
     solution: {
       headline: "ZabonEx gives you the perfect quantity for that exact moment",
@@ -455,13 +461,16 @@ export const translations: Record<Language, Translations> = {
       }
     },
     problem: {
-      badge: "المشكلة",
+      badge: "The Problem",
       title: "الهدر وقرارات المخزون غير الدقيقة تكلف شركات الأغذية والمشروبات",
+      pctNum: "9%",
+      pctText: "من إجمالي الإيرادات",
       pctRevenue: "9% من إجمالي الإيرادات",
       disappearsTitle: "5% تضيع في المنتجات منتهية الصلاحية",
       disappearsDesc: "التخلص من المنتجات التالفة والمنتهية مكلف مادياً، ضار بالبيئة، وغير مرحب به من قبل العملاء.",
       guessworkTitle: "4% تضيع في التخمين والخصومات العشوائية",
       guessworkDesc: "بدون بيانات تنبؤية فورية، يضطر الموزعون والتجار لتقديم تخفيضات متأخرة أو مفرطة تبتلع هوامش الربح.",
+      footnote: "تستند هذه الأرقام إلى بيانات أبحاث زبون إكس",
     },
     solution: {
       headline: "زبون إكس يمنحك الكمية الدقيقة في اللحظة المناسبة تماماً",
