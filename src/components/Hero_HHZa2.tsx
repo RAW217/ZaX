@@ -25,7 +25,7 @@ export default function Hero() {
             </h1>
             
             <h3 className="text-white text-center max-w-[800px] mx-auto font-display text-xl sm:text-2xl md:text-[30px] font-normal leading-[1.4] mb-10">
-              Boost your bottom line by up to <span className="text-wl-lightGreen font-medium">35%</span> with AI-powered forecasting from ZabonEx – zero integration required
+              products distribution and stocks availability up to <span className="text-[#12855F] font-bold">35%</span> – ZabonEx
             </h3>
             
             <a href="#contact" className="cta-light relative z-50">

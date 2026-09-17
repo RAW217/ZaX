@@ -16,6 +16,7 @@ export interface Translations {
     title: string;
     subtitle: string;
     highlight: string;
+    suffix: string;
     cta: string;
     cards: {
       milk: string;
@@ -225,7 +226,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Predict demand. Grow margins.",
-      subtitle: "Products distribution and stocks availability up to",
+      subtitle: "products distribution and stocks availability up to",
       highlight: "35%",
       cta: "Get started today",
       cards: {
