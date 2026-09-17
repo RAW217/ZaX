@@ -124,7 +124,7 @@ export default function Solution() {
 
           </div>
 
-          <h3 className="mb-10 text-center max-w-2xl text-[32px] leading-tight">
+          <h3 className="mb-10 text-center max-w-2xl text-[32px] leading-tight text-[#0A72C4] font-medium">
             {t.solution.easySetupHeadline}
           </h3>
 

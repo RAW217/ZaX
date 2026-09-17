@@ -52,7 +52,7 @@ export default function Contact() {
             <h3 className="text-[#0C3D5E] text-center mb-8 font-display text-2xl sm:text-3xl font-medium">
               {t.contact.upsellTitle}
             </h3>
-            <a href="#contact" className="cta-purple whitespace-nowrap">
+            <a href="#contact" className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white whitespace-nowrap">
               {t.contact.upsellCta}
             </a>
           </div>
@@ -139,7 +139,7 @@ export default function Contact() {
                 <button 
                   type="submit" 
                   disabled={status === "loading"}
-                  className="cta-purple w-full text-center mt-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white w-full text-center mt-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {status === "loading" ? t.contact.sending : t.contact.send}
                 </button>

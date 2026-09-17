@@ -26,20 +26,32 @@ export default function InteractiveChart() {
   return (
     <div className="w-full relative rounded-2xl overflow-hidden shadow-2xl border border-[#BFDCF0]/60 bg-white" style={{ fontFamily: 'var(--font-satoshi)' }}>
       {/* Mock macOS Window Header */}
-      <div className="h-12 w-full border-b border-[#BFDCF0]/60 bg-white flex items-center px-4 gap-2 absolute top-0 z-10">
-        <div className="flex gap-1.5">
+      <div className="h-12 w-full border-b border-[#BFDCF0]/60 bg-white flex items-center px-4 relative z-10">
+        <div className="flex gap-1.5 absolute left-4 hidden sm:flex">
           <div className="w-3 h-3 rounded-full bg-rose-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-amber-500/80"></div>
           <div className="w-3 h-3 rounded-full bg-emerald-500/80"></div>
         </div>
-        <div className="mx-auto text-xs font-semibold text-tertiary">ZabonEx AI Prediction Platform</div>
+        
+        <div className="mx-auto flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-[#0C3D5E] px-2">
+          <span className="font-bold text-[#0C3D5E]">ZabonEx AI Prediction Platform</span>
+          <span className="text-gray-300 hidden sm:inline">|</span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#e75e6b]"></span>
+            <span className="text-[#e75e6b]">Manual Guesswork</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#0A72C4]"></span>
+            <span className="text-[#0A72C4]">ZabonEx AI Predict</span>
+          </div>
+        </div>
       </div>
 
-      <div className="pt-16 pb-6 px-4 sm:px-6 w-full aspect-[14/8] min-h-[400px]">
+      <div className="pt-12 pb-6 px-4 sm:px-6 w-full aspect-[14/8] min-h-[400px]">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart
             data={data}
-            margin={{ top: 10, right: 10, left: -20, bottom: 0 }}
+            margin={{ top: 15, right: 10, left: -20, bottom: 0 }}
           >
             <CartesianGrid strokeDasharray="4 4" vertical={false} stroke="var(--border-color)" opacity={0.5} />
             <XAxis
@@ -66,12 +78,6 @@ export default function InteractiveChart() {
               }}
               itemStyle={{ fontWeight: 700, padding: '4px 0', fontSize: 13 }}
               cursor={{ stroke: '#1A8FD4', strokeWidth: 1, strokeDasharray: '4 4', opacity: 0.4 }}
-            />
-            <Legend
-              verticalAlign="top"
-              height={40}
-              iconType="circle"
-              wrapperStyle={{ fontWeight: 600, color: 'var(--text-secondary)', fontSize: 13, marginTop: '-10px' }}
             />
 
             <defs>

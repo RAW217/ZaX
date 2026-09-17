@@ -261,7 +261,7 @@ export const translations: Record<Language, Translations> = {
     },
     solution: {
       headline: "ZabonEx gives you the perfect quantity for that exact moment",
-      description: "Traditional guessing almost always misses the mark: too little or too much. Using thousands of data points from your own store, ZabonEx AI calculates the precise amounts that will maximize your revenue and minimize your food waste.",
+      description: "Traditional demand planning often misses the mark: ordering too much, too little, too early, or too late. ZabonEx AI Prediction analyzes thousands of data points from your sales, inventory, and POS systems to recommend the right quantity for each product and store location, maximizing sales while minimizing waste and stockouts",
       chartTitle: "ZabonEx AI Prediction Platform",
       easySetupHeadline: "All that impact, and with one of the easiest solutions you will ever implement.",
       setupTitle: "Setup",
@@ -474,7 +474,7 @@ export const translations: Record<Language, Translations> = {
     },
     solution: {
       headline: "زبون إكس يمنحك الكمية الدقيقة في اللحظة المناسبة تماماً",
-      description: "التخمين التقليدي يخطئ دائماً: إما كميات فائضة تتلف أو قليلة تضيع فرص البيع. عبر تحليل آلاف نقاط البيانات من متاجرك، يحسب ذكاء زبون إكس بدقة الكميات التي تضاعف إيراداتك وتحد من الهدر.",
+      description: "غالباً ما يخطئ تخطيط الطلب التقليدي الهدف: بالطلب المفرط، أو القليل جداً، أو المبكر جداً، أو المتأخر جداً. يحلل التنبؤ بالذكاء الاصطناعي من زبون إكس آلاف نقاط البيانات من أنظمة المبيعات والمخزون ونقاط البيع للتوصية بالكمية المناسبة لكل منتج وفرع، مما يعظم المبيعات ويحد من الهدر ونفاد المخزون.",
       chartTitle: "منصة زبون إكس للتنبؤ بالذكاء الاصطناعي",
       easySetupHeadline: "كل هذا الأثر، وأحد أسهل الحلول التي ستقوم بتطبيقها في عملك على الإطلاق.",
       setupTitle: "الإعداد والربط",
