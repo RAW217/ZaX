@@ -325,7 +325,7 @@ export default function Solution() {
             </svg>
           </div>
 
-          <h3 className="mb-14 text-center max-w-2xl text-[32px] leading-tight whitespace-pre-line">
+          <h3 className="text-[#17679E] mb-14 text-center max-w-2xl text-[32px] leading-tight whitespace-pre-line font-medium">
             {t.solution.resultsHeadline}
           </h3>
 
@@ -338,9 +338,9 @@ export default function Solution() {
                   <Image src="/stat-img1.jpg" alt="Hands holding bottle" width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-white bg-gradient-to-b from-[#0A72C4] to-[#0C3D5E] relative z-10">
-                <div className="text-white text-[60px] font-medium font-display leading-none mb-2">{t.solution.stat1Pct}</div>
-                <div className="text-white/90 text-center font-display text-base font-light whitespace-pre-line">{t.solution.stat1Text}</div>
+              <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-[#0C3D5E] bg-[#99ff99] relative z-10">
+                <div className="text-[#0C3D5E] text-[60px] font-medium font-display leading-none mb-2">{t.solution.stat1Pct}</div>
+                <div className="text-[#0C3D5E]/90 text-center font-display text-base font-medium whitespace-pre-line">{t.solution.stat1Text}</div>
               </div>
             </div>
 
@@ -351,9 +351,9 @@ export default function Solution() {
                   <Image src="/stat-img2.jpg" alt="Shopping cart" width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-white bg-gradient-to-b from-[#0A72C4] to-[#0C3D5E] relative z-10">
-                <div className="text-white text-[60px] font-medium font-display leading-none mb-2">{t.solution.stat2Pct}</div>
-                <div className="text-white/90 text-center font-display text-base font-light whitespace-pre-line">{t.solution.stat2Text}</div>
+              <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-[#0C3D5E] bg-[#99ff99] relative z-10">
+                <div className="text-[#0C3D5E] text-[60px] font-medium font-display leading-none mb-2">{t.solution.stat2Pct}</div>
+                <div className="text-[#0C3D5E]/90 text-center font-display text-base font-medium whitespace-pre-line">{t.solution.stat2Text}</div>
               </div>
             </div>
 
@@ -364,15 +364,15 @@ export default function Solution() {
                   <Image src="/stat-img3.jpg" alt="Man in aisle" width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-white bg-gradient-to-b from-[#0A72C4] to-[#0C3D5E] relative z-10">
-                <div className="text-white text-[60px] font-medium font-display leading-none mb-2">{t.solution.stat3Pct}</div>
-                <div className="text-white/90 text-center font-display text-base font-light whitespace-pre-line">{t.solution.stat3Text}</div>
+              <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-[#0C3D5E] bg-[#99ff99] relative z-10">
+                <div className="text-[#0C3D5E] text-[60px] font-medium font-display leading-none mb-2">{t.solution.stat3Pct}</div>
+                <div className="text-[#0C3D5E]/90 text-center font-display text-base font-medium whitespace-pre-line">{t.solution.stat3Text}</div>
               </div>
             </div>
 
           </div>
 
-          <a href="#contact" className="cta-purple">{t.solution.cta}</a>
+          <a href="#contact" className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white">{t.solution.cta}</a>
         </div>
       </section>
 
