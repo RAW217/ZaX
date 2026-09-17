@@ -12,11 +12,11 @@ export default function Problem() {
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="flex flex-col items-center mb-16">
-          <div className="bg-[#FCF1DC] border border-[#F5DCA6] rounded-[30px] px-6 py-2.5 mb-6">
-            <span className="text-[#B77708] font-display text-lg font-semibold tracking-wide uppercase">{t.problem.badge}</span>
+          <div className="bg-[#E4F4EC] border border-[#12855F]/25 rounded-[30px] px-6 py-2.5 mb-6">
+            <span className="text-[#12855F] font-display text-lg font-semibold tracking-wide uppercase">{t.problem.badge}</span>
           </div>
           <h2 className="text-center max-w-3xl text-[#0C3D5E] leading-tight">
-            {t.problem.title} <span className="text-[#B77708] font-semibold">{t.problem.pctRevenue}</span>
+            {t.problem.title} <span className="text-[#12855F] font-semibold">{t.problem.pctRevenue}</span>
           </h2>
         </div>
 
@@ -33,8 +33,8 @@ export default function Problem() {
         <div className="flex flex-col lg:flex-row justify-center gap-10 mt-2">
           
           <div className="flex flex-col items-start w-full lg:w-1/2">
-            <div className="bg-[#FCF1DC] rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-20 shadow-sm border-2 border-white">
-              <Trash2 className="text-[#B77708] w-7 h-7" />
+            <div className="bg-[#E4F4EC] rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-20 shadow-sm border-2 border-white">
+              <Trash2 className="text-[#12855F] w-7 h-7" />
             </div>
             <div className="bg-white rounded-[20px] w-full shadow-sm border border-[#D2E9F9] h-full relative overflow-hidden flex flex-col">
               <div className="w-full h-48 sm:h-64 relative">
@@ -52,8 +52,8 @@ export default function Problem() {
           </div>
 
           <div className="flex flex-col items-start w-full lg:w-1/2">
-            <div className="bg-[#FCF1DC] rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-20 shadow-sm border-2 border-white">
-              <TrendingDown className="text-[#B77708] w-7 h-7" />
+            <div className="bg-[#E4F4EC] rounded-full w-[60px] h-[60px] flex items-center justify-center -mb-8 -ml-3 relative z-20 shadow-sm border-2 border-white">
+              <TrendingDown className="text-[#12855F] w-7 h-7" />
             </div>
             <div className="bg-white rounded-[20px] w-full shadow-sm border border-[#D2E9F9] h-full relative overflow-hidden flex flex-col">
               <div className="w-full h-48 sm:h-64 relative">

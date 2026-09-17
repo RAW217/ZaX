@@ -225,7 +225,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Predict demand. Grow margins.",
-      subtitle: "Boost your bottom line by up to",
+      subtitle: "Products distribution and stocks availability up to",
       highlight: "35%",
       cta: "Get started today",
       cards: {
@@ -434,7 +434,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "توقع الطلب. ارفع أرباحك.",
-      subtitle: "ارفع صافي أرباحك بنسبة تصل إلى",
+      subtitle: "توزيع المنتجات وتوفر المخزون بنسبة تصل إلى",
       highlight: "35%",
       cta: "ابدأ اليوم مجاناً",
       cards: {

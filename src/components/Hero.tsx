@@ -64,7 +64,7 @@ export default function Hero() {
             </h1>
             
             <h3 className="text-white text-center max-w-[800px] mx-auto font-display text-xl sm:text-2xl md:text-[30px] font-normal leading-[1.4] mb-10">
-              {t.hero.subtitle} <span className="text-wl-lightGreen font-medium">{t.hero.highlight}</span> – ZabonEx
+              {t.hero.subtitle} <span className="text-[#12855F] font-bold">{t.hero.highlight}</span> – ZabonEx
             </h3>
             
             <a href="#contact" className="cta-light relative z-50">
