@@ -226,8 +226,9 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "Predict demand. Grow margins.",
-      subtitle: "products distribution and stocks availability up to",
+      subtitle: "Boost your products distribution and stocks availability by up to",
       highlight: "35%",
+      suffix: "with prediction platform from ZabonEx – seamless integration",
       cta: "Get started today",
       cards: {
         milk: "Fresh Milk",
@@ -435,8 +436,9 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       title: "توقع الطلب. ارفع أرباحك.",
-      subtitle: "توزيع المنتجات وتوفر المخزون بنسبة تصل إلى",
+      subtitle: "عزز توزيع المنتجات وتوفر المخزون بنسبة تصل إلى",
       highlight: "35%",
+      suffix: "مع منصة التنبؤ من زبون إكس – ربط سلس ودون تعقيد",
       cta: "ابدأ اليوم مجاناً",
       cards: {
         milk: "حليب طازج",
