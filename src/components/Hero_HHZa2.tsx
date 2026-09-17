@@ -25,7 +25,7 @@ export default function Hero() {
             </h1>
             
             <h3 className="text-white text-center max-w-[800px] mx-auto font-display text-xl sm:text-2xl md:text-[30px] font-normal leading-[1.4] mb-10">
-              products distribution and stocks availability up to <span className="text-[#12855F] font-bold">35%</span> – ZabonEx
+              Boost your products distribution and stocks availability by up to <span className="text-[#99ff99] font-bold">35%</span> with prediction platform from ZabonEx – seamless integration
             </h3>
             
             <a href="#contact" className="cta-light relative z-50">
