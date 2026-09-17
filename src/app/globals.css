@@ -81,7 +81,7 @@
 @layer components {
   /* White on Dark Hero CTA */
   .cta-light {
-    @apply inline-block bg-[#99ff99] text-[#0C3D5E] font-semibold rounded-full px-6 py-3.5 font-display text-lg shadow-sm transition-all duration-200;
+    @apply inline-block bg-[#99ff99] text-[#0C3D5E] font-normal rounded-full px-6 py-3.5 font-display text-lg shadow-sm transition-all duration-200;
   }
   .cta-light:hover {
     @apply bg-[#8AE68A] scale-[1.01] shadow-md;
@@ -101,9 +101,9 @@
     @apply scale-[0.98] shadow-sm;
   }
 
-  /* Header background color */
+  /* Rich Primary-Blue to Deep Navy Hero Gradient */
   .hero-gradient {
-    background-color: #3B4397;
+    background-image: linear-gradient(165deg, #0A72C4 0%, #17679E 45%, #0C3D5E 100%);
   }
   
   .footer-gradient {

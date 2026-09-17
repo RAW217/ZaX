@@ -28,7 +28,7 @@ export default function Hero() {
               Boost your products distribution and stocks availability by up to <span className="text-[#99ff99] font-normal">35%</span> with prediction platform from ZabonEx – seamless integration
             </h3>
             
-            <a href="#contact" className="cta-light relative z-50">
+            <a href="#contact" className="cta-light !text-[#0C3D5E] relative z-50">
               Get started today
             </a>
           </div>

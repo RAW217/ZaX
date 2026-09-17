@@ -67,7 +67,7 @@ export default function Hero() {
               {t.hero.subtitle} <span className="text-[#99ff99] font-normal">{t.hero.highlight}</span> {t.hero.suffix}
             </h3>
             
-            <a href="#contact" className="cta-light relative z-50">
+            <a href="#contact" className="cta-light !text-[#0C3D5E] relative z-50">
               {t.hero.cta}
             </a>
           </div>
