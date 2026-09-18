@@ -386,12 +386,12 @@ export default function Solution() {
           </div>
 
           <div className="w-full">
-            <div className="flex overflow-x-auto whitespace-nowrap gap-2 mb-10 pb-2 justify-start md:justify-center" style={{ scrollbarWidth: 'none' }}>
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-2.5 mb-4 px-2">
               {tabKeys.map(key => (
                 <button
                   key={key}
                   onClick={() => setActiveTabKey(key)}
-                  className={`px-6 py-2.5 font-display text-base font-semibold tracking-wide rounded-[30px] border transition-all ${
+                  className={`px-3.5 sm:px-5 py-1.5 sm:py-2 font-display text-xs sm:text-sm md:text-base font-semibold tracking-wide rounded-[30px] border transition-all ${
                     activeTabKey === key 
                       ? 'bg-[#4249a5]/10 border-[#4249a5]/30 text-[#17679E] shadow-sm' 
                       : 'bg-white/60 border-transparent text-[#17679E]/70 hover:bg-[#4249a5]/5 hover:text-[#17679E]'
