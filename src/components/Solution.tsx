@@ -393,8 +393,8 @@ export default function Solution() {
                   onClick={() => setActiveTabKey(key)}
                   className={`px-3.5 sm:px-5 py-1.5 sm:py-2 font-display text-xs sm:text-sm md:text-base font-semibold tracking-wide rounded-[30px] border transition-all ${
                     activeTabKey === key 
-                      ? 'bg-[#4249a5]/10 border-[#4249a5]/30 text-[#17679E] shadow-sm' 
-                      : 'bg-white/60 border-transparent text-[#17679E]/70 hover:bg-[#4249a5]/5 hover:text-[#17679E]'
+                      ? 'bg-[#0A72C4] border-[#0A72C4] text-white shadow-sm' 
+                      : 'bg-gray-200 border-transparent text-[#0C3D5E] hover:bg-[#0A72C4]/15 hover:text-[#0A72C4]'
                   }`}
                 >
                   {t.solution.tabs[key]}
