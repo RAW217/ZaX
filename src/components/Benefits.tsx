@@ -19,7 +19,7 @@ export default function Benefits() {
     },
     {
       title: t.benefits.case3,
-      image: "/benefits-img3.jpg",
+      image: "/image (6).png",
       position: "bg-center"
     }
   ];

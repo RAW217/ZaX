@@ -322,8 +322,8 @@ export const translations: Record<Language, Translations> = {
       learnMore: "Learn more",
     },
     benefits: {
-      title: "Small predictive changes,\nbig business-changing results",
-      case1: "Margins soar by 25% at Omani wholesaler with real-time predictions",
+      title: "Smarter predictions, bigger business results.",
+      case1: "Dairy producer increases margins by 25% with real-time predictions",
       case2: "ZabonEx AI goes live in 640 stores to optimize fresh sales",
       case3: "Leading GCC retailer cuts waste by 32%",
       readMore: "Read more case studies",
@@ -557,8 +557,8 @@ export const translations: Record<Language, Translations> = {
       learnMore: "اعرف المزيد",
     },
     benefits: {
-      title: "تغييرات تنبؤية ذكية،\nونتائج استثنائية لأعمالك",
-      case1: "ارتفاع هوامش الربح بنسبة 25% لدى موزع أغذية في عُمان بفضل التنبؤ الفوري",
+      title: "تنبؤات أذكى، ونتائج أعمال أكبر",
+      case1: "منتج للألبان يرفع هوامش ربحه بنسبة 25% بفضل التنبؤ الفوري",
       case2: "تشغيل ذكاء زبون إكس في 640 متجراً لتعظيم مبيعات المنتجات الطازجة",
       case3: "سلسلة تجزئة رائدة في الخليج تخفض هدرها الغذائي بنسبة 32%",
       readMore: "قراءة المزيد من دراسات الحالة",
