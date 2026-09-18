@@ -162,7 +162,7 @@ export default function Solution() {
             <div className="bg-white rounded-[24px] p-8 sm:p-12 shadow-sm flex flex-col items-center w-full relative z-10 border border-[#BFDCF0]/40">
               <h4 className="text-[30px] font-medium text-[#0C3D5E] mb-2 relative z-20">{t.solution.setupTitle}</h4>
               <div className="text-[#0A72C4] font-display text-base mb-4 relative z-20 font-medium">{t.solution.setupBadge}</div>
-              <p className="text-center mb-8 max-w-md text-[#0C3D5E]/80 relative z-20">
+              <p className="text-center mb-8 max-w-xl text-wl-textColor text-base sm:text-lg md:text-[19px] leading-relaxed relative z-20">
                 {t.solution.setupDesc}
               </p>
 
@@ -237,7 +237,7 @@ export default function Solution() {
             <div className="bg-white rounded-[24px] p-8 sm:p-12 shadow-sm flex flex-col items-center w-full relative z-10 border border-[#BFDCF0]/40">
               <h4 className="text-[30px] font-medium text-[#0C3D5E] mb-2 relative z-20">{t.solution.markdownsTitle}</h4>
               <div className="text-[#0A72C4] font-display text-base mb-4 relative z-20 font-medium">{t.solution.markdownsBadge}</div>
-              <p className="text-center mb-8 max-w-md text-[#0C3D5E]/80 relative z-20">
+              <p className="text-center mb-8 max-w-xl text-wl-textColor text-base sm:text-lg md:text-[19px] leading-relaxed relative z-20">
                 {t.solution.markdownsDesc}
               </p>
 
@@ -382,23 +382,27 @@ export default function Solution() {
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="flex justify-center mb-16">
-            <h2 className="text-[40px] text-[#0C3D5E]">{t.solution.tabsHeadline}</h2>
+            <h2 className="text-[#17679E] text-center max-w-[900px] text-2xl sm:text-3xl md:text-[45px] leading-[1.25] md:leading-[1.2] font-display font-medium tracking-tight px-4">{t.solution.tabsHeadline}</h2>
           </div>
 
           <div className="w-full">
-            <div className="flex overflow-x-auto whitespace-nowrap border-b border-[#BFDCF0] mb-10 pb-1" style={{ scrollbarWidth: 'none' }}>
+            <div className="flex overflow-x-auto whitespace-nowrap gap-2 mb-10 pb-2 justify-start md:justify-center" style={{ scrollbarWidth: 'none' }}>
               {tabKeys.map(key => (
                 <button
                   key={key}
                   onClick={() => setActiveTabKey(key)}
-                  className={`px-4 md:px-6 py-4 font-display text-base md:text-[17px] transition-colors ${activeTabKey === key ? 'bg-[#F4FAFD] text-[#0A72C4] font-medium rounded-t-lg border-b-2 border-[#0A72C4]' : 'text-[#4E8CB8] hover:bg-[#F4FAFD]'}`}
+                  className={`px-6 py-2.5 font-display text-base font-semibold tracking-wide rounded-[30px] border transition-all ${
+                    activeTabKey === key 
+                      ? 'bg-[#4249a5]/10 border-[#4249a5]/30 text-[#17679E] shadow-sm' 
+                      : 'bg-white/60 border-transparent text-[#17679E]/70 hover:bg-[#4249a5]/5 hover:text-[#17679E]'
+                  }`}
                 >
                   {t.solution.tabs[key]}
                 </button>
               ))}
             </div>
 
-            <div className="p-8 bg-[#F4FAFD] border border-[#BFDCF0]/50 rounded-b-[20px] rounded-tr-[20px]">
+            <div className="p-8 bg-[#F4FAFD] border border-[#BFDCF0]/50 rounded-[24px]">
               <div className="grid md:grid-cols-2 gap-10">
                 <div>
                   <div className="text-[#0A72C4] font-display text-lg font-medium mb-2">{t.solution.tabs[activeTabKey]}</div>
