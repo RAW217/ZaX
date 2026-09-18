@@ -69,7 +69,7 @@ export default function Solution() {
     <>
       <section id="how-it-works" className="pt-24 pb-10 bg-[#F0F0F5] overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
-          <h2 className="text-[#17679E] mb-5 text-center w-full max-w-[820px] text-[26px] sm:text-[34px] md:text-[42px] lg:text-[46px] leading-tight font-display font-medium tracking-tight px-4">
+          <h2 className="text-[#17679E] mb-5 text-center w-full max-w-[900px] text-2xl sm:text-3xl md:text-[45px] leading-[1.25] md:leading-[1.2] font-display font-medium tracking-tight px-4">
             {t.solution.headline}
           </h2>
           <p className="text-center w-full max-w-[780px] mb-10 text-wl-textColor text-base sm:text-lg md:text-[19px] leading-relaxed px-4">

@@ -36,7 +36,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveDesign((prev) => (prev === 0 ? 1 : 0));
-    }, 30000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 

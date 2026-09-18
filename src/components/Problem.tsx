@@ -15,7 +15,7 @@ export default function Problem() {
           <div className="bg-[#4249a5]/10 border border-[#4249a5]/20 rounded-[30px] px-6 py-2 mb-4">
             <span className="text-[#17679E] font-display text-base font-semibold tracking-wide">{t.problem.badge}</span>
           </div>
-          <h2 className="text-center max-w-[720px] text-[#17679E] leading-tight text-2xl sm:text-3xl md:text-[36px] font-medium">
+          <h2 className="text-center max-w-[850px] text-[#17679E] leading-[1.25] md:leading-[1.2] text-2xl sm:text-3xl md:text-[45px] font-medium">
             {t.problem.title} <span className="text-[#ff8a63] font-semibold">{t.problem.pctNum}</span> {t.problem.pctText}
           </h2>
         </div>
