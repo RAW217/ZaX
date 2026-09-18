@@ -61,8 +61,8 @@ export default function Solution() {
     inventorySync: "/solution-bg-4.jpg",
     salesAnalytics: "/GenAI.jpg",
     distributionPlanning: "/solution-bg-2.jpg",
-    smartRouting: "/solution-bg-3.jpg",
-    wasteReduction: "/solution-bg-2.jpg"
+    smartRouting: "/Screenshot 2026-09-18 175916.png",
+    wasteReduction: "/Screenshot 2026-09-18 175736.png"
   };
 
   return (
