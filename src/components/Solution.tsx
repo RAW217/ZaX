@@ -393,8 +393,8 @@ export default function Solution() {
                   onClick={() => setActiveTabKey(key)}
                   className={`px-3.5 sm:px-5 py-1.5 sm:py-2 font-display text-xs sm:text-sm md:text-base font-semibold tracking-wide rounded-[30px] border transition-all ${
                     activeTabKey === key 
-                      ? 'bg-[#0A72C4] border-[#0A72C4] text-white shadow-sm' 
-                      : 'bg-gray-200 border-transparent text-[#0C3D5E] hover:bg-[#0A72C4]/15 hover:text-[#0A72C4]'
+                      ? 'bg-[#0C3D5E] border-[#0C3D5E] text-white shadow-sm' 
+                      : 'bg-gray-200 border-transparent text-[#0C3D5E] hover:bg-[#0C3D5E]/15 hover:text-[#0C3D5E]'
                   }`}
                 >
                   {t.solution.tabs[key]}
@@ -410,7 +410,7 @@ export default function Solution() {
                   <p className="text-wl-textColor mb-8">
                     {t.solution.tabSectionDesc}
                   </p>
-                  <a href="#contact" className="cta-purple">{t.solution.learnMore}</a>
+                  <a href="#contact" className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white">{t.solution.learnMore}</a>
                 </div>
                 <div className="bg-white rounded-xl h-[300px] shadow-sm flex items-center justify-center relative overflow-hidden border border-gray-200">
                   <img
