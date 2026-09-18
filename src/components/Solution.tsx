@@ -51,18 +51,18 @@ export default function Solution() {
     "demandForecasting",
     "inventorySync",
     "salesAnalytics",
-    "wasteReduction",
+    "distributionPlanning",
     "smartRouting",
-    "distributionPlanning"
+    "wasteReduction"
   ];
 
   const tabImages: Record<string, string> = {
     demandForecasting: "/solution-bg-1.jpg",
-    wasteReduction: "/solution-bg-2.jpg",
-    smartRouting: "/solution-bg-3.jpg",
     inventorySync: "/solution-bg-4.jpg",
-    salesAnalytics: "/solution-bg-1.jpg",
-    distributionPlanning: "/solution-bg-2.jpg"
+    salesAnalytics: "/GenAI.jpg",
+    distributionPlanning: "/solution-bg-2.jpg",
+    smartRouting: "/solution-bg-3.jpg",
+    wasteReduction: "/solution-bg-2.jpg"
   };
 
   return (
@@ -386,12 +386,12 @@ export default function Solution() {
           </div>
 
           <div className="w-full">
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-2.5 mb-4 px-2">
+            <div className="flex flex-nowrap overflow-x-auto whitespace-nowrap justify-start md:justify-center gap-1 sm:gap-1.5 md:gap-2 mb-4 pb-2 px-1" style={{ scrollbarWidth: 'none' }}>
               {tabKeys.map(key => (
                 <button
                   key={key}
                   onClick={() => setActiveTabKey(key)}
-                  className={`px-3.5 sm:px-5 py-1.5 sm:py-2 font-display text-xs sm:text-sm md:text-base font-semibold tracking-wide rounded-[30px] border transition-all ${
+                  className={`flex-shrink-0 px-2.5 sm:px-3 md:px-3.5 lg:px-4 py-1.5 font-display text-[11px] sm:text-xs md:text-sm font-semibold tracking-tight rounded-[30px] border transition-all ${
                     activeTabKey === key 
                       ? 'bg-[#0C3D5E] border-[#0C3D5E] text-white shadow-sm' 
                       : 'bg-gray-200 border-transparent text-[#0C3D5E] hover:bg-[#0C3D5E]/15 hover:text-[#0C3D5E]'

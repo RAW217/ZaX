@@ -289,8 +289,8 @@ export const translations: Record<Language, Translations> = {
       tabsHeadline: "A solution for every challenge",
       tabs: {
         demandForecasting: "Object Recognition",
-        wasteReduction: "Waste Reduction",
-        smartRouting: "Smart Routing",
+        wasteReduction: "Budget Forecasting",
+        smartRouting: "Smart Distribution Routing",
         inventorySync: "Inventory Sync",
         salesAnalytics: "Sales Analytics",
         distributionPlanning: "Distribution Planning",
@@ -305,6 +305,18 @@ export const translations: Record<Language, Translations> = {
         inventorySync: {
           title: "Keep inventory updated through shelf images",
           desc: "ZabonEx converts shelf images into accurate stock counts and automatically syncs them with your inventory system, improving stock visibility, accelerating replenishment, and preventing lost sales."
+        },
+        distributionPlanning: {
+          title: "Deliver the right quantities to every store",
+          desc: "ZabonEx analyzes historical product distribution, sales patterns, and AI prediction outcomes to help sales analysts and teams decide the optimal product quantities to allocate to each store, improving availability while reducing overstock and waste, and eventually to fulfil consumers and shoppers demand."
+        },
+        smartRouting: {
+          title: "Optimize every load, route, and delivery journey",
+          desc: "ZabonEx combines demand predictions, stock visibility, and distribution plans to optimize product quantities, truck loading, and delivery routes. It also supports journey replanning when demand or conditions change, reducing fuel, transportation, labour, and overall distribution costs."
+        },
+        wasteReduction: {
+          title: "Plan smarter for the next 3, 6, and 12 months",
+          desc: "ZabonEx combines demand, production, inventory, warehousing, and distribution data to forecast future budgets and resource needs, helping businesses control costs, align factory output with market demand, optimize stock levels, and maintain product availability and a consistent customer experience."
         }
       },
       learnMore: "Learn more",
@@ -512,8 +524,8 @@ export const translations: Record<Language, Translations> = {
       tabsHeadline: "حل متكامل لكل تحدٍ في سلسلة التوزيع",
       tabs: {
         demandForecasting: "التعرف على العناصر (Object Recognition)",
-        wasteReduction: "تقليل الهدر",
-        smartRouting: "المسارات الذكية",
+        wasteReduction: "التنبؤ بالميزانية (Budget Forecasting)",
+        smartRouting: "المسارات الذكية للتوزيع (Smart Distribution Routing)",
         inventorySync: "مزامنة المخزون",
         salesAnalytics: "تحليلات المبيعات",
         distributionPlanning: "تخطيط التوزيع",
@@ -528,6 +540,18 @@ export const translations: Record<Language, Translations> = {
         inventorySync: {
           title: "تحديث المخزون باستمرار عبر صور الأرفف",
           desc: "يحول زبون إكس صور الأرفف إلى أعداد مخزون دقيقة ويقوم بمزامنتها تلقائياً مع نظام المخزون الخاص بك، مما يحسن وضوح المخزون، ويسرع عملية إعادة التعبئة، ويمنع ضياع المبيعات."
+        },
+        distributionPlanning: {
+          title: "توزيع الكميات المناسبة لكل متجر",
+          desc: "يحلل زبون إكس التوزيع التاريخي للمنتجات، وأنماط المبيعات، ونتائج التنبؤ بالذكاء الاصطناعي لمساعدة محللي المبيعات والفرق على تحديد الكميات المثالية لكل متجر، مما يرفع التوافر ويقلل تكدس المخزون والهدر لتلبية طلب المتسوقين."
+        },
+        smartRouting: {
+          title: "تحسين وتوجيه حمولات مسارات التوصيل بدقة",
+          desc: "يجمع زبون إكس بين تنبؤات الطلب، وشفافية المخزون، وخطط التوزيع لتحسين كميات المنتجات وشحن الشاحنات ومسارات التوصيل. كما يدعم إعادة تخطيط المسارات عند تغير الظروف أو الطلب، مما يقلل تكاليف الوقود والنقل والعمالة والتوزيع الإجمالية."
+        },
+        wasteReduction: {
+          title: "التخطيط الذكي لأشهر الـ 3 و6 و12 القادمة",
+          desc: "يجمع زبون إكس بين بيانات الطلب والإنتاج والمخزون والتخزين والتوزيع للتنبؤ بالميزانيات المستقبلية واحتياجات الموارد، مما يساعد الشركات على ضبط التكاليف ومواءمة مخرجات المصانع مع طلب السوق وتحسين مستويات المخزون وضمان تجربة عملاء اتساقية."
         }
       },
       learnMore: "اعرف المزيد",
