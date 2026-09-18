@@ -324,12 +324,12 @@ export const translations: Record<Language, Translations> = {
     benefits: {
       title: "Smarter predictions, bigger business results.",
       case1: "Dairy producer increases margins by 25% with real-time predictions",
-      case2: "ZabonEx AI goes live in 640 stores to optimize fresh sales",
-      case3: "Leading GCC retailer cuts waste by 32%",
+      case2: "ZabonEx AI Prediction Platform goes live in more than 5000 stores across Oman nationwide to maximize fresh product sales",
+      case3: "Dolphine Catering successfully cuts waste at its workforce camp by 37%",
       readMore: "Read more case studies",
     },
     contact: {
-      upsellTitle: "Ready to waste less with ZabonEx?",
+      upsellTitle: "Ready to predict your customers demand with ZabonEx?",
       upsellCta: "Get started today",
       title: "Get in touch",
       description: "Have questions about how ZabonEx can optimize your inventory and reduce waste? Send us a message and our team will get back to you shortly.",
@@ -559,12 +559,12 @@ export const translations: Record<Language, Translations> = {
     benefits: {
       title: "تنبؤات أذكى، ونتائج أعمال أكبر",
       case1: "منتج للألبان يرفع هوامش ربحه بنسبة 25% بفضل التنبؤ الفوري",
-      case2: "تشغيل ذكاء زبون إكس في 640 متجراً لتعظيم مبيعات المنتجات الطازجة",
-      case3: "سلسلة تجزئة رائدة في الخليج تخفض هدرها الغذائي بنسبة 32%",
+      case2: "إطلاق منصة زبون إكس للتنبؤ بالذكاء الاصطناعي في أكثر من 5000 متجر عبر سلطنة عُمان لتعظيم مبيعات المنتجات الطازجة",
+      case3: "شركة دلفين للتموين تنجح في تخفيض الهدر في مجمع عمالتها بنسبة 37%",
       readMore: "قراءة المزيد من دراسات الحالة",
     },
     contact: {
-      upsellTitle: "جاهز لتقليل الهدر وزيادة أرباحك مع زبون إكس؟",
+      upsellTitle: "جاهز للتنبؤ بطلب عملائك مع زبون إكس؟",
       upsellCta: "ابدأ معنا اليوم",
       title: "تواصل معنا",
       description: "هل لديك استفسارات حول كيفية مساعدة زبون إكس لعملك في خفض الهدر وتحسين التوزيع؟ فريقنا جاهز للتواصل معك ومساعدتك فوراً.",
