@@ -67,7 +67,7 @@ export default function Contact() {
             {/* Contact Info */}
             <div>
               <h2 className="text-[40px] text-[#17679E] mb-6">{t.contact.title}</h2>
-              <p className="text-[#0C3D5E]/80 mb-10 max-w-md">
+              <p className="text-wl-textColor mb-10 max-w-md text-base sm:text-lg md:text-[19px] leading-relaxed">
                 {t.contact.description}
               </p>
               
@@ -77,7 +77,7 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-[#0A72C4]" />
                   </div>
                   <div>
-                    <div className="text-sm text-[#4E8CB8] font-display">{t.contact.emailUs}</div>
+                    <div className="text-sm text-[#0A72C4] font-display font-medium">{t.contact.emailUs}</div>
                     <a href="mailto:inquiries@zabonex.com" className="text-[#0C3D5E] font-medium hover:text-[#0A72C4] transition-colors">inquiries@zabonex.com</a>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function Contact() {
                     <Phone className="w-5 h-5 text-[#0A72C4]" />
                   </div>
                   <div>
-                    <div className="text-sm text-[#4E8CB8] font-display">{t.contact.callUs}</div>
+                    <div className="text-sm text-[#0A72C4] font-display font-medium">{t.contact.callUs}</div>
                     <a href="tel:+96877706770" className="text-[#0C3D5E] font-medium hover:text-[#0A72C4] transition-colors dir-ltr inline-block">+968 7770 6770</a>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default function Contact() {
       </section>
 
       {/* Footer Section */}
-      <footer className="bg-[#303942] pt-20 pb-10">
+      <footer className="bg-[#303942] pt-20 pb-10 text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
@@ -172,13 +172,13 @@ export default function Contact() {
             </div>
             
             <div className="flex flex-col md:text-right gap-3">
-              <a href="/#home" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.home}</a>
-              <a href="/about" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.about}</a>
+              <a href="/#home" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.home}</a>
+              <a href="/about" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.about}</a>
             </div>
 
             <div className="flex flex-col md:text-right gap-3">
-              <a href="/#benefits" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.successStories}</a>
-              <a href="/#contact" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.contactLink}</a>
+              <a href="/#benefits" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.successStories}</a>
+              <a href="/#contact" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.contactLink}</a>
             </div>
           </div>
 
@@ -186,29 +186,29 @@ export default function Contact() {
 
           <div className="flex flex-col items-center gap-6">
             <div className="flex gap-6">
-              <a href="https://www.linkedin.com/company/zabonex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/zabonex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/zabonex.io/" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors">
+              <a href="https://www.instagram.com/zabonex.io/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/people/ZabonEx/100090619776003/" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors">
+              <a href="https://www.facebook.com/people/ZabonEx/100090619776003/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://x.com/ZabonEx" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors flex items-center justify-center">
+              <a href="https://x.com/ZabonEx" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors flex items-center justify-center">
                 <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
               </a>
-              <a href="https://www.youtube.com/channel/UCEh4jAegYvvppSA4gIzw0ag" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors">
+              <a href="https://www.youtube.com/channel/UCEh4jAegYvvppSA4gIzw0ag" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href="mailto:inquiries@zabonex.com" className="text-[#BFDCF0] hover:text-white transition-colors">
+              <a href="mailto:inquiries@zabonex.com" className="text-white hover:text-white/80 transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
             
-            <p className="text-[#86B3D1] text-sm">
+            <p className="text-white/90 text-sm">
               &copy; {new Date().getFullYear()} ZabonEx. All rights reserved.
             </p>
           </div>
