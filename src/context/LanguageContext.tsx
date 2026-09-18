@@ -81,6 +81,7 @@ export interface Translations {
     };
     tabSectionTitle: string;
     tabSectionDesc: string;
+    tabContents: Record<string, { title: string; desc: string }>;
     learnMore: string;
   };
   benefits: {
@@ -296,6 +297,16 @@ export const translations: Record<Language, Translations> = {
       },
       tabSectionTitle: "Turn shelf images into real-time stock insights",
       tabSectionDesc: "ZabonEx uses AI-powered object recognition to identify and count products on shelves, monitor availability, and detect stock gaps. Helping teams replenish faster, reduce manual checks, and prevent lost sales.",
+      tabContents: {
+        demandForecasting: {
+          title: "Turn shelf images into real-time stock insights",
+          desc: "ZabonEx uses AI-powered object recognition to identify and count products on shelves, monitor availability, and detect stock gaps. Helping teams replenish faster, reduce manual checks, and prevent lost sales."
+        },
+        inventorySync: {
+          title: "Keep inventory updated through shelf images",
+          desc: "ZabonEx converts shelf images into accurate stock counts and automatically syncs them with your inventory system, improving stock visibility, accelerating replenishment, and preventing lost sales."
+        }
+      },
       learnMore: "Learn more",
     },
     benefits: {
@@ -509,6 +520,16 @@ export const translations: Record<Language, Translations> = {
       },
       tabSectionTitle: "تحويل صور الأرفف إلى رؤى مخزونية فورية",
       tabSectionDesc: "يستخدم زبون إكس تقنيات التعرف على العناصر بالذكاء الاصطناعي لتحديد وعد المنتجات على الأرفف، ومراقبة توافرها، وإكتشاف النقص في المخزون فوراً. مما يساعد الفرق على إعادة التعبئة أسرع، وتقليل الفحوصات اليدوية، ومنع ضياع المبيعات.",
+      tabContents: {
+        demandForecasting: {
+          title: "تحويل صور الأرفف إلى رؤى مخزونية فورية",
+          desc: "يستخدم زبون إكس تقنيات التعرف على العناصر بالذكاء الاصطناعي لتحديد وعد المنتجات على الأرفف، ومراقبة توافرها، وإكتشاف النقص في المخزون فوراً. مما يساعد الفرق على إعادة التعبئة أسرع، وتقليل الفحوصات اليدوية، ومنع ضياع المبيعات."
+        },
+        inventorySync: {
+          title: "تحديث المخزون باستمرار عبر صور الأرفف",
+          desc: "يحول زبون إكس صور الأرفف إلى أعداد مخزون دقيقة ويقوم بمزامنتها تلقائياً مع نظام المخزون الخاص بك، مما يحسن وضوح المخزون، ويسرع عملية إعادة التعبئة، ويمنع ضياع المبيعات."
+        }
+      },
       learnMore: "اعرف المزيد",
     },
     benefits: {

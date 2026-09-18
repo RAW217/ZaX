@@ -49,10 +49,10 @@ export default function Solution() {
 
   const tabKeys: (keyof typeof t.solution.tabs)[] = [
     "demandForecasting",
-    "wasteReduction",
-    "smartRouting",
     "inventorySync",
     "salesAnalytics",
+    "wasteReduction",
+    "smartRouting",
     "distributionPlanning"
   ];
 
@@ -406,9 +406,11 @@ export default function Solution() {
               <div className="grid md:grid-cols-2 gap-10">
                 <div>
                   <div className="text-[#0A72C4] font-display text-lg font-medium mb-2">{t.solution.tabs[activeTabKey]}</div>
-                  <h2 className="text-[#0C3D5E] text-[32px] mb-6">{t.solution.tabSectionTitle}</h2>
+                  <h2 className="text-[#0C3D5E] text-[32px] mb-6">
+                    {t.solution.tabContents?.[activeTabKey]?.title || t.solution.tabSectionTitle}
+                  </h2>
                   <p className="text-wl-textColor mb-8">
-                    {t.solution.tabSectionDesc}
+                    {t.solution.tabContents?.[activeTabKey]?.desc || t.solution.tabSectionDesc}
                   </p>
                   <a href="#contact" className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white">{t.solution.learnMore}</a>
                 </div>
