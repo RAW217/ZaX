@@ -415,11 +415,16 @@ export default function Solution() {
                   <a href="#contact" className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white">{t.solution.learnMore}</a>
                 </div>
                 <div className="bg-white rounded-xl h-[300px] shadow-sm flex items-center justify-center relative overflow-hidden border border-gray-200">
-                  <img
-                    src={tabImages[activeTabKey]}
-                    alt={t.solution.tabs[activeTabKey]}
-                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
-                  />
+                  {tabKeys.map((key) => (
+                    <img
+                      key={key}
+                      src={tabImages[key]}
+                      alt={t.solution.tabs[key]}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-150 ${
+                        activeTabKey === key ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>

@@ -9,15 +9,18 @@ export default function Benefits() {
   const cases = [
     {
       title: t.benefits.case1,
-      image: "/benefits-img1.jpg"
+      image: "/benefits-img1.jpg",
+      position: "bg-center"
     },
     {
       title: t.benefits.case2,
-      image: "/benefits-img2.jpg"
+      image: "/benefits-img2.jpg",
+      position: "bg-bottom" // الصورة مرفوعة للأعلى
     },
     {
       title: t.benefits.case3,
-      image: "/benefits-img3.jpg"
+      image: "/benefits-img3.jpg",
+      position: "bg-center"
     }
   ];
 
@@ -33,8 +36,8 @@ export default function Benefits() {
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {cases.map((c, i) => (
             <a key={i} href="#" className="group block h-[400px]">
-              <div 
-                className="w-full h-full rounded-[20px] p-6 flex flex-col justify-end relative overflow-hidden bg-cover bg-center"
+              <div
+                className={`w-full h-full rounded-[20px] p-6 flex flex-col justify-end relative overflow-hidden bg-cover ${c.position}`}
                 style={{ backgroundImage: `url('${c.image}')` }}
               >
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
