@@ -44,7 +44,7 @@ export default function Problem() {
                 <h3 className="text-[#17679E] font-display text-xl sm:text-2xl font-medium mb-3">
                   {t.problem.disappearsTitle}
                 </h3>
-                <p className="text-[#0C3D5E]/80 leading-relaxed font-display text-base">
+                <p className="text-wl-textColor text-base sm:text-lg md:text-[19px] leading-relaxed font-display">
                   {t.problem.disappearsDesc}
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default function Problem() {
                 <h3 className="text-[#17679E] font-display text-xl sm:text-2xl font-medium mb-3">
                   {t.problem.guessworkTitle}
                 </h3>
-                <p className="text-[#0C3D5E]/80 leading-relaxed font-display text-base">
+                <p className="text-wl-textColor text-base sm:text-lg md:text-[19px] leading-relaxed font-display">
                   {t.problem.guessworkDesc}
                 </p>
               </div>
