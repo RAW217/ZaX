@@ -66,7 +66,7 @@ export default function Contact() {
             
             {/* Contact Info */}
             <div>
-              <h2 className="text-[40px] text-[#0C3D5E] mb-6">{t.contact.title}</h2>
+              <h2 className="text-[40px] text-[#17679E] mb-6">{t.contact.title}</h2>
               <p className="text-[#0C3D5E]/80 mb-10 max-w-md">
                 {t.contact.description}
               </p>
@@ -162,7 +162,7 @@ export default function Contact() {
       </section>
 
       {/* Footer Section */}
-      <footer className="footer-gradient pt-20 pb-10">
+      <footer className="bg-[#303942] pt-20 pb-10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
@@ -182,7 +182,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="border-t border-[#17679E] my-8" />
+          <div className="border-t border-[#0A72C4] my-8" />
 
           <div className="flex flex-col items-center gap-6">
             <div className="flex gap-6">
