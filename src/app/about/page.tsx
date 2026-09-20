@@ -24,6 +24,9 @@ import {
   Users, 
   Mail, 
   Linkedin,
+  Instagram,
+  Facebook,
+  Youtube,
   Clock,
   Settings,
   CloudUpload,
@@ -39,25 +42,25 @@ export default function AboutPage() {
       name: lang === "ar" ? "حاتم العبري" : "Hatim Al Abri",
       role: t.aboutPage.leaderHatimRole,
       bio: t.aboutPage.leaderHatimBio,
-      image: "/about/hatim-al-abri.jpg",
+      image: "/Screenshot_19-9-2026_11124_.jpeg",
     },
     {
       name: lang === "ar" ? "المهند البلوشي" : "Almuhannad Al Balushi",
       role: t.aboutPage.leaderAlmuhannadRole,
       bio: t.aboutPage.leaderAlmuhannadBio,
-      image: "/about/almuhannad-al-balushi.jpg",
+      image: "/Screenshot_19-9-2026_11059_.jpeg",
     },
     {
       name: lang === "ar" ? "مديحة موسى" : "Madiha Moosa",
       role: t.aboutPage.leaderMadihaRole,
       bio: t.aboutPage.leaderMadihaBio,
-      image: "/about/madiha-moosa.jpg",
+      image: "/Screenshot_19-9-2026_11149_.jpeg",
     },
     {
       name: lang === "ar" ? "عمر المعمري" : "Omar Al Mamari",
       role: t.aboutPage.leaderOmarRole,
       bio: t.aboutPage.leaderOmarBio,
-      image: "/about/omar-al-mamari.jpg",
+      image: "/Screenshot_19-9-2026_11216_.jpeg",
     },
   ];
 
@@ -323,26 +326,7 @@ export default function AboutPage() {
 
             {/* Visual Column */}
             <div className="lg:col-span-5 flex flex-col gap-6">
-              <div className="rounded-[24px] overflow-hidden relative h-[360px] sm:h-[440px] shadow-xl border border-[#D2E9F9]">
-                <Image 
-                  src="/about/zabonex_booth.jpg" 
-                  alt="ZabonEx at exhibition" 
-                  fill 
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C3D5E]/85 via-[#0C3D5E]/20 to-transparent flex items-end p-8">
-                  <div className="text-white">
-                    <div className="text-xs font-semibold uppercase tracking-wider text-[#D2E9F9] mb-1">
-                      GCC Innovation & Leadership
-                    </div>
-                    <div className="text-xl font-medium">
-                      {lang === "ar" ? "زبون إكس • تحويل البيانات إلى أثر وقيمة ملموسة" : "ZabonEx • Turning Data into Measurable Action"}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-[20px] overflow-hidden relative h-[200px] shadow-md border border-[#D2E9F9] hidden sm:block">
+              <div className="rounded-[20px] overflow-hidden relative h-[360px] sm:h-[440px] shadow-md border border-[#D2E9F9]">
                 <Image 
                   src="/about/warehouse_worker.jpg" 
                   alt="ZabonEx inventory operations" 
@@ -350,13 +334,36 @@ export default function AboutPage() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0C3D5E]/70 to-transparent flex items-end p-6">
-                  <div className="text-white text-sm font-medium">
+                  <div className="text-white text-base font-medium">
                     {lang === "ar" ? "تمكين فرق العمل في الميدان والمستودعات والمتاجر" : "Empowering frontline teams across stores and warehouses"}
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
+      {/* ================= 3. YOUTUBE VIDEO SECTION ================= */}
+      <section className="py-20 bg-[#fafafa] border-t border-[#D2E9F9]">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <div className="inline-block bg-[#4249a5]/10 border border-[#4249a5]/20 rounded-[30px] px-6 py-2 mb-4">
+            <span className="text-[#17679E] font-display text-sm font-semibold tracking-wide uppercase">
+              {lang === "ar" ? "فيديو منصة زبون إكس" : "ZabonEx Platform Video"}
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl text-[#0C3D5E] font-medium leading-tight mb-10 max-w-2xl mx-auto">
+            {lang === "ar" ? "تعرّف على منصة زبون إكس وكيف تعمل في الميدان" : "See how ZabonEx transforms inventory and demand forecasting"}
+          </h2>
+
+          <div className="w-full max-w-4xl mx-auto rounded-[24px] overflow-hidden shadow-2xl border border-[#BFDCF0] bg-black aspect-video relative">
+            <iframe 
+              src="https://www.youtube.com/embed/7G5rrlNDH08?rel=0" 
+              title="ZabonEx Platform Video" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowFullScreen
+              className="w-full h-full border-0 absolute inset-0"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -637,26 +644,6 @@ export default function AboutPage() {
             ))}
           </div>
 
-          {/* Group Photo Banner */}
-          <div className="rounded-[28px] overflow-hidden relative h-[360px] sm:h-[480px] shadow-2xl border border-white/25">
-            <Image 
-              src="/about/team-group.jpg" 
-              alt="ZabonEx Leadership Team" 
-              fill 
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0C3D5E]/90 via-[#0C3D5E]/30 to-transparent flex items-end p-8 sm:p-12">
-              <div className="text-white max-w-2xl">
-                <div className="text-sm font-semibold uppercase tracking-wider text-[#D2E9F9] mb-1 font-display">
-                  {lang === "ar" ? "فريق عمل زبون إكس" : "The ZabonEx Team"}
-                </div>
-                <div className="text-xl sm:text-3xl font-medium leading-snug">
-                  {lang === "ar" ? "نجمع بين التكنولوجيا المتطورة ورؤية السوق لدفع التحول الرقمي في الخليج" : "Combining deep market expertise and cutting-edge technology to lead regional transformation."}
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -719,63 +706,74 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ================= 10. UPSELL CALL TO ACTION ================= */}
-      <section className="bg-white py-24 border-t border-[#BFDCF0]/40">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="bg-[#BFDCF0] border border-[#86B3D1]/40 rounded-[32px] py-16 px-8 sm:px-14 flex flex-col items-center justify-center text-center shadow-sm">
-            <h3 className="text-[#0C3D5E] mb-4 font-display text-3xl sm:text-5xl font-medium tracking-tight">
-              {t.aboutPage.upsellTitle}
+      {/* ================= 10. UPSELL CALL TO ACTION (Exact Main Page Upsell) ================= */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="bg-[#99ff99] rounded-[24px] py-16 sm:py-20 px-8 sm:px-12 flex flex-col items-center justify-center text-center">
+            <h3 className="text-[#4249a5] text-center mb-4 font-display text-3xl sm:text-4xl md:text-[42px] font-medium leading-tight">
+              {t.contact.upsellTitle}
             </h3>
-            <p className="text-[#0C3D5E]/85 text-lg sm:text-xl font-light max-w-2xl mb-8">
-              {t.aboutPage.upsellSubtitle}
+            <p className="text-[#0C3D5E] text-base sm:text-lg md:text-xl font-normal max-w-3xl mb-8">
+              {t.contact.upsellSubtitle}
             </p>
             <a 
               href="/#contact" 
-              className="cta-purple whitespace-nowrap px-10 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+              className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white whitespace-nowrap"
             >
-              {t.aboutPage.upsellCta}
+              {t.contact.upsellCta}
             </a>
           </div>
         </div>
       </section>
 
-      {/* ================= 11. FOOTER ================= */}
-      <footer className="footer-gradient pt-16 pb-10 text-white">
+      {/* ================= 11. FOOTER (Exact Main Page Footer) ================= */}
+      <footer className="bg-[#303942] pt-20 pb-10 text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
               <span className="text-2xl font-display font-semibold text-white tracking-wide">
                 ZabonEx
               </span>
-              <p className="text-white/70 text-sm mt-3 max-w-xs leading-relaxed font-light">
-                {lang === "ar" ? "تمكين الشركات في الخليج من بيع المزيد وتقليل الهدر من خلال البيانات والذكاء الاصطناعي." : "Helping businesses sell more, waste less, and grow through smarter data and AI."}
-              </p>
             </div>
             
-            <div className="flex flex-col md:text-end gap-3">
-              <a href="/#home" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.home}</a>
-              <a href="/about" className="text-white font-semibold font-display text-base transition-colors">{t.contact.about}</a>
+            <div className="flex flex-col md:text-right gap-3">
+              <a href="/#home" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.home}</a>
+              <a href="/about" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.about}</a>
             </div>
 
-            <div className="flex flex-col md:text-end gap-3">
-              <a href="/#benefits" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.successStories}</a>
-              <a href="/#contact" className="text-[#BFDCF0] hover:text-white font-display text-base transition-colors">{t.contact.contactLink}</a>
+            <div className="flex flex-col md:text-right gap-3">
+              <a href="/#benefits" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.successStories}</a>
+              <a href="/#contact" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.contactLink}</a>
             </div>
           </div>
 
-          <div className="border-t border-[#17679E] my-8" />
+          <div className="border-t border-[#0A72C4] my-8" />
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col items-center gap-6">
             <div className="flex gap-6">
-              <a href="https://www.linkedin.com/company/zabonex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-[#BFDCF0] hover:text-white transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/zabonex/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="mailto:inquiries@zabonex.com" className="text-[#BFDCF0] hover:text-white transition-colors" aria-label="Email">
+              <a href="https://www.instagram.com/zabonex.io/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://www.facebook.com/people/ZabonEx/100090619776003/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://x.com/ZabonEx" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors flex items-center justify-center">
+                <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/channel/UCEh4jAegYvvppSA4gIzw0ag" target="_blank" rel="noopener noreferrer" className="text-white hover:text-white/80 transition-colors">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href="mailto:inquiries@zabonex.com" className="text-white hover:text-white/80 transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
-
-            <p className="text-[#86B3D1] text-sm">
+            
+            <p className="text-white/90 text-sm">
               &copy; {new Date().getFullYear()} ZabonEx. All rights reserved.
             </p>
           </div>

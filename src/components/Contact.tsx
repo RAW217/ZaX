@@ -48,10 +48,13 @@ export default function Contact() {
       {/* Upsell Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="bg-[#99ff99] rounded-[24px] py-16 sm:py-20 px-8 sm:px-12 flex flex-col items-center justify-center">
-            <h3 className="text-[#4249a5] text-center mb-8 font-display text-3xl sm:text-4xl md:text-[42px] font-medium leading-tight">
+          <div className="bg-[#99ff99] rounded-[24px] py-16 sm:py-20 px-8 sm:px-12 flex flex-col items-center justify-center text-center">
+            <h3 className="text-[#4249a5] text-center mb-4 font-display text-3xl sm:text-4xl md:text-[42px] font-medium leading-tight">
               {t.contact.upsellTitle}
             </h3>
+            <p className="text-[#0C3D5E] text-base sm:text-lg md:text-xl font-normal max-w-3xl mb-8">
+              {t.contact.upsellSubtitle}
+            </p>
             <a href="#contact" className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white whitespace-nowrap">
               {t.contact.upsellCta}
             </a>

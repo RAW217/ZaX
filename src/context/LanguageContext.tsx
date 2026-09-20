@@ -93,6 +93,7 @@ export interface Translations {
   };
   contact: {
     upsellTitle: string;
+    upsellSubtitle: string;
     upsellCta: string;
     title: string;
     description: string;
@@ -329,7 +330,8 @@ export const translations: Record<Language, Translations> = {
       readMore: "Read more case studies",
     },
     contact: {
-      upsellTitle: "Ready to predict your customers demand with ZabonEx?",
+      upsellTitle: "Ready to Sell More and Waste Less?",
+      upsellSubtitle: "Turn your business data into better forecasts, smarter decisions, and measurable results.",
       upsellCta: "Get started today",
       title: "Get in touch",
       description: "Have questions about how ZabonEx can optimize your inventory and reduce waste? Send us a message and our team will get back to you shortly.",
@@ -564,7 +566,8 @@ export const translations: Record<Language, Translations> = {
       readMore: "قراءة المزيد من دراسات الحالة",
     },
     contact: {
-      upsellTitle: "جاهز للتنبؤ بطلب عملائك مع زبون إكس؟",
+      upsellTitle: "جاهز لبيع المزيد وتقليل الهدر؟",
+      upsellSubtitle: "حوّل بيانات أعمالك إلى تنبؤات أفضل، وقرارات أذكى، ونتائج ملموسة.",
       upsellCta: "ابدأ معنا اليوم",
       title: "تواصل معنا",
       description: "هل لديك استفسارات حول كيفية مساعدة زبون إكس لعملك في خفض الهدر وتحسين التوزيع؟ فريقنا جاهز للتواصل معك ومساعدتك فوراً.",
