@@ -128,6 +128,7 @@ export interface Translations {
     stat3Label: string;
     storyBadge: string;
     storyTitle: string;
+    storySubtitle: string;
     storyP1: string;
     storyP2: string;
     storyP3: string;
@@ -367,10 +368,11 @@ export const translations: Record<Language, Translations> = {
       stat3Num: "5000+",
       stat3Label: "Connected Stores & Outlets",
       storyBadge: "About Us",
-      storyTitle: "Turning Data into Business Value",
-      storyP1: "ZabonEx is a technology and data solutions company helping organizations across the GCC make faster, clearer, and more confident decisions.",
-      storyP2: "Our journey began in the Food and Beverage industry, where producers, distributors, and retailers face a daily challenge: having the right products, in the right quantities, at the right locations. By combining demand forecasting, artificial intelligence, object recognition, and advanced analytics, ZabonEx helps businesses improve product availability, optimize inventory and distribution, reduce waste and returns, and unlock new sales opportunities.",
-      storyP3: "Beyond Food and Beverage, we support organizations across retail, manufacturing, logistics, telecom, energy, hospitality, healthcare, and the public sector through data platforms, BI dashboards, AI and machine learning, application development, automation, and National Cloud-based solutions.",
+      storyTitle: "Turning Data into Business Value:",
+      storySubtitle: "Since 2023, ZabonEx has helped food and beverage businesses such as producers, distributors, retailers to sell more and waste less by predicting demand and improving how products reach customers.",
+      storyP1: "ZabonEx provides a software as a service platform based on artificial intelligence for food and beverage producers, distributors, and retailers. It helps them predict demand, send the right quantities to each location, and monitor shelf availability, for reducing waste and returns while increasing sales. Founded in Oman in 2023, ZabonEx has offices in Muscat and Riyadh, with operations throughout the GCC countries.",
+      storyP2: "",
+      storyP3: "",
       storyApproachTitle: "Our Approach is Simple",
       storyApproachDesc: "Understand the business problem first, connect the right data and technology, and deliver measurable results.",
       purposeBadge: "Our Purpose",
@@ -605,10 +607,11 @@ export const translations: Record<Language, Translations> = {
       stat3Num: "5000+",
       stat3Label: "متجر ومنفذ بيع متصل بالمنصة",
       storyBadge: "من نحن",
-      storyTitle: "تحويل البيانات إلى قيمة حقيقية وقرارات واثقة",
-      storyP1: "زبون إكس (ZabonEx) هي شركة رائدة في حلول التكنولوجيا والبيانات، تمكّن المؤسسات في جميع أنحاء دول مجلس التعاون الخليجي من اتخاذ قرارات أسرع وأوضح وأكثر ثقة.",
-      storyP2: "بدأت رحلتنا في قطاع الأغذية والمشروبات (F&B)، حيث يواجه المنتجون والموزعون وتجار التجزئة تحدياً يومياً حرجاً: توفير المنتجات المناسبة بالكميات المناسبة في المواقع المناسبة تماماً. من خلال دمج التنبؤ بالطلب، والذكاء الاصطناعي، وتقنيات التعرف على العناصر (Object Recognition)، والتحليلات المتقدمة، نساعد الشركات على رفع توافر المنتجات، وتحسين إدارة المخزون والتوزيع، والحد من الهدر والمرتجعات، وفتح آفاق جديدة للمبيعات.",
-      storyP3: "وبالإضافة إلى قطاع الأغذية والمشروبات، ندعم المؤسسات عبر مختلف القطاعات مثل التجزئة، والتصنيع، واللوجستيات، والاتصالات، والطاقة، والضيافة، والرعاية الصحية، والقطاع الحكومي؛ عبر منصات البيانات، ولوحات ذكاء الأعمال (BI)، وحلول الذكاء الاصطناعي وتعلم الآلة، وتطوير التطبيقات، والأتمتة، والحلول السحابية الوطنية (National Cloud).",
+      storyTitle: "تحويل البيانات إلى قيمة حقيقية للشركات:",
+      storySubtitle: "منذ عام 2023، تساعد زبون إكس شركات الأغذية والمشروبات من منتجين وموزعين وتجار تجزئة على زيادة المبيعات وتقليل الهدر من خلال التنبؤ بالطلب وتحسين طريقة وصول المنتجات للعملاء.",
+      storyP1: "تعد زبون إكس (ZabonEx) منصة برمجية كخدمة (SaaS) تعتمد على الذكاء الاصطناعي لمنتجي وموزعي وتجار التجزئة في قطاع الأغذية والمشروبات. تساعدهم على التنبؤ بالطلب، وإرسال الكميات المناسبة لكل موقع، ومراقبة توفر المنتجات على الرفوف، وذلك لتقليل الهدر والمرتجعات وزيادة المبيعات. تأسست الشركة في عمان عام 2023، ولديها مكاتب في مسقط والرياض، وتغطي عملياتها كافة دول مجلس التعاون الخليجي.",
+      storyP2: "",
+      storyP3: "",
       storyApproachTitle: "منهجيتنا بسيطة ومباشرة",
       storyApproachDesc: "فهم التحدي التشغيلي أولاً، وربط البيانات والتقنيات المناسبة، وتحقيق نتائج ملموسة وقابلة للقياس.",
       purposeBadge: "غايتنا ورسالتنا",

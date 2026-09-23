@@ -295,21 +295,33 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#0C3D5E] font-medium leading-[1.2]">
+              <h2 className="text-[#17679E] text-2xl sm:text-3xl md:text-[45px] leading-[1.25] md:leading-[1.2] font-display font-medium tracking-tight">
                 {t.aboutPage.storyTitle}
               </h2>
 
-              <p className="text-base sm:text-lg text-[#0C3D5E]/85 leading-relaxed font-light">
-                {t.aboutPage.storyP1}
-              </p>
+              {t.aboutPage.storySubtitle && (
+                <div className="text-[#0A72C4] font-display text-base font-medium leading-relaxed">
+                  {t.aboutPage.storySubtitle}
+                </div>
+              )}
 
-              <p className="text-base sm:text-lg text-[#0C3D5E]/85 leading-relaxed font-light">
-                {t.aboutPage.storyP2}
-              </p>
+              {t.aboutPage.storyP1 && (
+                <p className="text-base sm:text-lg text-[#0C3D5E]/85 leading-relaxed font-light">
+                  {t.aboutPage.storyP1}
+                </p>
+              )}
 
-              <p className="text-base sm:text-lg text-[#0C3D5E]/85 leading-relaxed font-light">
-                {t.aboutPage.storyP3}
-              </p>
+              {t.aboutPage.storyP2 && (
+                <p className="text-base sm:text-lg text-[#0C3D5E]/85 leading-relaxed font-light">
+                  {t.aboutPage.storyP2}
+                </p>
+              )}
+
+              {t.aboutPage.storyP3 && (
+                <p className="text-base sm:text-lg text-[#0C3D5E]/85 leading-relaxed font-light">
+                  {t.aboutPage.storyP3}
+                </p>
+              )}
 
               {/* Approach Box */}
               <div className="bg-[#F4FAFD] border-l-4 rtl:border-l-0 rtl:border-r-4 border-[#0A72C4] rounded-r-2xl rtl:rounded-r-none rtl:rounded-l-2xl p-6 mt-2">
@@ -357,7 +369,7 @@ export default function AboutPage() {
 
           <div className="w-full max-w-4xl mx-auto rounded-[24px] overflow-hidden shadow-2xl border border-[#BFDCF0] bg-black aspect-video relative">
             <iframe 
-              src="https://www.youtube.com/embed/7G5rrlNDH08?rel=0" 
+              src="https://www.youtube.com/embed/GXoAPa4FgbM?rel=0" 
               title="ZabonEx Platform Video" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowFullScreen
