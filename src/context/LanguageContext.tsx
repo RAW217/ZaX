@@ -358,7 +358,7 @@ export const translations: Record<Language, Translations> = {
     },
     aboutPage: {
       badge: "About ZabonEx",
-      heroTitle: "Sell More.\nWaste Less.\nGrow Smarter.",
+      heroTitle: "Sell More.\nWaste Less.",
       heroSubtitle: "ZabonEx turns F&B business data into accurate forecasts, practical insights, and smarter decisions that improve sales, reduce waste, and strengthen operational performance.",
       stat1Num: "35%",
       stat1Label: "products distribution and stocks availability Uplift",
@@ -596,7 +596,7 @@ export const translations: Record<Language, Translations> = {
     },
     aboutPage: {
       badge: "عن زبون إكس • ZabonEx",
-      heroTitle: "بع أكثر.\nأهدر أقل.\nوانمُ بذكاء.",
+      heroTitle: "بع أكثر.\nأهدر أقل.",
       heroSubtitle: "يحوّل زبون إكس بيانات أعمالك إلى تنبؤات دقيقة، ورؤى عملية، وقرارات أذكى تعزز مبيعاتك، وتقلل الهدر، وترفع الكفاءة التشغيلية.",
       stat1Num: "35%",
       stat1Label: "ارتفاع توزيع المنتجات وتوفر المخزون",

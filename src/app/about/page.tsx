@@ -230,15 +230,14 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
           
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white shadow-sm px-5 py-2 rounded-full border border-[#D2E9F9] mb-8">
-            <Sparkles className="w-4 h-4 text-[#1A8FD4]" />
-            <span className="text-[#0D1527] text-sm font-display font-medium">
+          <div className="inline-flex items-center justify-center bg-[#B3C5EA]/90 backdrop-blur-sm px-6 py-2.5 rounded-full mb-8 shadow-sm">
+            <span className="text-[#2B3990] text-sm font-display font-semibold tracking-wide">
               {t.aboutPage.badge}
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-white text-[44px] sm:text-[60px] md:text-[72px] font-medium leading-[1.08] mb-6 whitespace-pre-line max-w-4xl tracking-tight">
+          <h1 className="text-white text-center font-display text-[45px] sm:text-[60px] md:text-[75px] font-medium leading-[1.1] mb-6 whitespace-pre-line max-w-4xl">
             {t.aboutPage.heroTitle}
           </h1>
 
