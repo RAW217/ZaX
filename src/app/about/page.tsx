@@ -230,8 +230,8 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
           
           {/* Badge */}
-          <div className="inline-flex items-center justify-center bg-[#B3C5EA]/90 backdrop-blur-sm px-6 py-2.5 rounded-full mb-8 shadow-sm">
-            <span className="text-[#2B3990] text-sm font-display font-semibold tracking-wide">
+          <div className="inline-flex items-center justify-center bg-[#B3C5EA] px-8 py-3.5 rounded-full mb-8 shadow-md">
+            <span className="text-[#0A72C4] text-base sm:text-lg font-display font-bold tracking-wide">
               {t.aboutPage.badge}
             </span>
           </div>
@@ -289,7 +289,7 @@ export default function AboutPage() {
             
             {/* Story Text */}
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <h2 className="text-[#17679E] text-2xl sm:text-3xl md:text-[45px] leading-[1.25] md:leading-[1.2] font-display font-medium tracking-tight">
+              <h2 className="text-[#0C3D5E] text-2xl sm:text-3xl md:text-[45px] leading-[1.25] md:leading-[1.2] font-display font-medium tracking-tight">
                 {t.aboutPage.storyTitle}
               </h2>
 
@@ -336,12 +336,7 @@ export default function AboutPage() {
       {/* ================= 3. YOUTUBE VIDEO SECTION ================= */}
       <section className="py-20 bg-[#fafafa] border-t border-[#D2E9F9]">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <div className="inline-block bg-[#4249a5]/10 border border-[#4249a5]/20 rounded-[30px] px-6 py-2 mb-4">
-            <span className="text-[#17679E] font-display text-sm font-semibold tracking-wide uppercase">
-              {lang === "ar" ? "فيديو منصة زبون إكس" : "ZabonEx Platform Video"}
-            </span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl text-[#0C3D5E] font-medium leading-tight mb-10 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0C3D5E] font-medium leading-tight mb-10 max-w-4xl mx-auto">
             {lang === "ar" ? "تعرّف على منصة زبون إكس وكيف تعمل في الميدان" : "See how ZabonEx transforms inventory and demand forecasting"}
           </h2>
 
@@ -354,231 +349,6 @@ export default function AboutPage() {
               className="w-full h-full border-0 absolute inset-0"
             ></iframe>
           </div>
-        </div>
-      </section>
-
-      {/* ================= 3. OUR PURPOSE ================= */}
-      <section className="py-20 bg-[#F4FAFD] border-y border-[#D2E9F9]/70">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          
-          <div className="inline-flex items-center gap-2 bg-[#E4F4EC] border border-[#B7E4CE] rounded-full px-4 py-1.5 mb-6">
-            <span className="text-[#12855F] font-display text-xs font-semibold uppercase tracking-wider">
-              {t.aboutPage.purposeBadge}
-            </span>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#0C3D5E] font-medium leading-tight mb-8">
-            {t.aboutPage.purposeTitle}
-          </h2>
-
-          <p className="text-lg sm:text-xl text-[#0C3D5E]/80 leading-relaxed font-light max-w-3xl mx-auto mb-10">
-            {t.aboutPage.purposeDesc}
-          </p>
-
-          <div className="bg-white rounded-[24px] p-8 sm:p-10 border border-[#BFDCF0] shadow-sm max-w-3xl mx-auto">
-            <p className="text-xl sm:text-2xl text-[#0A72C4] font-display font-medium leading-snug">
-              &ldquo;{t.aboutPage.purposeQuote}&rdquo;
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= 4. REGIONAL ISSUES IN FOOD INDUSTRY ================= */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#FCF1DC] border border-[#F5DCA6] rounded-full px-4 py-1.5 mb-4">
-              <span className="text-[#B77708] font-display text-xs font-semibold uppercase tracking-wider">
-                {t.aboutPage.issuesBadge}
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#0C3D5E] font-medium mb-6">
-              {t.aboutPage.issuesTitle}
-            </h2>
-            <p className="text-[#0C3D5E]/80 text-base sm:text-lg leading-relaxed font-light">
-              {t.aboutPage.issuesDesc}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {issues.map((item, idx) => {
-              const IconComp = item.icon;
-              return (
-                <div 
-                  key={idx}
-                  className="bg-[#F4FAFD] border border-[#D2E9F9] rounded-[24px] p-8 flex gap-6 items-start hover:shadow-md transition-all group"
-                >
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 border ${item.color}`}>
-                    <IconComp className="w-7 h-7" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-display font-bold text-[#0C3D5E] mb-2 group-hover:text-[#0A72C4] transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-base text-[#0C3D5E]/75 leading-relaxed font-light">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= 5. HOW WE CREATE IMPACT ================= */}
-      <section className="py-24 bg-[#F4FAFD] border-t border-[#D2E9F9]">
-        <div className="max-w-6xl mx-auto px-6">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 bg-white border border-[#BFDCF0] rounded-full px-4 py-1.5 mb-4 shadow-sm">
-              <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
-                {t.aboutPage.impactBadge}
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#0C3D5E] font-medium mb-6">
-              {t.aboutPage.impactTitle}
-            </h2>
-            <p className="text-[#0C3D5E]/80 text-base sm:text-lg leading-relaxed font-light">
-              {t.aboutPage.impactDesc}
-            </p>
-          </div>
-
-          {/* 5-step Workflow */}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-16">
-            {steps.map((st, idx) => {
-              const IconComponent = st.icon;
-              return (
-                <div 
-                  key={idx}
-                  className="bg-white rounded-[22px] p-6 border border-[#BFDCF0] shadow-sm flex flex-col justify-between relative group hover:border-[#0A72C4] hover:-translate-y-1 transition-all"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-2xl font-display font-bold text-[#0A72C4]/40 group-hover:text-[#0A72C4] transition-colors">
-                        {st.num}
-                      </span>
-                      <div className="w-10 h-10 rounded-xl bg-[#F4FAFD] flex items-center justify-center text-[#0A72C4]">
-                        <IconComponent className="w-5 h-5" />
-                      </div>
-                    </div>
-                    <h4 className="text-lg font-display font-semibold text-[#0C3D5E] mb-2 leading-snug">
-                      {st.title}
-                    </h4>
-                    <p className="text-sm text-[#0C3D5E]/75 leading-relaxed font-light">
-                      {st.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Outcomes Grid */}
-          <div className="bg-white rounded-[28px] p-8 sm:p-12 border border-[#BFDCF0] shadow-sm">
-            <h3 className="text-2xl sm:text-3xl font-display font-medium text-[#0C3D5E] text-center mb-10">
-              {t.aboutPage.outcomesTitle}
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {outcomes.map((outcome, idx) => (
-                <div key={idx} className="flex items-start gap-3.5 bg-[#F4FAFD] rounded-xl p-4 border border-[#D2E9F9]">
-                  <CheckCircle2 className="w-5 h-5 text-[#0A72C4] shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-[#0C3D5E] font-medium leading-snug">
-                    {outcome}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= 6. BROADER SERVICES & SECTORS ================= */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#F4FAFD] border border-[#BFDCF0] rounded-full px-4 py-1.5 mb-4">
-              <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
-                {t.aboutPage.sectorsBadge}
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#0C3D5E] font-medium mb-6">
-              {t.aboutPage.sectorsTitle}
-            </h2>
-            <p className="text-[#0C3D5E]/80 text-base sm:text-lg leading-relaxed font-light">
-              {t.aboutPage.sectorsDesc}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sectors.map((sec, idx) => {
-              const SecIcon = sec.icon;
-              return (
-                <div 
-                  key={idx}
-                  className="bg-[#F4FAFD] border border-[#D2E9F9] rounded-[24px] p-8 hover:bg-white hover:border-[#0A72C4] hover:shadow-lg transition-all group flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="w-14 h-14 rounded-2xl bg-white border border-[#D2E9F9] flex items-center justify-center text-[#0A72C4] mb-6 group-hover:bg-[#0A72C4] group-hover:text-white transition-colors">
-                      <SecIcon className="w-7 h-7" />
-                    </div>
-                    <h3 className="text-xl font-display font-semibold text-[#0C3D5E] mb-3">
-                      {sec.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-[#0C3D5E]/75 leading-relaxed font-light">
-                      {sec.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
-
-      {/* ================= 7. DELIVERY APPROACH ================= */}
-      <section className="py-24 bg-[#F4FAFD] border-t border-[#D2E9F9]">
-        <div className="max-w-6xl mx-auto px-6">
-          
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 bg-white border border-[#BFDCF0] rounded-full px-4 py-1.5 mb-4 shadow-sm">
-              <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
-                {t.aboutPage.deliveryBadge}
-              </span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#0C3D5E] font-medium mb-6">
-              {t.aboutPage.deliveryTitle}
-            </h2>
-            <p className="text-[#0C3D5E]/80 text-base sm:text-lg leading-relaxed font-light">
-              {t.aboutPage.deliveryDesc}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {deliverySteps.map((deliv, idx) => (
-              <div 
-                key={idx}
-                className="bg-white rounded-[24px] p-8 border border-[#BFDCF0] shadow-sm relative overflow-hidden group hover:border-[#0A72C4] transition-all"
-              >
-                <span className="text-3xl font-display font-bold text-[#0A72C4]/20 group-hover:text-[#0A72C4]/40 transition-colors block mb-4">
-                  {deliv.num}
-                </span>
-                <h4 className="text-xl font-display font-semibold text-[#0C3D5E] mb-2 leading-snug">
-                  {deliv.title}
-                </h4>
-                <p className="text-sm sm:text-base text-[#0C3D5E]/75 leading-relaxed font-light">
-                  {deliv.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
         </div>
       </section>
 
