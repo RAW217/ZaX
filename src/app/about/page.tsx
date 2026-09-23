@@ -3,26 +3,26 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import { 
-  Sparkles, 
-  ShieldCheck, 
-  Building2, 
-  AlertTriangle, 
-  TrendingDown, 
-  Layers, 
-  Database, 
-  ArrowRight, 
-  CheckCircle2, 
-  ShoppingBag, 
-  Factory, 
-  Truck, 
-  Radio, 
-  Zap, 
-  HeartPulse, 
-  Cpu, 
-  LineChart, 
-  Users, 
-  Mail, 
+import {
+  Sparkles,
+  ShieldCheck,
+  Building2,
+  AlertTriangle,
+  TrendingDown,
+  Layers,
+  Database,
+  ArrowRight,
+  CheckCircle2,
+  ShoppingBag,
+  Factory,
+  Truck,
+  Radio,
+  Zap,
+  HeartPulse,
+  Cpu,
+  LineChart,
+  Users,
+  Mail,
   Linkedin,
   Instagram,
   Facebook,
@@ -228,10 +228,10 @@ export default function AboutPage() {
       {/* ================= 1. HERO SECTION ================= */}
       <section className="hero-gradient pt-36 pb-20 md:pb-28 px-6 relative overflow-hidden">
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
-          
+
           {/* Badge */}
           <div className="inline-flex items-center justify-center bg-[#B3C5EA] px-8 py-3.5 rounded-full mb-8 shadow-md">
-            <span className="text-[#0A72C4] text-base sm:text-lg font-display font-bold tracking-wide">
+            <span className="text-[#17679E] text-base sm:text-lg font-display font-extrabold tracking-wide">
               {t.aboutPage.badge}
             </span>
           </div>
@@ -286,15 +286,15 @@ export default function AboutPage() {
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Story Text */}
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <h2 className="text-[#0C3D5E] text-2xl sm:text-3xl md:text-[45px] leading-[1.25] md:leading-[1.2] font-display font-medium tracking-tight">
+              <h2 className="text-[#0C3D5E] text-2xl sm:text-3xl md:text-[40px] lg:text-[42px] leading-[1.2] font-display font-medium tracking-tight whitespace-normal lg:whitespace-nowrap">
                 {t.aboutPage.storyTitle}
               </h2>
 
               {t.aboutPage.storySubtitle && (
-                <div className="text-[#0A72C4] font-display text-base font-medium leading-relaxed">
+                <div className="text-[#0A72C4] font-display text-lg sm:text-xl md:text-[22px] font-medium leading-relaxed">
                   {t.aboutPage.storySubtitle}
                 </div>
               )}
@@ -321,10 +321,10 @@ export default function AboutPage() {
             {/* Visual Column */}
             <div className="lg:col-span-5 flex flex-col gap-6">
               <div className="rounded-[20px] overflow-hidden relative h-[360px] sm:h-[440px] shadow-md border border-[#D2E9F9]">
-                <Image 
-                  src="/about/warehouse_worker.jpg" 
-                  alt="ZabonEx inventory operations" 
-                  fill 
+                <Image
+                  src="/about/warehouse_worker.jpg"
+                  alt="ZabonEx inventory operations"
+                  fill
                   className="object-cover"
                 />
               </div>
@@ -336,15 +336,15 @@ export default function AboutPage() {
       {/* ================= 3. YOUTUBE VIDEO SECTION ================= */}
       <section className="py-20 bg-[#fafafa] border-t border-[#D2E9F9]">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#0C3D5E] font-medium leading-tight mb-10 max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-[#17679E] font-medium leading-tight mb-10 max-w-4xl mx-auto">
             {lang === "ar" ? "تعرّف على منصة زبون إكس وكيف تعمل في الميدان" : "See how ZabonEx transforms inventory and demand forecasting"}
           </h2>
 
           <div className="w-full max-w-4xl mx-auto rounded-[24px] overflow-hidden shadow-2xl border border-[#BFDCF0] bg-black aspect-video relative">
-            <iframe 
-              src="https://www.youtube.com/embed/GXoAPa4FgbM?rel=0" 
-              title="ZabonEx Platform Video" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            <iframe
+              src="https://www.youtube.com/embed/GXoAPa4FgbM?rel=0"
+              title="ZabonEx Platform Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="w-full h-full border-0 absolute inset-0"
             ></iframe>
@@ -352,10 +352,54 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ================= CLIENTS SECTION ================= */}
+      {/* 
+        =============================================================================
+        تعديل حجوم شعارات العملاء (CLIENTS LOGOS SIZES):
+        يمكنك تعديل الحجم مباشرة عن طريق تغيير قيمة scale (مثلاً: 1.0, 1.2, 0.95, إلخ)
+        =============================================================================
+      */}
+      <section className="py-20 bg-white border-t border-[#D2E9F9]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-[#F4FAFD] border border-[#BFDCF0] rounded-full px-5 py-1.5 mb-4">
+              <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
+                {lang === "ar" ? "عملاؤنا" : "Clients"}
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl text-[#0C3D5E] font-medium font-display">
+              {lang === "ar" ? "شركاء النجاح والعملاء" : "Trusted by Industry Leaders"}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
+            {[
+              { src: "/download (2).png", alt: "Client Logo 1", size: 60, multiply: false },
+              { src: "/images (3).jpg", alt: "Client Logo 2", size: 75, multiply: true },
+              { src: "/DSD.png", alt: "Client Logo 3 (DSD)", size: 70, multiply: false },
+              { src: "/Mazoon-logo (1).png", alt: "Mazoon Dairy Logo", size: 65, multiply: false },
+            ].map((client, idx) => (
+              <div key={idx} className="w-full h-32 bg-[#F4FAFD] rounded-2xl p-4 border border-[#BFDCF0]/50 flex items-center justify-center hover:shadow-md transition-all hover:bg-white group overflow-hidden">
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src={client.src}
+                    alt={client.alt}
+                    width={240}
+                    height={120}
+                    style={{ height: `${client.size}px`, width: 'auto', maxHeight: '90%', maxWidth: '90%' }}
+                    className={`object-contain group-hover:scale-105 transition-transform duration-300 ${client.multiply ? 'mix-blend-multiply' : ''}`}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ================= 8. LEADERSHIP TEAM ================= */}
       <section className="py-24 hero-gradient text-white">
         <div className="max-w-6xl mx-auto px-6">
-          
+
           <div className="flex flex-col items-center text-center mb-16">
             <div className="inline-block bg-white/15 backdrop-blur border border-white/25 rounded-full px-5 py-1.5 mb-4">
               <span className="text-[#D2E9F9] font-display text-sm font-semibold tracking-wide uppercase">
@@ -373,16 +417,114 @@ export default function AboutPage() {
           {/* 4 Leaders Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {team.map((member, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white rounded-[24px] overflow-hidden shadow-xl border border-white/30 text-[#0C3D5E] flex flex-col group hover:-translate-y-1.5 transition-transform duration-300"
               >
                 <div className="h-72 relative overflow-hidden bg-[#D2E9F9]/40">
-                  <Image 
-                    src={member.image} 
-                    alt={member.name} 
-                    fill 
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between bg-white">
+                  <div>
+                    <h4 className="text-xl font-display font-bold text-[#0C3D5E] mb-1">
+                      {member.name}
+                    </h4>
+                    <div className="text-xs sm:text-sm font-semibold text-[#0A72C4] mb-3 leading-snug">
+                      {member.role}
+                    </div>
+                    <p className="text-xs sm:text-sm text-wl-textColor leading-relaxed font-light">
+                      {member.bio}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ================= PARTNERS SECTION ================= */}
+      {/* 
+        =============================================================================
+        تعديل حجوم شعارات الشركاء (PARTNERS LOGOS SIZES):
+        يمكنك تعديل الحجم مباشرة عن طريق تغيير قيمة scale (مثلاً: 1.0, 1.25, 0.85, إلخ)
+        =============================================================================
+      */}
+      <section className="py-20 bg-[#F4FAFD] border-t border-[#D2E9F9]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-white border border-[#BFDCF0] rounded-full px-5 py-1.5 mb-4 shadow-sm">
+              <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
+                {lang === "ar" ? "شركاؤنا" : "Partners"}
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl text-[#0C3D5E] font-medium font-display">
+              {lang === "ar" ? "شركاء التكنولوجيا والحلول" : "Our Strategic Partners"}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
+            {[
+              { src: "/aws-logo.svg", alt: "AWS Logo", size: 50, multiply: false },
+              { src: "/images (2).png", alt: "Partner Logo 2", size: 200, multiply: true },
+              { src: "/images (3).png", alt: "Partner Logo 3", size: 500, multiply: true },
+              { src: "/images (1).png", alt: "Partner Logo 4 (Omantel)", size: 300, multiply: true },
+            ].map((partner, idx) => (
+              <div key={idx} className="w-full h-32 bg-white rounded-2xl p-4 border border-[#BFDCF0]/60 flex items-center justify-center hover:shadow-md transition-all group overflow-hidden">
+                <div className="relative w-full h-full flex items-center justify-center">
+                  <Image
+                    src={partner.src}
+                    alt={partner.alt}
+                    width={240}
+                    height={120}
+                    style={{ height: `${partner.size}px`, width: 'auto', maxHeight: '90%', maxWidth: '90%' }}
+                    className={`object-contain group-hover:scale-105 transition-transform duration-300 ${partner.multiply ? 'mix-blend-multiply' : ''}`}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= 8. LEADERSHIP TEAM ================= */}
+      <section className="py-24 hero-gradient text-white">
+        <div className="max-w-6xl mx-auto px-6">
+
+          <div className="flex flex-col items-center text-center mb-16">
+            <div className="inline-block bg-white/15 backdrop-blur border border-white/25 rounded-full px-5 py-1.5 mb-4">
+              <span className="text-[#D2E9F9] font-display text-sm font-semibold tracking-wide uppercase">
+                {t.aboutPage.leadershipBadge}
+              </span>
+            </div>
+            <h2 className="text-white text-3xl sm:text-5xl font-medium max-w-2xl mb-4">
+              {t.aboutPage.leadershipTitle}
+            </h2>
+            <p className="text-white/80 text-base sm:text-lg max-w-3xl leading-relaxed font-light">
+              {t.aboutPage.leadershipDesc}
+            </p>
+          </div>
+
+          {/* 4 Leaders Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {team.map((member, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-[24px] overflow-hidden shadow-xl border border-white/30 text-[#0C3D5E] flex flex-col group hover:-translate-y-1.5 transition-transform duration-300"
+              >
+                <div className="h-72 relative overflow-hidden bg-[#D2E9F9]/40">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
@@ -406,65 +548,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ================= 9. OUR ECOSYSTEM & PARTNERS ================= */}
-      <section className="py-24 bg-[#F4FAFD]">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          
-          <div className="inline-block bg-[#E4F4EC] border border-[#B7E4CE] rounded-full px-5 py-1.5 mb-4">
-            <span className="text-[#12855F] font-display text-sm font-semibold tracking-wide uppercase">
-              {t.aboutPage.ecosystemBadge}
-            </span>
-          </div>
-
-          <h2 className="text-[#0C3D5E] text-3xl sm:text-4xl font-medium mb-6 max-w-2xl mx-auto">
-            {t.aboutPage.ecosystemTitle}
-          </h2>
-
-          <p className="text-[#0C3D5E]/80 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed font-light mb-16">
-            {t.aboutPage.ecosystemDesc}
-          </p>
-
-          {/* Clients Sub-heading */}
-          <div className="mb-12">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-[#4E8CB8] font-display mb-6">
-              {t.aboutPage.clientsBadge}
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-              {clients.map((client, idx) => (
-                <div 
-                  key={idx}
-                  className="bg-white hover:bg-[#D2E9F9]/40 transition-colors border border-[#BFDCF0]/60 rounded-[18px] p-6 flex items-center justify-center min-h-[85px] shadow-sm"
-                >
-                  <span className="text-[#0C3D5E] font-display font-semibold text-base sm:text-lg">
-                    {client}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Partners Sub-heading */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-[#4E8CB8] font-display mb-6">
-              {t.aboutPage.partnersBadge}
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
-              {partners.map((partner, idx) => (
-                <div 
-                  key={idx}
-                  className="bg-white/80 border border-[#BFDCF0]/40 rounded-[18px] p-6 flex items-center justify-center min-h-[85px] shadow-sm"
-                >
-                  <span className="text-[#17679E] font-display font-medium text-sm sm:text-base">
-                    {partner}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       {/* ================= 10. UPSELL CALL TO ACTION (Exact Main Page Upsell) ================= */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -475,8 +558,8 @@ export default function AboutPage() {
             <p className="text-[#0C3D5E] text-base sm:text-lg md:text-xl font-normal max-w-3xl mb-8">
               {t.contact.upsellSubtitle}
             </p>
-            <a 
-              href="/#contact" 
+            <a
+              href="/#contact"
               className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white whitespace-nowrap"
             >
               {t.contact.upsellCta}
@@ -494,7 +577,7 @@ export default function AboutPage() {
                 ZabonEx
               </span>
             </div>
-            
+
             <div className="flex flex-col md:text-right gap-3">
               <a href="/#home" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.home}</a>
               <a href="/about" className="text-white hover:text-white/80 font-display text-base transition-colors">{t.contact.about}</a>
@@ -531,7 +614,7 @@ export default function AboutPage() {
                 <Mail className="w-5 h-5" />
               </a>
             </div>
-            
+
             <p className="text-white/90 text-sm">
               &copy; {new Date().getFullYear()} ZabonEx. All rights reserved.
             </p>
