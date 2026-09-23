@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { name, email, message } = body;
+    const { name, email, phone, message } = body;
 
     // Validate fields
     if (!name || !email || !message) {
@@ -46,6 +46,12 @@ export async function POST(req: Request) {
                 <td style="padding: 8px 0; font-weight: 600; color: #0C3D5E; vertical-align: top;">Email:</td>
                 <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #0A72C4; text-decoration: none; font-weight: 500;">${email}</a></td>
               </tr>
+              ${phone ? `
+              <tr>
+                <td style="padding: 8px 0; font-weight: 600; color: #0C3D5E; vertical-align: top;">Phone:</td>
+                <td style="padding: 8px 0; color: #1E293B;"><a href="tel:${phone}" style="color: #0A72C4; text-decoration: none; font-weight: 500;">${phone}</a></td>
+              </tr>
+              ` : ''}
               <tr>
                 <td style="padding: 8px 0; font-weight: 600; color: #0C3D5E; vertical-align: top;">Date:</td>
                 <td style="padding: 8px 0; color: #64748B;">${new Date().toLocaleString()}</td>

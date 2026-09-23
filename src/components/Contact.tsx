@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function Contact() {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -23,6 +23,7 @@ export default function Contact() {
         body: JSON.stringify({
           name: formData.name.trim(),
           email: formData.email.trim(),
+          phone: formData.phone.trim(),
           message: formData.message.trim(),
         })
       });
@@ -30,7 +31,7 @@ export default function Contact() {
       const json = await res.json();
       if (res.ok && json.success) {
         setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", phone: "", message: "" });
         setTimeout(() => setStatus("idle"), 6000);
       } else {
         setStatus("error");
@@ -123,6 +124,18 @@ export default function Contact() {
                     placeholder={t.contact.emailPlaceholder}
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-display text-[#0C3D5E] mb-2 font-medium">{t.contact.phoneNumber}</label>
+                  <input 
+                    type="tel" 
+                    id="phone"
+                    className="w-full px-4 py-3 rounded-xl border border-[#BFDCF0] focus:outline-none focus:border-[#0A72C4] focus:ring-1 focus:ring-[#0A72C4] transition-colors bg-[#F4FAFD] focus:bg-white text-[#0C3D5E] dir-ltr"
+                    placeholder={t.contact.phonePlaceholder}
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   />
                 </div>
                 

@@ -230,9 +230,9 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center relative z-10">
           
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-5 py-2 rounded-full border border-white/20 mb-8">
-            <Sparkles className="w-4 h-4 text-[#D2E9F9]" />
-            <span className="text-white text-sm font-display font-medium">
+          <div className="inline-flex items-center gap-2 bg-white shadow-sm px-5 py-2 rounded-full border border-[#D2E9F9] mb-8">
+            <Sparkles className="w-4 h-4 text-[#1A8FD4]" />
+            <span className="text-[#0D1527] text-sm font-display font-medium">
               {t.aboutPage.badge}
             </span>
           </div>

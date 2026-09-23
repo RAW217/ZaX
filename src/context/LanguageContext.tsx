@@ -103,6 +103,8 @@ export interface Translations {
     namePlaceholder: string;
     emailAddress: string;
     emailPlaceholder: string;
+    phoneNumber: string;
+    phonePlaceholder: string;
     yourMessage: string;
     messagePlaceholder: string;
     sending: string;
@@ -341,6 +343,8 @@ export const translations: Record<Language, Translations> = {
       namePlaceholder: "John Doe",
       emailAddress: "Email Address",
       emailPlaceholder: "john@company.com",
+      phoneNumber: "Phone Number",
+      phonePlaceholder: "+968 9123 4567",
       yourMessage: "Your Message",
       messagePlaceholder: "Tell us about your needs...",
       sending: "Sending...",
@@ -355,12 +359,12 @@ export const translations: Record<Language, Translations> = {
     aboutPage: {
       badge: "About ZabonEx",
       heroTitle: "Sell More.\nWaste Less.\nGrow Smarter.",
-      heroSubtitle: "ZabonEx turns business data into accurate forecasts, practical insights, and smarter decisions that improve sales, reduce waste, and strengthen operational performance.",
+      heroSubtitle: "ZabonEx turns F&B business data into accurate forecasts, practical insights, and smarter decisions that improve sales, reduce waste, and strengthen operational performance.",
       stat1Num: "35%",
-      stat1Label: "Average Profit Margin Uplift",
+      stat1Label: "products distribution and stocks availability Uplift",
       stat2Num: "50%",
       stat2Label: "Food Waste Reduction",
-      stat3Num: "640+",
+      stat3Num: "5000+",
       stat3Label: "Connected Stores & Outlets",
       storyBadge: "About Us",
       storyTitle: "Turning Data into Business Value",
@@ -577,6 +581,8 @@ export const translations: Record<Language, Translations> = {
       namePlaceholder: "محمد أحمد",
       emailAddress: "البريد الإلكتروني",
       emailPlaceholder: "name@company.com",
+      phoneNumber: "رقم الهاتف",
+      phonePlaceholder: "+968 9123 4567",
       yourMessage: "رسالتك",
       messagePlaceholder: "أخبرنا عن احتياجات عملك...",
       sending: "جاري الإرسال...",
@@ -593,10 +599,10 @@ export const translations: Record<Language, Translations> = {
       heroTitle: "بع أكثر.\nأهدر أقل.\nوانمُ بذكاء.",
       heroSubtitle: "يحوّل زبون إكس بيانات أعمالك إلى تنبؤات دقيقة، ورؤى عملية، وقرارات أذكى تعزز مبيعاتك، وتقلل الهدر، وترفع الكفاءة التشغيلية.",
       stat1Num: "35%",
-      stat1Label: "نمو متوسط هوامش الربح",
+      stat1Label: "ارتفاع توزيع المنتجات وتوفر المخزون",
       stat2Num: "50%",
       stat2Label: "انخفاض في هدر الأغذية والمخزون",
-      stat3Num: "640+",
+      stat3Num: "5000+",
       stat3Label: "متجر ومنفذ بيع متصل بالمنصة",
       storyBadge: "من نحن",
       storyTitle: "تحويل البيانات إلى قيمة حقيقية وقرارات واثقة",
