@@ -472,10 +472,10 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
             {[
-              { src: "/aws-logo.svg", alt: "AWS Logo", size: 50, multiply: false },
+              { src: "/aws-logo.svg", alt: "AWS Logo", size: 40, multiply: false },
               { src: "/images (2).png", alt: "Partner Logo 2", size: 200, multiply: true },
               { src: "/images (3).png", alt: "Partner Logo 3", size: 500, multiply: true },
-              { src: "/images (1).png", alt: "Partner Logo 4 (Omantel)", size: 300, multiply: true },
+              { src: "/images (1).png", alt: "Partner Logo 4 (Omantel)", size: 400, multiply: true },
             ].map((partner, idx) => (
               <div key={idx} className="w-full h-32 bg-white rounded-2xl p-4 border border-[#BFDCF0]/60 flex items-center justify-center hover:shadow-md transition-all group overflow-hidden">
                 <div className="relative w-full h-full flex items-center justify-center">

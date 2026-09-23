@@ -241,76 +241,105 @@ export default function Solution() {
                 {t.solution.markdownsDesc}
               </p>
 
-              <div className="relative flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 lg:gap-4 w-full py-4 z-20">
-                {/* Step 1: Scan product */}
-                <div className="bg-[#D2E9F9]/60 backdrop-blur-md rounded-[50px] w-[130px] sm:w-[138px] h-[210px] sm:h-[220px] flex flex-col items-center justify-center p-3 relative z-10 shadow-sm border-2 border-white">
-                  <svg width="38" height="38" viewBox="0 0 32 32" fill="none" stroke="#0A72C4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="mb-3">
-                    <path d="M8 7h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2z" />
-                    <path d="M12 16v7l-2 5h7l2-5v-7" />
-                    <line x1="12" y1="11" x2="20" y2="11" strokeWidth="2" />
-                    <line x1="5" y1="21" x2="3" y2="23" strokeWidth="1.5" />
-                    <line x1="8" y1="23" x2="6" y2="25" strokeWidth="1.5" />
+              <div className="relative flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 lg:gap-3.5 w-full py-4 z-20">
+                {/* Step 1: Select seasons */}
+                <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#2B2D38" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 mb-2">
+                    {/* Checkbox Left */}
+                    <rect x="14" y="16" width="28" height="28" rx="4" />
+                    <polyline points="21,30 27,36 36,24" />
+                    {/* Checkbox Right */}
+                    <rect x="52" y="16" width="28" height="28" rx="4" />
+                    {/* Clicking Hand */}
+                    <path d="M30 46 V28 a5 5 0 0 1 10 0 v20" />
+                    <path d="M40 38 a4 4 0 0 1 8 0 v10" />
+                    <path d="M48 41 a4 4 0 0 1 8 0 v9" />
+                    <path d="M56 46 a4 4 0 0 1 8 0 v14 c0 15 -14 20 -22 20 c-10 0 -16 -6 -20 -14 l-10 -12 a5 5 0 0 1 8 -6 l6 8" />
                   </svg>
-                  <div className="font-display text-[#0C3D5E] text-center font-medium text-sm sm:text-base leading-tight">{t.solution.scanProduct}</div>
+                  <div className="font-display text-[#2B2D38] text-center font-bold text-sm sm:text-base leading-tight max-w-[110px]">{t.solution.selectSeasons}</div>
                 </div>
 
-                {/* Arrow */}
-                <div className="hidden sm:block relative z-10 px-1">
-                  <svg width="10" height="48" viewBox="0 0 10 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L10 24L0 48Z" fill="#BFDCF0" />
-                  </svg>
-                </div>
-
-                {/* Step 2: Enter quantity and expiration */}
-                <div className="bg-[#D2E9F9]/60 backdrop-blur-md rounded-[50px] w-[130px] sm:w-[138px] h-[210px] sm:h-[220px] flex flex-col items-center justify-center p-3 relative z-10 shadow-sm border-2 border-white">
-                  <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#0A72C4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="mb-3">
-                    <rect x="5" y="2" width="14" height="20" rx="3" />
-                    <line x1="12" y1="18" x2="12.01" y2="18" strokeWidth="2.5" />
-                    <path d="M9 7h6M9 11h4" />
-                  </svg>
-                  <div className="font-display text-[#0C3D5E] text-center font-medium text-xs sm:text-sm leading-tight">{t.solution.enterQtyExp}</div>
-                </div>
-
-                {/* Arrow */}
-                <div className="hidden sm:block relative z-10 px-1">
-                  <svg width="10" height="48" viewBox="0 0 10 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L10 24L0 48Z" fill="#BFDCF0" />
+                {/* Arrow Connector */}
+                <div className="hidden sm:block relative z-10 px-0.5">
+                  <svg width="14" height="42" viewBox="0 0 14 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L14 21L0 42Z" fill="#5C94ED" />
                   </svg>
                 </div>
 
-                {/* Step 3: ZabonEx AI with green sparkles */}
-                <div className="bg-[#D2E9F9]/60 backdrop-blur-md rounded-[50px] w-[130px] sm:w-[138px] h-[210px] sm:h-[220px] flex flex-col items-center justify-center p-3 relative z-10 shadow-sm border-2 border-white">
-                  <div className="relative mb-3">
-                    {/* Green Sparkle Top-Right */}
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="#39A97D" className="absolute -top-3 -right-3 animate-pulse">
-                      <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
-                    </svg>
-                    {/* Green Sparkle Bottom-Left */}
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="#39A97D" className="absolute -bottom-2 -left-3 animate-pulse delay-150">
-                      <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
-                    </svg>
-                    <Cpu className="w-10 h-10 text-[#0A72C4]" />
-                  </div>
-                  <div className="font-display text-[#0C3D5E] text-center font-bold text-sm sm:text-base leading-tight">{t.solution.zabonexAi}</div>
+                {/* Step 2: Apply sales buffer */}
+                <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#2B2D38" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 mb-2">
+                    {/* Bar Field */}
+                    <rect x="12" y="32" width="62" height="24" rx="6" />
+                    <line x1="20" y1="44" x2="48" y2="44" />
+                    {/* Check Circle */}
+                    <circle cx="44" cy="22" r="14" fill="#5C94ED" />
+                    <circle cx="44" cy="22" r="14" />
+                    <polyline points="38,22 42,26 50,18" />
+                    {/* Hand Pointer */}
+                    <path d="M58 54 V40 a5 5 0 0 1 10 0 v14" />
+                    <path d="M68 47 a4 4 0 0 1 8 0 v7" />
+                    <path d="M76 50 a4 4 0 0 1 8 0 v8" />
+                    <path d="M84 55 a4 4 0 0 1 6 0 v10 c0 14 -12 18 -18 18 H58 c-8 0 -12 -5 -14 -11 l-4 -8 a4 4 0 0 1 7 -4 l5 7" />
+                  </svg>
+                  <div className="font-display text-[#2B2D38] text-center font-bold text-sm sm:text-base leading-tight max-w-[110px]">{t.solution.applySalesBuffer}</div>
                 </div>
 
-                {/* Arrow */}
-                <div className="hidden sm:block relative z-10 px-1">
-                  <svg width="10" height="48" viewBox="0 0 10 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L10 24L0 48Z" fill="#BFDCF0" />
+                {/* Arrow Connector */}
+                <div className="hidden sm:block relative z-10 px-0.5">
+                  <svg width="14" height="42" viewBox="0 0 14 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L14 21L0 42Z" fill="#5C94ED" />
                   </svg>
                 </div>
 
-                {/* Step 4: Apply sticker */}
-                <div className="bg-[#D2E9F9]/60 backdrop-blur-md rounded-[50px] w-[130px] sm:w-[138px] h-[210px] sm:h-[220px] flex flex-col items-center justify-center p-3 relative z-10 shadow-sm border-2 border-white">
-                  <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#0A72C4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="mb-3">
-                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
-                    <line x1="7" y1="7" x2="7.01" y2="7" strokeWidth="2.5" />
-                    <circle cx="13" cy="11" r="1.5" fill="#0A72C4" />
-                    <circle cx="16" cy="14" r="1.5" fill="#0A72C4" />
-                    <line x1="16" y1="11" x2="13" y2="14" strokeWidth="1.5" />
+                {/* Step 3: Build AI Model */}
+                <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#2B2D38" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 mb-2">
+                    {/* Central Axis */}
+                    <line x1="50" y1="12" x2="50" y2="88" />
+                    {/* Left Side: Gear & Circuits */}
+                    <path d="M42 22 H28 M42 78 H28" />
+                    <path d="M50 32 H34 v12 H22 v12 h12 v12 H50" />
+                    <path d="M22 44 c-8 0 -12 12 -12 12 s4 12 12 12" />
+                    <circle cx="28" cy="22" r="3" fill="#2B2D38" />
+                    <circle cx="28" cy="78" r="3" fill="#2B2D38" />
+                    {/* Right Side: Brain & AI Nodes */}
+                    <path d="M50 20 c14 -6 32 0 32 16 c8 4 10 16 4 24 c8 8 6 20 -4 24 c-8 4 -20 2 -32 -2" />
+                    <line x1="50" y1="36" x2="70" y2="36" />
+                    <line x1="50" y1="64" x2="68" y2="64" />
+                    <circle cx="70" cy="36" r="3" fill="#2B2D38" />
+                    <circle cx="68" cy="64" r="3" fill="#2B2D38" />
                   </svg>
-                  <div className="font-display text-[#0C3D5E] text-center font-medium text-sm sm:text-base leading-tight">{t.solution.applySticker}</div>
+                  <div className="font-display text-[#2B2D38] text-center font-bold text-sm sm:text-base leading-tight max-w-[110px]">{t.solution.buildMlModel}</div>
+                </div>
+
+                {/* Arrow Connector */}
+                <div className="hidden sm:block relative z-10 px-0.5">
+                  <svg width="14" height="42" viewBox="0 0 14 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L14 21L0 42Z" fill="#5C94ED" />
+                  </svg>
+                </div>
+
+                {/* Step 4: View Prediction */}
+                <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#2B2D38" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 mb-2">
+                    {/* Bottom Bar Chart */}
+                    <line x1="10" y1="86" x2="90" y2="86" />
+                    <rect x="18" y="66" width="10" height="20" />
+                    <rect x="34" y="54" width="10" height="32" />
+                    <rect x="50" y="58" width="10" height="28" />
+                    <rect x="66" y="44" width="10" height="42" />
+                    {/* Line Trend */}
+                    <polyline points="14,60 26,52 42,42 60,46 76,28" />
+                    <circle cx="14" cy="60" r="3" fill="#5C94ED" />
+                    <circle cx="26" cy="52" r="3" fill="#5C94ED" />
+                    <circle cx="42" cy="42" r="3" fill="#5C94ED" />
+                    <circle cx="60" cy="46" r="3" fill="#5C94ED" />
+                    {/* Target & Click */}
+                    <circle cx="78" cy="26" r="12" strokeDasharray="2 4" />
+                    <path d="M80 34 l8 14 l-4 1 l4 8 l-4 2 l-4 -8 l-4 3 z" fill="#2B2D38" />
+                  </svg>
+                  <div className="font-display text-[#2B2D38] text-center font-bold text-sm sm:text-base leading-tight max-w-[110px]">{t.solution.viewPrediction}</div>
                 </div>
               </div>
             </div>

@@ -62,6 +62,10 @@ export interface Translations {
     enterQtyExp: string;
     zabonexAi: string;
     applySticker: string;
+    selectSeasons: string;
+    applySalesBuffer: string;
+    buildMlModel: string;
+    viewPrediction: string;
     resultsHeadline: string;
     stat1Pct: string;
     stat1Text: string;
@@ -282,6 +286,10 @@ export const translations: Record<Language, Translations> = {
       enterQtyExp: "Enter quantity & expiration",
       zabonexAi: "ZabonEx AI",
       applySticker: "Apply sticker",
+      selectSeasons: "Select seasons",
+      applySalesBuffer: "Apply sales buffer",
+      buildMlModel: "Build AI Model",
+      viewPrediction: "View Prediction",
       resultsHeadline: "That's it.\nAnd the results are simply transformational.",
       stat1Pct: "50%",
       stat1Text: "Reduction in\nfood waste",
@@ -521,6 +529,10 @@ export const translations: Record<Language, Translations> = {
       enterQtyExp: "إدخال الكمية والصلاحية",
       zabonexAi: "ذكاء زبون إكس",
       applySticker: "طباعة الملصق",
+      selectSeasons: "تحديد المواسم",
+      applySalesBuffer: "إضافة هامش الأمان",
+      buildMlModel: "بناء نموذج الذكاء الاصطناعي",
+      viewPrediction: "عرض التنبؤات",
       resultsHeadline: "هذا كل شيء.\nوالنتائج تحدث تحولاً جذرياً في عملك.",
       stat1Pct: "50%",
       stat1Text: "انخفاض في\nهدر الأغذية",
