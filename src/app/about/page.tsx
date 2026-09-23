@@ -289,12 +289,6 @@ export default function AboutPage() {
             
             {/* Story Text */}
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <div className="inline-flex items-center gap-2 bg-[#F4FAFD] border border-[#BFDCF0] rounded-full px-4 py-1.5 w-fit">
-                <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
-                  {t.aboutPage.storyBadge}
-                </span>
-              </div>
-
               <h2 className="text-[#17679E] text-2xl sm:text-3xl md:text-[45px] leading-[1.25] md:leading-[1.2] font-display font-medium tracking-tight">
                 {t.aboutPage.storyTitle}
               </h2>
@@ -322,17 +316,6 @@ export default function AboutPage() {
                   {t.aboutPage.storyP3}
                 </p>
               )}
-
-              {/* Approach Box */}
-              <div className="bg-[#F4FAFD] border-l-4 rtl:border-l-0 rtl:border-r-4 border-[#0A72C4] rounded-r-2xl rtl:rounded-r-none rtl:rounded-l-2xl p-6 mt-2">
-                <h4 className="text-lg font-display font-semibold text-[#0C3D5E] mb-2 flex items-center gap-2">
-                  <Target className="w-5 h-5 text-[#0A72C4]" />
-                  {t.aboutPage.storyApproachTitle}
-                </h4>
-                <p className="text-[#0C3D5E]/80 text-sm sm:text-base leading-relaxed">
-                  {t.aboutPage.storyApproachDesc}
-                </p>
-              </div>
             </div>
 
             {/* Visual Column */}
@@ -344,11 +327,6 @@ export default function AboutPage() {
                   fill 
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0C3D5E]/70 to-transparent flex items-end p-6">
-                  <div className="text-white text-base font-medium">
-                    {lang === "ar" ? "تمكين فرق العمل في الميدان والمستودعات والمتاجر" : "Empowering frontline teams across stores and warehouses"}
-                  </div>
-                </div>
               </div>
             </div>
           </div>
