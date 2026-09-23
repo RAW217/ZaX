@@ -244,101 +244,70 @@ export default function Solution() {
               <div className="relative flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 lg:gap-3.5 w-full py-4 z-20">
                 {/* Step 1: Select seasons */}
                 <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#2B2D38" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 mb-2">
-                    {/* Checkbox Left */}
-                    <rect x="14" y="16" width="28" height="28" rx="4" />
-                    <polyline points="21,30 27,36 36,24" />
-                    {/* Checkbox Right */}
-                    <rect x="52" y="16" width="28" height="28" rx="4" />
-                    {/* Clicking Hand */}
-                    <path d="M30 46 V28 a5 5 0 0 1 10 0 v20" />
-                    <path d="M40 38 a4 4 0 0 1 8 0 v10" />
-                    <path d="M48 41 a4 4 0 0 1 8 0 v9" />
-                    <path d="M56 46 a4 4 0 0 1 8 0 v14 c0 15 -14 20 -22 20 c-10 0 -16 -6 -20 -14 l-10 -12 a5 5 0 0 1 8 -6 l6 8" />
-                  </svg>
+                  <Image 
+                    src="/step-select-seasons.png" 
+                    alt="Select Seasons" 
+                    width={90} 
+                    height={90} 
+                    className="w-16 h-16 object-contain mb-2" 
+                  />
                   <div className="font-display text-[#2B2D38] text-center font-bold text-sm sm:text-base leading-tight max-w-[110px]">{t.solution.selectSeasons}</div>
                 </div>
 
-                {/* Arrow Connector */}
+                {/* Arrow Connector: Lengthened height without changing width */}
                 <div className="hidden sm:block relative z-10 px-0.5">
-                  <svg width="14" height="42" viewBox="0 0 14 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L14 21L0 42Z" fill="#5C94ED" />
+                  <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
                 </div>
 
                 {/* Step 2: Apply sales buffer */}
                 <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#2B2D38" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 mb-2">
-                    {/* Bar Field */}
-                    <rect x="12" y="32" width="62" height="24" rx="6" />
-                    <line x1="20" y1="44" x2="48" y2="44" />
-                    {/* Check Circle */}
-                    <circle cx="44" cy="22" r="14" fill="#5C94ED" />
-                    <circle cx="44" cy="22" r="14" />
-                    <polyline points="38,22 42,26 50,18" />
-                    {/* Hand Pointer */}
-                    <path d="M58 54 V40 a5 5 0 0 1 10 0 v14" />
-                    <path d="M68 47 a4 4 0 0 1 8 0 v7" />
-                    <path d="M76 50 a4 4 0 0 1 8 0 v8" />
-                    <path d="M84 55 a4 4 0 0 1 6 0 v10 c0 14 -12 18 -18 18 H58 c-8 0 -12 -5 -14 -11 l-4 -8 a4 4 0 0 1 7 -4 l5 7" />
-                  </svg>
+                  <Image 
+                    src="/step-apply-buffer.png" 
+                    alt="Apply Sales Buffer" 
+                    width={90} 
+                    height={90} 
+                    className="w-16 h-16 object-contain mb-2" 
+                  />
                   <div className="font-display text-[#2B2D38] text-center font-bold text-sm sm:text-base leading-tight max-w-[110px]">{t.solution.applySalesBuffer}</div>
                 </div>
 
-                {/* Arrow Connector */}
+                {/* Arrow Connector: Lengthened height without changing width */}
                 <div className="hidden sm:block relative z-10 px-0.5">
-                  <svg width="14" height="42" viewBox="0 0 14 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L14 21L0 42Z" fill="#5C94ED" />
+                  <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
                 </div>
 
                 {/* Step 3: Build AI Model */}
                 <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#2B2D38" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 mb-2">
-                    {/* Central Axis */}
-                    <line x1="50" y1="12" x2="50" y2="88" />
-                    {/* Left Side: Gear & Circuits */}
-                    <path d="M42 22 H28 M42 78 H28" />
-                    <path d="M50 32 H34 v12 H22 v12 h12 v12 H50" />
-                    <path d="M22 44 c-8 0 -12 12 -12 12 s4 12 12 12" />
-                    <circle cx="28" cy="22" r="3" fill="#2B2D38" />
-                    <circle cx="28" cy="78" r="3" fill="#2B2D38" />
-                    {/* Right Side: Brain & AI Nodes */}
-                    <path d="M50 20 c14 -6 32 0 32 16 c8 4 10 16 4 24 c8 8 6 20 -4 24 c-8 4 -20 2 -32 -2" />
-                    <line x1="50" y1="36" x2="70" y2="36" />
-                    <line x1="50" y1="64" x2="68" y2="64" />
-                    <circle cx="70" cy="36" r="3" fill="#2B2D38" />
-                    <circle cx="68" cy="64" r="3" fill="#2B2D38" />
-                  </svg>
+                  <Image 
+                    src="/step-ai-model.png" 
+                    alt="Build AI Model" 
+                    width={90} 
+                    height={90} 
+                    className="w-16 h-16 object-contain mb-2" 
+                  />
                   <div className="font-display text-[#2B2D38] text-center font-bold text-sm sm:text-base leading-tight max-w-[110px]">{t.solution.buildMlModel}</div>
                 </div>
 
-                {/* Arrow Connector */}
+                {/* Arrow Connector: Lengthened height without changing width */}
                 <div className="hidden sm:block relative z-10 px-0.5">
-                  <svg width="14" height="42" viewBox="0 0 14 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0L14 21L0 42Z" fill="#5C94ED" />
+                  <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
                 </div>
 
                 {/* Step 4: View Prediction */}
                 <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="#2B2D38" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-16 h-16 mb-2">
-                    {/* Bottom Bar Chart */}
-                    <line x1="10" y1="86" x2="90" y2="86" />
-                    <rect x="18" y="66" width="10" height="20" />
-                    <rect x="34" y="54" width="10" height="32" />
-                    <rect x="50" y="58" width="10" height="28" />
-                    <rect x="66" y="44" width="10" height="42" />
-                    {/* Line Trend */}
-                    <polyline points="14,60 26,52 42,42 60,46 76,28" />
-                    <circle cx="14" cy="60" r="3" fill="#5C94ED" />
-                    <circle cx="26" cy="52" r="3" fill="#5C94ED" />
-                    <circle cx="42" cy="42" r="3" fill="#5C94ED" />
-                    <circle cx="60" cy="46" r="3" fill="#5C94ED" />
-                    {/* Target & Click */}
-                    <circle cx="78" cy="26" r="12" strokeDasharray="2 4" />
-                    <path d="M80 34 l8 14 l-4 1 l4 8 l-4 2 l-4 -8 l-4 3 z" fill="#2B2D38" />
-                  </svg>
+                  <Image 
+                    src="/step-view-prediction.png" 
+                    alt="View Prediction" 
+                    width={90} 
+                    height={90} 
+                    className="w-16 h-16 object-contain mb-2" 
+                  />
                   <div className="font-display text-[#2B2D38] text-center font-bold text-sm sm:text-base leading-tight max-w-[110px]">{t.solution.viewPrediction}</div>
                 </div>
               </div>

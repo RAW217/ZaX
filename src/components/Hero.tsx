@@ -21,7 +21,7 @@ const ProductCard = ({ name, image, status }: { name: string, image: string, sta
       </div>
       <div className="p-2 md:p-3 text-center bg-white border-t border-gray-50 relative z-20">
         <div className="font-display font-bold text-[#0C3D5E] text-sm md:text-base leading-tight mb-1 md:mb-2">{name}</div>
-        <div className={`font-bold text-[8px] md:text-[10px] uppercase tracking-wide inline-block px-2.5 py-1 rounded-md ${badgeClass}`}>
+        <div className={`font-bold text-[8px] md:text-[10px] uppercase tracking-wide inline-block px-3 py-1 rounded-full ${badgeClass}`}>
           {status}
         </div>
       </div>

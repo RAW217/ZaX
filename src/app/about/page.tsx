@@ -231,7 +231,7 @@ export default function AboutPage() {
 
           {/* Badge */}
           <div className="inline-flex items-center justify-center bg-[#B3C5EA] px-8 py-3.5 rounded-full mb-8 shadow-md">
-            <span className="text-[#17679E] text-base sm:text-lg font-display font-extrabold tracking-wide">
+            <span className="text-[#17679E] text-base sm:text-lg font-display font-normal tracking-wide">
               {t.aboutPage.badge}
             </span>
           </div>
@@ -359,35 +359,35 @@ export default function AboutPage() {
         يمكنك تعديل الحجم مباشرة عن طريق تغيير قيمة scale (مثلاً: 1.0, 1.2, 0.95, إلخ)
         =============================================================================
       */}
-      <section className="py-20 bg-white border-t border-[#D2E9F9]">
+      <section className="py-20 bg-[#F8FAFC] border-t border-[#D2E9F9]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="inline-block bg-[#F4FAFD] border border-[#BFDCF0] rounded-full px-5 py-1.5 mb-4">
+            <div className="inline-block bg-[#F0F2F5] rounded-full px-5 py-1.5 mb-4">
               <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
                 {lang === "ar" ? "عملاؤنا" : "Clients"}
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl text-[#0C3D5E] font-medium font-display">
+            <h2 className="text-3xl sm:text-4xl text-[#17679E] font-medium font-display">
               {lang === "ar" ? "شركاء النجاح والعملاء" : "Trusted by Industry Leaders"}
             </h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
             {[
-              { src: "/download (2).png", alt: "Client Logo 1", size: 60, multiply: false },
+              { src: "/Mazoon-logo (1).png", alt: "Mazoon Dairy Logo", size: 65, multiply: false },
               { src: "/images (3).jpg", alt: "Client Logo 2", size: 75, multiply: true },
               { src: "/DSD.png", alt: "Client Logo 3 (DSD)", size: 70, multiply: false },
-              { src: "/Mazoon-logo (1).png", alt: "Mazoon Dairy Logo", size: 65, multiply: false },
+              { src: "/download (2).png", alt: "Client Logo 1", size: 60, multiply: false },
             ].map((client, idx) => (
-              <div key={idx} className="w-full h-32 bg-[#F4FAFD] rounded-2xl p-4 border border-[#BFDCF0]/50 flex items-center justify-center hover:shadow-md transition-all hover:bg-white group overflow-hidden">
+              <div key={idx} className="w-full h-32 bg-white rounded-2xl border border-gray-100 shadow-md sm:shadow-lg p-4 flex items-center justify-center overflow-hidden">
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image
                     src={client.src}
                     alt={client.alt}
                     width={240}
                     height={120}
-                    style={{ height: `${client.size}px`, width: 'auto', maxHeight: '90%', maxWidth: '90%' }}
-                    className={`object-contain group-hover:scale-105 transition-transform duration-300 ${client.multiply ? 'mix-blend-multiply' : ''}`}
+                    style={{ height: `${client.size}px`, width: 'auto', maxHeight: '85%', maxWidth: '85%' }}
+                    className={`object-contain ${client.multiply ? 'mix-blend-multiply' : ''}`}
                   />
                 </div>
               </div>
@@ -401,7 +401,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6">
 
           <div className="flex flex-col items-center text-center mb-16">
-            <div className="inline-block bg-white/15 backdrop-blur border border-white/25 rounded-full px-5 py-1.5 mb-4">
+            <div className="inline-block bg-white/15 backdrop-blur rounded-full px-5 py-1.5 mb-4">
               <span className="text-[#D2E9F9] font-display text-sm font-semibold tracking-wide uppercase">
                 {t.aboutPage.leadershipBadge}
               </span>
@@ -460,91 +460,43 @@ export default function AboutPage() {
       <section className="py-20 bg-[#F4FAFD] border-t border-[#D2E9F9]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <div className="inline-block bg-white border border-[#BFDCF0] rounded-full px-5 py-1.5 mb-4 shadow-sm">
+            <div className="inline-block bg-[#F0F2F5] rounded-full px-5 py-1.5 mb-4">
               <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
                 {lang === "ar" ? "شركاؤنا" : "Partners"}
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl text-[#0C3D5E] font-medium font-display">
+            <h2 className="text-3xl sm:text-4xl text-[#17679E] font-medium font-display">
               {lang === "ar" ? "شركاء التكنولوجيا والحلول" : "Our Strategic Partners"}
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
             {[
-              { src: "/aws-logo.svg", alt: "AWS Logo", size: 40, multiply: false },
-              { src: "/images (2).png", alt: "Partner Logo 2", size: 200, multiply: true },
-              { src: "/images (3).png", alt: "Partner Logo 3", size: 500, multiply: true },
-              { src: "/images (1).png", alt: "Partner Logo 4 (Omantel)", size: 400, multiply: true },
+              { src: "/aws-logo.svg", alt: "AWS Logo", size: 40, scale: 1.0, multiply: false },
+              { src: "/images (2).png", alt: "Odoo Logo", size: 300, scale: 1.05, multiply: true },
+              { src: "/images (3).png", alt: "Huawei Logo", size: 700, scale: 1.5, multiply: true },
+              { src: "/images (1).png", alt: "Omantel Logo", size: 700, scale: 1.5, multiply: true },
             ].map((partner, idx) => (
-              <div key={idx} className="w-full h-32 bg-white rounded-2xl p-4 border border-[#BFDCF0]/60 flex items-center justify-center hover:shadow-md transition-all group overflow-hidden">
+              <div key={idx} className="w-full h-24 flex items-center justify-center p-2">
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image
                     src={partner.src}
                     alt={partner.alt}
                     width={240}
                     height={120}
-                    style={{ height: `${partner.size}px`, width: 'auto', maxHeight: '90%', maxWidth: '90%' }}
-                    className={`object-contain group-hover:scale-105 transition-transform duration-300 ${partner.multiply ? 'mix-blend-multiply' : ''}`}
+                    style={{ 
+                      height: `${partner.size}px`, 
+                      width: 'auto', 
+                      maxHeight: partner.scale ? `${Math.min(90 * partner.scale, 100)}%` : '90%', 
+                      maxWidth: partner.scale ? `${Math.min(90 * partner.scale, 100)}%` : '90%',
+                      transform: partner.scale ? `scale(${partner.scale})` : undefined
+                    }}
+                    className={`object-contain grayscale opacity-75 ${partner.multiply ? 'mix-blend-multiply' : ''}`}
                   />
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ================= 8. LEADERSHIP TEAM ================= */}
-      <section className="py-24 hero-gradient text-white">
-        <div className="max-w-6xl mx-auto px-6">
-
-          <div className="flex flex-col items-center text-center mb-16">
-            <div className="inline-block bg-white/15 backdrop-blur border border-white/25 rounded-full px-5 py-1.5 mb-4">
-              <span className="text-[#D2E9F9] font-display text-sm font-semibold tracking-wide uppercase">
-                {t.aboutPage.leadershipBadge}
-              </span>
-            </div>
-            <h2 className="text-white text-3xl sm:text-5xl font-medium max-w-2xl mb-4">
-              {t.aboutPage.leadershipTitle}
-            </h2>
-            <p className="text-white/80 text-base sm:text-lg max-w-3xl leading-relaxed font-light">
-              {t.aboutPage.leadershipDesc}
-            </p>
-          </div>
-
-          {/* 4 Leaders Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {team.map((member, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-[24px] overflow-hidden shadow-xl border border-white/30 text-[#0C3D5E] flex flex-col group hover:-translate-y-1.5 transition-transform duration-300"
-              >
-                <div className="h-72 relative overflow-hidden bg-[#D2E9F9]/40">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <div className="p-6 flex-1 flex flex-col justify-between bg-white">
-                  <div>
-                    <h4 className="text-xl font-display font-bold text-[#0C3D5E] mb-1">
-                      {member.name}
-                    </h4>
-                    <div className="text-xs sm:text-sm font-semibold text-[#0A72C4] mb-3 leading-snug">
-                      {member.role}
-                    </div>
-                    <p className="text-xs sm:text-sm text-[#0C3D5E]/75 leading-relaxed font-light">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
         </div>
       </section>
 
@@ -552,12 +504,9 @@ export default function AboutPage() {
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="bg-[#99ff99] rounded-[24px] py-16 sm:py-20 px-8 sm:px-12 flex flex-col items-center justify-center text-center">
-            <h3 className="text-[#4249a5] text-center mb-4 font-display text-3xl sm:text-4xl md:text-[42px] font-medium leading-tight">
+            <h3 className="text-[#4249a5] text-center mb-8 font-display text-3xl sm:text-4xl md:text-[42px] font-medium leading-tight">
               {t.contact.upsellTitle}
             </h3>
-            <p className="text-[#0C3D5E] text-base sm:text-lg md:text-xl font-normal max-w-3xl mb-8">
-              {t.contact.upsellSubtitle}
-            </p>
             <a
               href="/#contact"
               className="cta-purple !bg-[#0C3D5E] hover:!bg-[#08293F] text-white whitespace-nowrap"
