@@ -6,6 +6,7 @@ export type Language = "en" | "ar";
 
 export interface Translations {
   nav: {
+    news: string;
     solutions: string;
     successStories: string;
     about: string;
@@ -90,6 +91,12 @@ export interface Translations {
   };
   benefits: {
     title: string;
+    newsBadge: string;
+    newsTitle: string;
+    madaynTitle: string;
+    madaynDesc: string;
+    madaynTag: string;
+    readArticle: string;
     case1: string;
     case2: string;
     case3: string;
@@ -230,6 +237,7 @@ export interface Translations {
 export const translations: Record<Language, Translations> = {
   en: {
     nav: {
+      news: "News",
       solutions: "Solutions",
       successStories: "Success Stories",
       about: "About",
@@ -335,6 +343,12 @@ export const translations: Record<Language, Translations> = {
     },
     benefits: {
       title: "Smarter predictions, bigger business results.",
+      newsBadge: "In the News",
+      newsTitle: "Latest Media & Event Coverage",
+      madaynTitle: "Madayn Records RO 272 Million Investments in Food Sector & Highlights ZabonEx AI Solutions at Gulfood 2026",
+      madaynDesc: "At the 'From Factory to Fork' event organized by Madayn on the sidelines of Gulfood 2026 in Dubai, ZabonEx presented its predictive and generative AI platform, demonstrating how data-driven forecasting cuts food waste and boosts supply chain efficiency.",
+      madaynTag: "Gulfood 2026 & Madayn Official Press",
+      readArticle: "Read Official Article",
       case1: "Dairy producer increases margins by 25% with real-time predictions",
       case2: "ZabonEx AI Prediction Platform goes live in more than 5000 stores across Oman nationwide to maximize fresh product sales",
       case3: "Dolphine Catering successfully cuts waste at its workforce camp by 37%",
@@ -473,6 +487,7 @@ export const translations: Record<Language, Translations> = {
   },
   ar: {
     nav: {
+      news: "الأخبار",
       solutions: "الحلول",
       successStories: "قصص النجاح",
       about: "من نحن",
@@ -578,6 +593,12 @@ export const translations: Record<Language, Translations> = {
     },
     benefits: {
       title: "تنبؤات أذكى، ونتائج أعمال أكبر",
+      newsBadge: "في الأخبار والتغطيات",
+      newsTitle: "أبرز الأخبار والتغطيات الإعلامية",
+      madaynTitle: "مدائن تسجل 272 مليون ريال استثمارات في قطاع الأغذية وتسلط الضوء على حلول زبون إكس في جلفود 2026",
+      madaynDesc: "خلال الفعالية التي نظمتها المؤسسة العامة للمناطق الصناعية «مدائن» بعنوان «من المصنع إلى المائدة» على هامش مشاركتها في معرض جلفود 2026 بدبي، استعرضت زبون إكس منصتها المبتكرة بالذكاء الاصطناعي التنبؤي وتأثيرها في الحد من هدر الأغذية وتحسين كفاءة سلاسل الإمداد.",
+      madaynTag: "تغطية جلفود 2026 والبيان الرسمي لمدائن",
+      readArticle: "قراءة الخبر الرسمي",
       case1: "منتج للألبان يرفع هوامش ربحه بنسبة 25% بفضل التنبؤ الفوري",
       case2: "إطلاق منصة زبون إكس للتنبؤ بالذكاء الاصطناعي في أكثر من 5000 متجر عبر سلطنة عُمان لتعظيم مبيعات المنتجات الطازجة",
       case3: "شركة دلفين للتموين تنجح في تخفيض الهدر في مجمع عمالتها بنسبة 37%",
