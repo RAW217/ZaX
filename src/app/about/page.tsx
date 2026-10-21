@@ -363,7 +363,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-block bg-[#F0F2F5] rounded-full px-5 py-1.5 mb-4">
-              <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
+              <span className="text-[#0A72C4] font-display text-base sm:text-lg font-semibold uppercase tracking-wider">
                 {lang === "ar" ? "عملاؤنا" : "Clients"}
               </span>
             </div>
@@ -402,7 +402,7 @@ export default function AboutPage() {
 
           <div className="flex flex-col items-center text-center mb-16">
             <div className="inline-block bg-white/15 backdrop-blur rounded-full px-5 py-1.5 mb-4">
-              <span className="text-[#D2E9F9] font-display text-sm font-semibold tracking-wide uppercase">
+              <span className="text-[#D2E9F9] font-display text-base sm:text-lg font-semibold tracking-wide uppercase">
                 {t.aboutPage.leadershipBadge}
               </span>
             </div>
@@ -461,7 +461,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-block bg-[#F0F2F5] rounded-full px-5 py-1.5 mb-4">
-              <span className="text-[#0A72C4] font-display text-xs font-semibold uppercase tracking-wider">
+              <span className="text-[#0A72C4] font-display text-base sm:text-lg font-semibold uppercase tracking-wider">
                 {lang === "ar" ? "شركاؤنا" : "Partners"}
               </span>
             </div>
