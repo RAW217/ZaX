@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import BrandWordmark from "@/components/BrandWordmark";
 import {
   Sparkles,
   ShieldCheck,
@@ -522,9 +523,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
-              <span className="text-2xl font-display font-semibold text-white tracking-wide">
-                ZabonEx
-              </span>
+              <BrandWordmark />
             </div>
 
             <div className="flex flex-col md:text-right gap-3">

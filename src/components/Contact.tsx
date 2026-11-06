@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Linkedin, Mail, Phone, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import BrandWordmark from "@/components/BrandWordmark";
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -182,9 +183,7 @@ export default function Contact() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
-              <span className="text-2xl font-display font-semibold text-white tracking-wide">
-                ZabonEx
-              </span>
+              <BrandWordmark />
             </div>
             
             <div className="flex flex-col md:text-right gap-3">

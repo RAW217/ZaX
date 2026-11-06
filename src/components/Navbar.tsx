@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import BrandWordmark from "@/components/BrandWordmark";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,22 +31,7 @@ export default function Navbar() {
               height={32} 
               className="brightness-0 invert w-8 h-8"
             />
-            {lang === "ar" ? (
-              <span className="flex items-center h-8">
-                <Image
-                  src="/logo-wordmark-ar.png"
-                  alt="زبون إكس"
-                  width={493}
-                  height={109}
-                  priority
-                  className="h-[23px] w-auto"
-                />
-              </span>
-            ) : (
-              <span className="text-2xl font-display font-semibold text-white tracking-wide">
-                ZabonEx
-              </span>
-            )}
+            <BrandWordmark priority />
           </a>
 
           {/* Desktop nav */}
