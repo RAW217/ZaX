@@ -578,7 +578,7 @@ export const translations: Record<Language, Translations> = {
       stat1Text: "انخفاض في\nهدر الأغذية",
       stat2Pct: "٢٠%",
       stat2Text: "زيادة في\nالإيرادات",
-      stat3Pct: "٩٫١%",
+      stat3Pct: "٩.١%",
       stat3Text: "تحسن في\nهوامش الربح",
       cta: "ابدأ اليوم",
       tabsHeadline: "حل متكامل لكل تحدٍ في سلسلة التوزيع",
