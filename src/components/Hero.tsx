@@ -117,13 +117,11 @@ export default function Hero() {
       <section className="bg-[#17679E] border-t border-white/10 min-h-[100px] flex items-center">
         <div className="max-w-7xl mx-auto px-6 w-full">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-14 py-8">
-            <span className="text-white/90 font-display text-xl font-medium tracking-wide">HoReCa</span>
-            <span className="text-white/90 font-display text-xl font-medium tracking-wide">Distributors</span>
-            <span className="text-white/90 font-display text-xl font-medium tracking-wide">Retail Chains</span>
-            <span className="text-white/90 font-display text-xl font-medium tracking-wide">Dairy</span>
-            <span className="text-white/90 font-display text-xl font-medium tracking-wide">Bakery</span>
-            <span className="text-white/90 font-display text-xl font-medium tracking-wide">Beverages</span>
-            <span className="text-white/90 font-display text-xl font-medium tracking-wide">Wholesalers</span>
+            {t.hero.industries.map((name) => (
+              <span key={name} className="text-white/90 font-display text-xl font-medium tracking-wide">
+                {name}
+              </span>
+            ))}
           </div>
         </div>
       </section>

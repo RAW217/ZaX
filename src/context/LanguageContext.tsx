@@ -19,6 +19,8 @@ export interface Translations {
     highlight: string;
     suffix: string;
     cta: string;
+    /** Industry names shown in the strip under the hero. */
+    industries: string[];
     cards: {
       milk: string;
       oil: string;
@@ -252,6 +254,7 @@ export const translations: Record<Language, Translations> = {
       highlight: "35%",
       suffix: "with prediction platform from ZabonEx – seamless integration",
       cta: "Get started today",
+      industries: ["HoReCa", "Distributors", "Retail Chains", "Dairy", "Bakery", "Beverages", "Wholesalers"],
       cards: {
         milk: "Fresh Milk",
         oil: "Olive Oil",
@@ -503,6 +506,7 @@ export const translations: Record<Language, Translations> = {
       highlight: "٣٥%",
       suffix: "مع منصة التنبؤ من زبون إكس – ربط سلس ودون تعقيد",
       cta: "ابدأ اليوم",
+      industries: ["الفنادق والمطاعم والمقاهي", "الموزّعون", "سلاسل متاجر التجزئة", "الألبان", "المخابز", "المشروبات", "تجار الجملة"],
       cards: {
         milk: "حليب طازج",
         oil: "زيت زيتون",
