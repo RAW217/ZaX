@@ -11,18 +11,24 @@ import {
   ComposedChart,
   Line
 } from "recharts";
+import { useLanguage } from "@/context/LanguageContext";
 
-const data = [
-  { day: "Mon", actual: 120, guess: 160, zabonex: 122 },
-  { day: "Tue", actual: 130, guess: 140, zabonex: 131 },
-  { day: "Wed", actual: 150, guess: 110, zabonex: 148 },
-  { day: "Thu", actual: 180, guess: 200, zabonex: 182 },
-  { day: "Fri", actual: 210, guess: 220, zabonex: 208 },
-  { day: "Sat", actual: 240, guess: 200, zabonex: 238 },
-  { day: "Sun", actual: 220, guess: 180, zabonex: 245 },
+const series = [
+  { actual: 120, guess: 160, zabonex: 122 },
+  { actual: 130, guess: 140, zabonex: 131 },
+  { actual: 150, guess: 110, zabonex: 148 },
+  { actual: 180, guess: 200, zabonex: 182 },
+  { actual: 210, guess: 220, zabonex: 208 },
+  { actual: 240, guess: 200, zabonex: 238 },
+  { actual: 220, guess: 180, zabonex: 245 },
 ];
 
 export default function InteractiveChart() {
+  const { t, lang } = useLanguage();
+  const numberFormat = new Intl.NumberFormat(lang === "ar" ? "ar-EG" : "en-US", { useGrouping: false });
+  const formatNumber = (value: number) => numberFormat.format(value);
+  const data = series.map((point, i) => ({ ...point, day: t.chart.days[i] }));
+
   return (
     <div className="w-full relative rounded-2xl overflow-hidden shadow-2xl border border-[#BFDCF0]/60 bg-white" style={{ fontFamily: 'var(--font-satoshi)' }}>
       {/* Mock macOS Window Header */}
@@ -34,15 +40,15 @@ export default function InteractiveChart() {
         </div>
         
         <div className="mx-auto flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-[#0C3D5E] px-2">
-          <span className="font-bold text-[#0C3D5E]">ZabonEx AI Prediction Platform</span>
+          <span className="font-bold text-[#0C3D5E]">{t.chart.title}</span>
           <span className="text-gray-300 hidden sm:inline">|</span>
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-[#e75e6b]"></span>
-            <span className="text-[#e75e6b]">Manual Guesswork</span>
+            <span className="text-[#e75e6b]">{t.chart.guess}</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2.5 h-2.5 rounded-full bg-[#0A72C4]"></span>
-            <span className="text-[#0A72C4]">ZabonEx AI Predict</span>
+            <span className="text-[#0A72C4]">{t.chart.predict}</span>
           </div>
         </div>
       </div>
@@ -66,6 +72,7 @@ export default function InteractiveChart() {
               tickLine={false}
               tick={{ fill: 'var(--text-muted)', fontWeight: 600, fontSize: 12 }}
               dx={-10}
+              tickFormatter={formatNumber}
             />
             <Tooltip
               contentStyle={{
@@ -77,6 +84,7 @@ export default function InteractiveChart() {
                 padding: '12px 16px'
               }}
               itemStyle={{ fontWeight: 700, padding: '4px 0', fontSize: 13 }}
+              formatter={(value) => (typeof value === "number" ? formatNumber(value) : value)}
               cursor={{ stroke: '#1A8FD4', strokeWidth: 1, strokeDasharray: '4 4', opacity: 0.4 }}
             />
 
@@ -104,6 +112,7 @@ export default function InteractiveChart() {
               fill="url(#actualGrad)"
               stroke="none"
               legendType="none"
+              tooltipType="none"
             />
             <Area
               type="monotone"
@@ -111,12 +120,13 @@ export default function InteractiveChart() {
               fill="url(#zabonexGrad)"
               stroke="none"
               legendType="none"
+              tooltipType="none"
             />
 
             <Line
               type="monotone"
               dataKey="actual"
-              name="Actual Sales"
+              name={t.chart.actual}
               stroke="#86B3D1"
               strokeWidth={2}
               strokeDasharray="4 4"
@@ -127,7 +137,7 @@ export default function InteractiveChart() {
             <Line
               type="monotone"
               dataKey="guess"
-              name="Manual Guesswork"
+              name={t.chart.guess}
               stroke="#e75e6b"
               strokeWidth={2}
               dot={{ r: 4, fill: '#ffffff', strokeWidth: 2, stroke: '#e75e6b' }}
@@ -136,7 +146,7 @@ export default function InteractiveChart() {
             <Line
               type="monotone"
               dataKey="zabonex"
-              name="ZabonEx AI Predict"
+              name={t.chart.predict}
               stroke="#0A72C4"
               strokeWidth={4}
               filter="url(#shadow)"

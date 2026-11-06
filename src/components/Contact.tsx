@@ -93,7 +93,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-sm text-[#0A72C4] font-display font-medium">{t.contact.callUs}</div>
-                    <a href="tel:+96877706770" className="text-[#0C3D5E] font-medium hover:text-[#0A72C4] transition-colors dir-ltr inline-block">+968 7770 6770</a>
+                    <a href="tel:+96877706770" dir="ltr" className="text-[#0C3D5E] font-medium hover:text-[#0A72C4] transition-colors inline-block [unicode-bidi:bidi-override]">{t.contact.phoneDisplay}</a>
                   </div>
                 </div>
               </div>

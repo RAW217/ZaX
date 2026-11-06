@@ -91,6 +91,14 @@ export interface Translations {
     tabContents: Record<string, { title: string; desc: string }>;
     learnMore: string;
   };
+  chart: {
+    title: string;
+    guess: string;
+    predict: string;
+    actual: string;
+    /** Seven day labels, Monday first. */
+    days: string[];
+  };
   benefits: {
     title: string;
     newsBadge: string;
@@ -111,6 +119,8 @@ export interface Translations {
     title: string;
     description: string;
     emailUs: string;
+    /** Phone number as displayed (the tel: link is fixed). */
+    phoneDisplay: string;
     callUs: string;
     fullName: string;
     namePlaceholder: string;
@@ -346,6 +356,13 @@ export const translations: Record<Language, Translations> = {
       },
       learnMore: "Learn more",
     },
+    chart: {
+      title: "ZabonEx AI Prediction Platform",
+      guess: "Manual Guesswork",
+      predict: "ZabonEx AI Predict",
+      actual: "Actual Sales",
+      days: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    },
     benefits: {
       title: "Smarter predictions, bigger business results.",
       newsBadge: "In the News",
@@ -366,6 +383,7 @@ export const translations: Record<Language, Translations> = {
       title: "Get in touch",
       description: "Have questions about how ZabonEx can optimize your inventory and reduce waste? Send us a message and our team will get back to you shortly.",
       emailUs: "Email us at",
+      phoneDisplay: "+968 7770 6770",
       callUs: "Call us",
       fullName: "Full Name",
       namePlaceholder: "John Doe",
@@ -524,12 +542,12 @@ export const translations: Record<Language, Translations> = {
     problem: {
       badge: "المشكلة",
       title: "الهدر وقرارات المخزون غير الدقيقة تكلف شركات الأغذية والمشروبات",
-      pctNum: "9%",
+      pctNum: "٩%",
       pctText: "من إجمالي الإيرادات",
-      pctRevenue: "9% من إجمالي الإيرادات",
-      disappearsTitle: "5% تضيع في المنتجات منتهية الصلاحية",
+      pctRevenue: "٩% من إجمالي الإيرادات",
+      disappearsTitle: "٥% تضيع في المنتجات منتهية الصلاحية",
       disappearsDesc: "التخلص من المنتجات التالفة والمنتهية مكلف مادياً، ضار بالبيئة، وغير مرحب به من قبل العملاء.",
-      guessworkTitle: "4% مبيعات مفقودة بسبب التخمين ونفاد المخزون",
+      guessworkTitle: "٤% مبيعات مفقودة بسبب التخمين ونفاد المخزون",
       guessworkDesc: "بدون بيانات تنبؤية فورية، تفشل الشركات في تحديد الكميات الصحيحة، مما يسبب النقص، وتراكم المخزون الفائض، وضياع فرص المبيعات.",
       footnote: "تستند هذه الأرقام إلى بيانات أبحاث زبون إكس",
     },
@@ -556,16 +574,16 @@ export const translations: Record<Language, Translations> = {
       buildMlModel: "نموذج الذكاء الاصطناعي",
       viewPrediction: "عرض التنبؤات",
       resultsHeadline: "هذا كل شيء.\nوالنتائج تحدث تحولاً جذرياً في عملك.",
-      stat1Pct: "50%",
+      stat1Pct: "٥٠%",
       stat1Text: "انخفاض في\nهدر الأغذية",
-      stat2Pct: "20%",
+      stat2Pct: "٢٠%",
       stat2Text: "زيادة في\nالإيرادات",
-      stat3Pct: "9.1%",
+      stat3Pct: "٩٫١%",
       stat3Text: "تحسن في\nهوامش الربح",
       cta: "ابدأ اليوم",
       tabsHeadline: "حل متكامل لكل تحدٍ في سلسلة التوزيع",
       tabs: {
-        demandForecasting: "التعرف على العناصر (Object Recognition)",
+        demandForecasting: "التعرف على المنتج",
         wasteReduction: "التنبؤ بالميزانية (Budget Forecasting)",
         smartRouting: "المسارات الذكية للتوزيع (Smart Distribution Routing)",
         inventorySync: "مزامنة المخزون",
@@ -573,11 +591,11 @@ export const translations: Record<Language, Translations> = {
         distributionPlanning: "تخطيط التوزيع",
       },
       tabSectionTitle: "تحويل صور الأرفف إلى رؤى مخزونية فورية",
-      tabSectionDesc: "يستخدم زبون إكس تقنيات التعرف على العناصر بالذكاء الاصطناعي لتحديد وعد المنتجات على الأرفف، ومراقبة توافرها، وإكتشاف النقص في المخزون فوراً. مما يساعد الفرق على إعادة التعبئة أسرع، وتقليل الفحوصات اليدوية، ومنع ضياع المبيعات.",
+      tabSectionDesc: "يستخدم زبون إكس تقنيات التعرف على المنتج بالذكاء الاصطناعي لتحديد وعد المنتجات على الأرفف، ومراقبة توافرها، وإكتشاف النقص في المخزون فوراً. مما يساعد الفرق على إعادة التعبئة أسرع، وتقليل الفحوصات اليدوية، ومنع ضياع المبيعات.",
       tabContents: {
         demandForecasting: {
           title: "تحويل صور الأرفف إلى رؤى مخزونية فورية",
-          desc: "يستخدم زبون إكس تقنيات التعرف على العناصر بالذكاء الاصطناعي لتحديد وعد المنتجات على الأرفف، ومراقبة توافرها، وإكتشاف النقص في المخزون فوراً. مما يساعد الفرق على إعادة التعبئة أسرع، وتقليل الفحوصات اليدوية، ومنع ضياع المبيعات."
+          desc: "يستخدم زبون إكس تقنيات التعرف على المنتج بالذكاء الاصطناعي لتحديد وعد المنتجات على الأرفف، ومراقبة توافرها، وإكتشاف النقص في المخزون فوراً. مما يساعد الفرق على إعادة التعبئة أسرع، وتقليل الفحوصات اليدوية، ومنع ضياع المبيعات."
         },
         inventorySync: {
           title: "تحديث المخزون باستمرار عبر صور الأرفف",
@@ -598,6 +616,13 @@ export const translations: Record<Language, Translations> = {
       },
       learnMore: "اعرف المزيد",
     },
+    chart: {
+      title: "منصة زبون إكس للتنبؤ بالذكاء الاصطناعي",
+      guess: "التخمين اليدوي",
+      predict: "تنبؤ زبون إكس الذكي",
+      actual: "المبيعات الفعلية",
+      days: ["الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت", "الأحد"],
+    },
     benefits: {
       title: "تنبؤات أذكى، ونتائج أعمال أكبر",
       newsBadge: "في الأخبار والتغطيات",
@@ -606,9 +631,9 @@ export const translations: Record<Language, Translations> = {
       madaynDesc: "خلال الفعالية التي نظمتها المؤسسة العامة للمناطق الصناعية «مدائن» بعنوان «من المصنع إلى المائدة» على هامش مشاركتها في معرض جلفود 2026 بدبي، استعرضت زبون إكس منصتها المبتكرة بالذكاء الاصطناعي التنبؤي وتأثيرها في الحد من هدر الأغذية وتحسين كفاءة سلاسل الإمداد.",
       madaynTag: "تغطية جلفود 2026 والبيان الرسمي لمدائن",
       readArticle: "قراءة الخبر الرسمي",
-      case1: "منتج للألبان يرفع هوامش ربحه بنسبة 25% بفضل التنبؤ الفوري",
-      case2: "إطلاق منصة زبون إكس للتنبؤ بالذكاء الاصطناعي في أكثر من 5000 متجر عبر سلطنة عُمان لتعظيم مبيعات المنتجات الطازجة",
-      case3: "شركة دلفين للتموين تنجح في تخفيض الهدر في مجمع عمالتها بنسبة 37%",
+      case1: "منتج للألبان يرفع هوامش ربحه بنسبة ٢٥% بفضل التنبؤ الفوري",
+      case2: "إطلاق منصة زبون إكس للتنبؤ بالذكاء الاصطناعي في أكثر من ٥٠٠٠ متجر عبر سلطنة عُمان لتعظيم مبيعات المنتجات الطازجة",
+      case3: "شركة دلفين للتموين تنجح في تخفيض الهدر في مجمع عمالتها بنسبة ٣٧%",
       readMore: "قراءة المزيد من دراسات الحالة",
     },
     contact: {
@@ -618,6 +643,7 @@ export const translations: Record<Language, Translations> = {
       title: "تواصل معنا",
       description: "هل لديك استفسارات حول كيفية مساعدة زبون إكس لعملك في خفض الهدر وتحسين التوزيع؟ فريقنا جاهز للتواصل معك ومساعدتك فوراً.",
       emailUs: "راسلنا عبر البريد",
+      phoneDisplay: "٩٦٨ ٧٧٧٠ ٦٧٧٠+",
       callUs: "اتصل بنا",
       fullName: "الاسم الكامل",
       namePlaceholder: "محمد أحمد",
