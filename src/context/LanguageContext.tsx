@@ -522,7 +522,7 @@ export const translations: Record<Language, Translations> = {
       }
     },
     problem: {
-      badge: "The Problem",
+      badge: "المشكلة",
       title: "الهدر وقرارات المخزون غير الدقيقة تكلف شركات الأغذية والمشروبات",
       pctNum: "9%",
       pctText: "من إجمالي الإيرادات",
