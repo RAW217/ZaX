@@ -30,9 +30,22 @@ export default function Navbar() {
               height={32} 
               className="brightness-0 invert w-8 h-8"
             />
-            <span className="text-2xl font-display font-semibold text-white tracking-wide">
-              ZabonEx
-            </span>
+            {lang === "ar" ? (
+              <span className="flex items-center h-8">
+                <Image
+                  src="/logo-wordmark-ar.png"
+                  alt="زبون إكس"
+                  width={493}
+                  height={109}
+                  priority
+                  className="h-7 w-auto"
+                />
+              </span>
+            ) : (
+              <span className="text-2xl font-display font-semibold text-white tracking-wide">
+                ZabonEx
+              </span>
+            )}
           </a>
 
           {/* Desktop nav */}
