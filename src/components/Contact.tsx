@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import BrandWordmark from "@/components/BrandWordmark";
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
@@ -224,7 +224,10 @@ export default function Contact() {
             </div>
             
             <p className="text-white/90 text-sm">
-              &copy; {new Date().getFullYear()} ZabonEx. All rights reserved.
+              {t.contact.copyright.replace(
+                "{year}",
+                new Intl.NumberFormat(lang === "ar" ? "ar-EG" : "en-US", { useGrouping: false }).format(new Date().getFullYear())
+              )}
             </p>
           </div>
         </div>

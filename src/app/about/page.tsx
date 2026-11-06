@@ -564,7 +564,10 @@ export default function AboutPage() {
             </div>
 
             <p className="text-white/90 text-sm">
-              &copy; {new Date().getFullYear()} ZabonEx. All rights reserved.
+              {t.contact.copyright.replace(
+                "{year}",
+                new Intl.NumberFormat(lang === "ar" ? "ar-EG" : "en-US", { useGrouping: false }).format(new Date().getFullYear())
+              )}
             </p>
           </div>
         </div>

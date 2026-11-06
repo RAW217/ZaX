@@ -126,6 +126,8 @@ export interface Translations {
     about: string;
     successStories: string;
     contactLink: string;
+    /** Footer copyright line; "{year}" is replaced with the current year. */
+    copyright: string;
   };
   aboutPage: {
     badge: string;
@@ -378,6 +380,7 @@ export const translations: Record<Language, Translations> = {
       about: "About",
       successStories: "Success Stories",
       contactLink: "Contact",
+      copyright: "© {year} ZabonEx. All rights reserved.",
     },
     aboutPage: {
       badge: "About ZabonEx",
@@ -628,6 +631,7 @@ export const translations: Record<Language, Translations> = {
       about: "من نحن",
       successStories: "قصص النجاح",
       contactLink: "تواصل معنا",
+      copyright: "جميع الحقوق محفوظة © {year} زبون إكس",
     },
     aboutPage: {
       badge: "عن زبون إكس • ZabonEx",
