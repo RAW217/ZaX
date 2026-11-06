@@ -497,7 +497,7 @@ export const translations: Record<Language, Translations> = {
     hero: {
       title: "توقع الطلب. ارفع أرباحك.",
       subtitle: "عزز توزيع المنتجات وتوفر المخزون بنسبة تصل إلى",
-      highlight: "35%",
+      highlight: "٣٥%",
       suffix: "مع منصة التنبؤ من زبون إكس – ربط سلس ودون تعقيد",
       cta: "ابدأ اليوم مجاناً",
       cards: {
