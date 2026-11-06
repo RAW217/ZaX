@@ -499,7 +499,7 @@ export const translations: Record<Language, Translations> = {
       subtitle: "عزز توزيع المنتجات وتوفر المخزون بنسبة تصل إلى",
       highlight: "٣٥%",
       suffix: "مع منصة التنبؤ من زبون إكس – ربط سلس ودون تعقيد",
-      cta: "ابدأ اليوم مجاناً",
+      cta: "ابدأ اليوم",
       cards: {
         milk: "حليب طازج",
         oil: "زيت زيتون",
