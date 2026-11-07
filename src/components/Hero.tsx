@@ -98,7 +98,7 @@ export default function Hero() {
                 <ProductCard name={t.hero.cards.tomatoes} image="/tomatoes.jpg" status={t.hero.cards.low} />
               </div>
               <div className="absolute left-[88%] bottom-[20px] rotate-[3deg] z-20 transform transition-transform duration-300 hover:-translate-y-20 hover:rotate-0 hover:z-50 cursor-pointer hidden xl:block">
-                <ProductCard name="Biscuits" image="/biscuits.jpg" status={t.hero.cards.optimal} />
+                <ProductCard name={t.hero.cards.biscuits} image="/biscuits.jpg" status={t.hero.cards.optimal} />
               </div>
             </div>
           </div>

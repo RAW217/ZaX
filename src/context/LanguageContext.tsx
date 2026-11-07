@@ -28,6 +28,7 @@ export interface Translations {
       flour: string;
       pasta: string;
       yogurt: string;
+      biscuits: string;
       tomatoes: string;
       optimal: string;
       high: string;
@@ -272,6 +273,7 @@ export const translations: Record<Language, Translations> = {
         flour: "Bakery Flour",
         pasta: "Penne Pasta",
         yogurt: "Greek Yogurt",
+        biscuits: "Biscuits",
         tomatoes: "Tomatoes",
         optimal: "Stock: Optimal",
         high: "Demand: High",
@@ -532,6 +534,7 @@ export const translations: Record<Language, Translations> = {
         flour: "طحين مخابز",
         pasta: "معكرونة بيني",
         yogurt: "زبادي يوناني",
+        biscuits: "بسكويت",
         tomatoes: "طماطم طازجة",
         optimal: "المخزون: مثالي",
         high: "الطلب: مرتفع",
