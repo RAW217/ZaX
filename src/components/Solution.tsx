@@ -44,7 +44,8 @@ const rightIcons = [
 ];
 
 export default function Solution() {
-  const { t } = useLanguage();
+  const { t, dir } = useLanguage();
+  const arrowFlip = dir === "rtl" ? "-scale-x-100" : "";
   const [activeTabKey, setActiveTabKey] = useState<keyof typeof t.solution.tabs>("demandForecasting");
 
   const tabKeys: (keyof typeof t.solution.tabs)[] = [
@@ -172,7 +173,7 @@ export default function Solution() {
                   <div className="font-display text-[#0C3D5E] text-center font-medium">{t.solution.register}</div>
                 </div>
                 {/* Tall, narrow arrow */}
-                <div className="hidden sm:block relative z-10 px-2">
+                <div className={`hidden sm:block relative z-10 px-2 ${arrowFlip}`}>
                   <svg width="12" height="52" viewBox="0 0 12 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L12 26L0 52Z" fill="#BFDCF0" />
                   </svg>
@@ -182,7 +183,7 @@ export default function Solution() {
                   <div className="font-display text-[#0C3D5E] text-center font-medium">{t.solution.getAccess}</div>
                 </div>
                 {/* Tall, narrow arrow */}
-                <div className="hidden sm:block relative z-10 px-2">
+                <div className={`hidden sm:block relative z-10 px-2 ${arrowFlip}`}>
                   <svg width="12" height="52" viewBox="0 0 12 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L12 26L0 52Z" fill="#BFDCF0" />
                   </svg>
@@ -255,7 +256,7 @@ export default function Solution() {
                 </div>
 
                 {/* Arrow Connector: Lengthened height without changing width */}
-                <div className="hidden sm:block relative z-10 px-0.5">
+                <div className={`hidden sm:block relative z-10 px-0.5 ${arrowFlip}`}>
                   <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
@@ -274,7 +275,7 @@ export default function Solution() {
                 </div>
 
                 {/* Arrow Connector: Lengthened height without changing width */}
-                <div className="hidden sm:block relative z-10 px-0.5">
+                <div className={`hidden sm:block relative z-10 px-0.5 ${arrowFlip}`}>
                   <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
@@ -293,7 +294,7 @@ export default function Solution() {
                 </div>
 
                 {/* Arrow Connector: Lengthened height without changing width */}
-                <div className="hidden sm:block relative z-10 px-0.5">
+                <div className={`hidden sm:block relative z-10 px-0.5 ${arrowFlip}`}>
                   <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
