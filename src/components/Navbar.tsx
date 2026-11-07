@@ -26,7 +26,7 @@ export default function Navbar() {
           <a href="/" className="flex items-center gap-3 group">
             <Image 
               src="/logo.svg" 
-              alt="ZabonEx Logo" 
+              alt={lang === "ar" ? "شعار زبون إكس" : "ZabonEx Logo"} 
               width={32} 
               height={32} 
               className="brightness-0 invert w-8 h-8"
@@ -71,7 +71,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white p-2"
-              aria-label="Toggle menu"
+              aria-label={lang === "ar" ? "فتح القائمة" : "Toggle menu"}
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

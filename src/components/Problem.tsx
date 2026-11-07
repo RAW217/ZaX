@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Problem() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section id="problem" className="py-16 bg-[#fafafa] text-[#0C3D5E]">
@@ -23,7 +23,7 @@ export default function Problem() {
         <div className="flex justify-center -mb-4 -mt-2 relative z-0">
           <Image 
             src="/split-arrow.png" 
-            alt="Splits into two causes" 
+            alt={lang === "ar" ? "ينقسم إلى سببين" : "Splits into two causes"} 
             width={130} 
             height={130} 
             className="object-contain opacity-70" 
@@ -38,7 +38,7 @@ export default function Problem() {
             </div>
             <div className="bg-white rounded-[20px] w-full shadow-sm border border-[#D2E9F9] h-full relative overflow-hidden flex flex-col">
               <div className="w-full h-44 sm:h-56 relative">
-                <Image src="/problem-img1.jpg" alt="Expired stock" fill className="object-cover" />
+                <Image src="/problem-img1.jpg" alt={lang === "ar" ? "مخزون منتهي الصلاحية" : "Expired stock"} fill className="object-cover" />
               </div>
               <div className="p-6 sm:p-7">
                 <h3 className="text-[#17679E] font-display text-xl sm:text-2xl font-medium mb-3">
@@ -57,7 +57,7 @@ export default function Problem() {
             </div>
             <div className="bg-white rounded-[20px] w-full shadow-sm border border-[#D2E9F9] h-full relative overflow-hidden flex flex-col">
               <div className="w-full h-44 sm:h-56 relative">
-                <Image src="/problem-img2.jpg" alt="Lost to guesswork" fill className="object-cover" />
+                <Image src="/problem-img2.jpg" alt={lang === "ar" ? "خسائر بسبب التخمين" : "Lost to guesswork"} fill className="object-cover" />
               </div>
               <div className="p-6 sm:p-7">
                 <h3 className="text-[#17679E] font-display text-xl sm:text-2xl font-medium mb-3">

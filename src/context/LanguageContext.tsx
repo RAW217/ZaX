@@ -587,8 +587,8 @@ export const translations: Record<Language, Translations> = {
       tabsHeadline: "حل متكامل لكل تحدٍ في سلسلة التوزيع",
       tabs: {
         demandForecasting: "التعرف على المنتج",
-        wasteReduction: "التنبؤ بالميزانية (Budget Forecasting)",
-        smartRouting: "المسارات الذكية للتوزيع (Smart Distribution Routing)",
+        wasteReduction: "التنبؤ بالميزانية",
+        smartRouting: "المسارات الذكية للتوزيع",
         inventorySync: "مزامنة المخزون",
         salesAnalytics: "تحليلات المبيعات",
         distributionPlanning: "تخطيط التوزيع",
@@ -613,7 +613,7 @@ export const translations: Record<Language, Translations> = {
           desc: "يجمع زبون إكس بين تنبؤات الطلب، وشفافية المخزون، وخطط التوزيع لتحسين كميات المنتجات وشحن الشاحنات ومسارات التوصيل. كما يدعم إعادة تخطيط المسارات عند تغير الظروف أو الطلب، مما يقلل تكاليف الوقود والنقل والعمالة والتوزيع الإجمالية."
         },
         wasteReduction: {
-          title: "التخطيط الذكي لأشهر الـ 3 و6 و12 القادمة",
+          title: "التخطيط الذكي لأشهر الـ ٣ و٦ و١٢ القادمة",
           desc: "يجمع زبون إكس بين بيانات الطلب والإنتاج والمخزون والتخزين والتوزيع للتنبؤ بالميزانيات المستقبلية واحتياجات الموارد، مما يساعد الشركات على ضبط التكاليف ومواءمة مخرجات المصانع مع طلب السوق وتحسين مستويات المخزون وضمان تجربة عملاء اتساقية."
         }
       },
@@ -630,9 +630,9 @@ export const translations: Record<Language, Translations> = {
       title: "تنبؤات أذكى، ونتائج أعمال أكبر",
       newsBadge: "في الأخبار والتغطيات",
       newsTitle: "أبرز الأخبار والتغطيات الإعلامية",
-      madaynTitle: "مدائن تسجل 272 مليون ريال استثمارات في قطاع الأغذية وتسلط الضوء على حلول زبون إكس في جلفود 2026",
-      madaynDesc: "خلال الفعالية التي نظمتها المؤسسة العامة للمناطق الصناعية «مدائن» بعنوان «من المصنع إلى المائدة» على هامش مشاركتها في معرض جلفود 2026 بدبي، استعرضت زبون إكس منصتها المبتكرة بالذكاء الاصطناعي التنبؤي وتأثيرها في الحد من هدر الأغذية وتحسين كفاءة سلاسل الإمداد.",
-      madaynTag: "تغطية جلفود 2026 والبيان الرسمي لمدائن",
+      madaynTitle: "مدائن تسجل ٢٧٢ مليون ريال استثمارات في قطاع الأغذية وتسلط الضوء على حلول زبون إكس في جلفود ٢٠٢٦",
+      madaynDesc: "خلال الفعالية التي نظمتها المؤسسة العامة للمناطق الصناعية «مدائن» بعنوان «من المصنع إلى المائدة» على هامش مشاركتها في معرض جلفود ٢٠٢٦ بدبي، استعرضت زبون إكس منصتها المبتكرة بالذكاء الاصطناعي التنبؤي وتأثيرها في الحد من هدر الأغذية وتحسين كفاءة سلاسل الإمداد.",
+      madaynTag: "تغطية جلفود ٢٠٢٦ والبيان الرسمي لمدائن",
       readArticle: "قراءة الخبر الرسمي",
       case1: "منتج للألبان يرفع هوامش ربحه بنسبة ٢٥% بفضل التنبؤ الفوري",
       case2: "إطلاق منصة زبون إكس للتنبؤ بالذكاء الاصطناعي في أكثر من ٥٠٠٠ متجر عبر سلطنة عُمان لتعظيم مبيعات المنتجات الطازجة",
@@ -667,19 +667,19 @@ export const translations: Record<Language, Translations> = {
       copyright: "جميع الحقوق محفوظة © {year} زبون إكس",
     },
     aboutPage: {
-      badge: "عن زبون إكس • ZabonEx",
+      badge: "عن زبون إكس",
       heroTitle: "بع أكثر.\nأهدر أقل.",
       heroSubtitle: "يحوّل زبون إكس بيانات أعمالك إلى تنبؤات دقيقة، ورؤى عملية، وقرارات أذكى تعزز مبيعاتك، وتقلل الهدر، وترفع الكفاءة التشغيلية.",
-      stat1Num: "35%",
+      stat1Num: "٣٥%",
       stat1Label: "ارتفاع توزيع المنتجات وتوفر المخزون",
-      stat2Num: "50%",
+      stat2Num: "٥٠%",
       stat2Label: "انخفاض في هدر الأغذية والمخزون",
-      stat3Num: "5000+",
+      stat3Num: "+٥٠٠٠",
       stat3Label: "متجر ومنفذ بيع متصل بالمنصة",
       storyBadge: "من نحن",
       storyTitle: "تحويل البيانات إلى قيمة حقيقية للشركات:",
-      storySubtitle: "منذ عام 2023، تساعد زبون إكس شركات الأغذية والمشروبات من منتجين وموزعين وتجار تجزئة على زيادة المبيعات وتقليل الهدر من خلال التنبؤ بالطلب وتحسين طريقة وصول المنتجات للعملاء.",
-      storyP1: "تعد زبون إكس (ZabonEx) منصة برمجية كخدمة (SaaS) تعتمد على الذكاء الاصطناعي لمنتجي وموزعي وتجار التجزئة في قطاع الأغذية والمشروبات. تساعدهم على التنبؤ بالطلب، وإرسال الكميات المناسبة لكل موقع، ومراقبة توفر المنتجات على الرفوف، وذلك لتقليل الهدر والمرتجعات وزيادة المبيعات. تأسست الشركة في عمان عام 2023، ولديها مكاتب في مسقط والرياض، وتغطي عملياتها كافة دول مجلس التعاون الخليجي.",
+      storySubtitle: "منذ عام ٢٠٢٣، تساعد زبون إكس شركات الأغذية والمشروبات من منتجين وموزعين وتجار تجزئة على زيادة المبيعات وتقليل الهدر من خلال التنبؤ بالطلب وتحسين طريقة وصول المنتجات للعملاء.",
+      storyP1: "تعد زبون إكس منصة برمجية كخدمة (SaaS) تعتمد على الذكاء الاصطناعي لمنتجي وموزعي وتجار التجزئة في قطاع الأغذية والمشروبات. تساعدهم على التنبؤ بالطلب، وإرسال الكميات المناسبة لكل موقع، ومراقبة توفر المنتجات على الرفوف، وذلك لتقليل الهدر والمرتجعات وزيادة المبيعات. تأسست الشركة في عمان عام ٢٠٢٣، ولديها مكاتب في مسقط والرياض، وتغطي عملياتها كافة دول مجلس التعاون الخليجي.",
       storyP2: "",
       storyP3: "",
       storyApproachTitle: "منهجيتنا بسيطة ومباشرة",
@@ -743,7 +743,7 @@ export const translations: Record<Language, Translations> = {
       deliv2Desc: "بناء معمارية بيانات آمنة، قابلة للتوسع، ومتوافقة محلياً.",
       deliv3Title: "تكامل البيانات وإعداد المنصة",
       deliv3Desc: "ربط أنظمة ERP و POS والمخزون بسلاسة ودون تعطيل العمل.",
-      deliv4Title: "تسليم اللوحات والتطبيقات و AI",
+      deliv4Title: "تسليم اللوحات والتطبيقات والذكاء الاصطناعي",
       deliv4Desc: "تفعيل نماذج التنبؤ، وتطبيقات الاستخدام، ولوحات التحكم الذكية.",
       deliv5Title: "الاختبار، التدريب والدعم عند الإطلاق",
       deliv5Desc: "تدريب فرق العمل والموظفين وضمان انتقال تشغيلي آمن وسلس.",
@@ -782,6 +782,11 @@ interface LanguageContextType {
   dir: "ltr" | "rtl";
 }
 
+const pageTitles: Record<Language, string> = {
+  en: "ZabonEx | AI-Powered F&B Distribution Optimization",
+  ar: "زبون إكس | تحسين توزيع الأغذية والمشروبات بالذكاء الاصطناعي",
+};
+
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
@@ -802,6 +807,22 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       document.documentElement.lang = lang;
       document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
     }
+  }, [lang, mounted]);
+
+  // Keep the browser tab title in the active language. Next.js injects its own
+  // <title> from the static metadata, so re-apply whenever the head changes.
+  useEffect(() => {
+    if (!mounted) return;
+    const title = pageTitles[lang];
+    const apply = () => {
+      document.querySelectorAll("title").forEach((el) => {
+        if (el.textContent !== title) el.textContent = title;
+      });
+    };
+    apply();
+    const observer = new MutationObserver(apply);
+    observer.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+    return () => observer.disconnect();
   }, [lang, mounted]);
 
   const setLang = (newLang: Language) => {

@@ -29,7 +29,7 @@ export default function NewsSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0C3D5E] via-[#0A72C4]/40 to-transparent z-10 opacity-75" />
             <Image
               src="/madayn-gulfood.jpg"
-              alt="Madayn & ZabonEx at Gulfood 2026"
+              alt={lang === "ar" ? "مدائن وزبون إكس في جلفود ٢٠٢٦" : "Madayn & ZabonEx at Gulfood 2026"}
               fill
               style={{ objectFit: 'cover', objectPosition: '20% 0%' }}
               className="transform hover:scale-105 transition-transform duration-500"
