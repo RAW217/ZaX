@@ -31,7 +31,7 @@ const ProductCard = ({ name, image, status }: { name: string, image: string, sta
 
 export default function Hero() {
   const [activeDesign, setActiveDesign] = useState<0 | 1>(0);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -48,12 +48,12 @@ export default function Hero() {
           <button 
             onClick={() => setActiveDesign(0)}
             className={`w-3 h-3 rounded-full transition-all ${activeDesign === 0 ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/70'}`}
-            title="Design HZa1 (Cards)"
+            title={lang === "ar" ? "التصميم الأول (البطاقات)" : "Design HZa1 (Cards)"}
           />
           <button 
             onClick={() => setActiveDesign(1)}
             className={`w-3 h-3 rounded-full transition-all ${activeDesign === 1 ? 'bg-white scale-125' : 'bg-white/40 hover:bg-white/70'}`}
-            title="Design HHZa2 (Static)"
+            title={lang === "ar" ? "التصميم الثاني (ثابت)" : "Design HHZa2 (Static)"}
           />
         </div>
 
@@ -106,7 +106,7 @@ export default function Hero() {
           <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-full max-w-[1800px] z-30 pointer-events-none flex justify-center items-end px-4 animate-fade-in">
             <img 
               src="/hero-products-highres.png" 
-              alt="ZabonEx Products" 
+              alt={lang === "ar" ? "منتجات زبون إكس" : "ZabonEx Products"} 
               className="w-full h-auto object-contain object-bottom drop-shadow-2xl" 
             />
           </div>

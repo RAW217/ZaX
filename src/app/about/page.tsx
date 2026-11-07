@@ -290,7 +290,7 @@ export default function AboutPage() {
 
             {/* Story Text */}
             <div className="lg:col-span-7 flex flex-col gap-6">
-              <h2 className="text-[#0C3D5E] text-2xl sm:text-3xl md:text-[40px] lg:text-[42px] leading-[1.2] font-display font-medium tracking-tight whitespace-normal lg:whitespace-nowrap">
+              <h2 className={`text-[#0C3D5E] text-2xl sm:text-3xl md:text-[40px] lg:text-[42px] font-display font-medium tracking-tight whitespace-normal ${lang === "ar" ? "!leading-[1.5]" : "leading-[1.2] lg:whitespace-nowrap"}`}>
                 {t.aboutPage.storyTitle}
               </h2>
 
@@ -324,7 +324,7 @@ export default function AboutPage() {
               <div className="rounded-[20px] overflow-hidden relative h-[360px] sm:h-[440px] shadow-md border border-[#D2E9F9]">
                 <Image
                   src="/about/warehouse_worker.jpg"
-                  alt="ZabonEx inventory operations"
+                  alt={lang === "ar" ? "عمليات المخزون مع زبون إكس" : "ZabonEx inventory operations"}
                   fill
                   className="object-cover"
                 />
@@ -344,7 +344,7 @@ export default function AboutPage() {
           <div className="w-full max-w-4xl mx-auto rounded-[24px] overflow-hidden shadow-2xl border border-[#BFDCF0] bg-black aspect-video relative">
             <iframe
               src="https://www.youtube.com/embed/GXoAPa4FgbM?rel=0"
-              title="ZabonEx Platform Video"
+              title={lang === "ar" ? "فيديو منصة زبون إكس" : "ZabonEx Platform Video"}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="w-full h-full border-0 absolute inset-0"
@@ -375,10 +375,10 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
             {[
-              { src: "/Mazoon-logo (1).png", alt: "Mazoon Dairy Logo", size: 65, multiply: false },
-              { src: "/images (3).jpg", alt: "Client Logo 2", size: 75, multiply: true },
-              { src: "/DSD.png", alt: "Client Logo 3 (DSD)", size: 70, multiply: false },
-              { src: "/download (2).png", alt: "Client Logo 1", size: 60, multiply: false },
+              { src: "/Mazoon-logo (1).png", alt: lang === "ar" ? "شعار مزون للألبان" : "Mazoon Dairy Logo", size: 65, multiply: false },
+              { src: "/images (3).jpg", alt: lang === "ar" ? "شعار عميل ٢" : "Client Logo 2", size: 75, multiply: true },
+              { src: "/DSD.png", alt: lang === "ar" ? "شعار عميل ٣" : "Client Logo 3 (DSD)", size: 70, multiply: false },
+              { src: "/download (2).png", alt: lang === "ar" ? "شعار عميل ١" : "Client Logo 1", size: 60, multiply: false },
             ].map((client, idx) => (
               <div key={idx} className="w-full h-32 bg-white rounded-2xl border border-gray-100 shadow-md sm:shadow-lg p-4 flex items-center justify-center overflow-hidden">
                 <div className="relative w-full h-full flex items-center justify-center">
@@ -473,10 +473,10 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
             {[
-              { src: "/aws-logo.svg", alt: "AWS Logo", size: 40, scale: 1.0, multiply: false },
-              { src: "/images (2).png", alt: "Odoo Logo", size: 300, scale: 1.05, multiply: true },
-              { src: "/images (3).png", alt: "Huawei Logo", size: 700, scale: 1.5, multiply: true },
-              { src: "/images (1).png", alt: "Omantel Logo", size: 700, scale: 1.5, multiply: true },
+              { src: "/aws-logo.svg", alt: lang === "ar" ? "شعار AWS" : "AWS Logo", size: 40, scale: 1.0, multiply: false },
+              { src: "/images (2).png", alt: lang === "ar" ? "شعار أودو" : "Odoo Logo", size: 300, scale: 1.05, multiply: true },
+              { src: "/images (3).png", alt: lang === "ar" ? "شعار هواوي" : "Huawei Logo", size: 700, scale: 1.5, multiply: true },
+              { src: "/images (1).png", alt: lang === "ar" ? "شعار عمانتل" : "Omantel Logo", size: 700, scale: 1.5, multiply: true },
             ].map((partner, idx) => (
               <div key={idx} className="w-full h-24 flex items-center justify-center p-2">
                 <div className="relative w-full h-full flex items-center justify-center">

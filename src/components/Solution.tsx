@@ -44,7 +44,8 @@ const rightIcons = [
 ];
 
 export default function Solution() {
-  const { t } = useLanguage();
+  const { t, dir, lang } = useLanguage();
+  const arrowFlip = dir === "rtl" ? "-scale-x-100" : "";
   const [activeTabKey, setActiveTabKey] = useState<keyof typeof t.solution.tabs>("demandForecasting");
 
   const tabKeys: (keyof typeof t.solution.tabs)[] = [
@@ -137,7 +138,7 @@ export default function Solution() {
               <div className="w-[210px] h-[210px] sm:w-[260px] sm:h-[260px] lg:w-[310px] lg:h-[310px] rounded-full overflow-hidden shadow-md">
                 <Image
                   src="/problem-img2.png"
-                  alt="Retail"
+                  alt={lang === "ar" ? "تجارة التجزئة" : "Retail"}
                   width={310}
                   height={310}
                   className="w-full h-full object-cover"
@@ -150,7 +151,7 @@ export default function Solution() {
               <div className="w-[170px] h-[170px] sm:w-[220px] sm:h-[220px] lg:w-[260px] lg:h-[260px] rounded-full overflow-hidden shadow-md">
                 <Image
                   src="/problem-img1.jpg"
-                  alt="Shelves"
+                  alt={lang === "ar" ? "الأرفف" : "Shelves"}
                   width={260}
                   height={260}
                   className="w-full h-full object-cover"
@@ -172,7 +173,7 @@ export default function Solution() {
                   <div className="font-display text-[#0C3D5E] text-center font-medium">{t.solution.register}</div>
                 </div>
                 {/* Tall, narrow arrow */}
-                <div className="hidden sm:block relative z-10 px-2">
+                <div className={`hidden sm:block relative z-10 px-2 ${arrowFlip}`}>
                   <svg width="12" height="52" viewBox="0 0 12 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L12 26L0 52Z" fill="#BFDCF0" />
                   </svg>
@@ -182,7 +183,7 @@ export default function Solution() {
                   <div className="font-display text-[#0C3D5E] text-center font-medium">{t.solution.getAccess}</div>
                 </div>
                 {/* Tall, narrow arrow */}
-                <div className="hidden sm:block relative z-10 px-2">
+                <div className={`hidden sm:block relative z-10 px-2 ${arrowFlip}`}>
                   <svg width="12" height="52" viewBox="0 0 12 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L12 26L0 52Z" fill="#BFDCF0" />
                   </svg>
@@ -212,7 +213,7 @@ export default function Solution() {
               <div className="w-[210px] h-[210px] sm:w-[260px] sm:h-[260px] lg:w-[310px] lg:h-[310px] rounded-full overflow-hidden shadow-md">
                 <Image
                   src="/prediction-img2.jpg"
-                  alt="Shelf electronic price tag"
+                  alt={lang === "ar" ? "ملصق سعر إلكتروني على الرف" : "Shelf electronic price tag"}
                   width={310}
                   height={310}
                   className="w-full h-full object-cover"
@@ -225,7 +226,7 @@ export default function Solution() {
               <div className="w-[170px] h-[170px] sm:w-[220px] sm:h-[220px] lg:w-[260px] lg:h-[260px] rounded-full overflow-hidden shadow-md">
                 <Image
                   src="/prediction-img1.jpg"
-                  alt="Price markdowns printer"
+                  alt={lang === "ar" ? "طابعة ملصقات التخفيضات" : "Price markdowns printer"}
                   width={260}
                   height={260}
                   className="w-full h-full object-cover"
@@ -246,7 +247,7 @@ export default function Solution() {
                 <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
                   <Image 
                     src="/step-select-seasons.png" 
-                    alt="Select Seasons" 
+                    alt={lang === "ar" ? "تحديد المواسم" : "Select Seasons"} 
                     width={90} 
                     height={90} 
                     className="w-16 h-16 object-contain mb-2" 
@@ -255,7 +256,7 @@ export default function Solution() {
                 </div>
 
                 {/* Arrow Connector: Lengthened height without changing width */}
-                <div className="hidden sm:block relative z-10 px-0.5">
+                <div className={`hidden sm:block relative z-10 px-0.5 ${arrowFlip}`}>
                   <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
@@ -265,7 +266,7 @@ export default function Solution() {
                 <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
                   <Image 
                     src="/step-apply-buffer.png" 
-                    alt="Apply Sales Buffer" 
+                    alt={lang === "ar" ? "إضافة هامش الأمان" : "Apply Sales Buffer"} 
                     width={90} 
                     height={90} 
                     className="w-16 h-16 object-contain mb-2" 
@@ -274,7 +275,7 @@ export default function Solution() {
                 </div>
 
                 {/* Arrow Connector: Lengthened height without changing width */}
-                <div className="hidden sm:block relative z-10 px-0.5">
+                <div className={`hidden sm:block relative z-10 px-0.5 ${arrowFlip}`}>
                   <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
@@ -284,7 +285,7 @@ export default function Solution() {
                 <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
                   <Image 
                     src="/step-ai-model.png" 
-                    alt="Build AI Model" 
+                    alt={lang === "ar" ? "نموذج الذكاء الاصطناعي" : "Build AI Model"} 
                     width={90} 
                     height={90} 
                     className="w-16 h-16 object-contain mb-2" 
@@ -293,7 +294,7 @@ export default function Solution() {
                 </div>
 
                 {/* Arrow Connector: Lengthened height without changing width */}
-                <div className="hidden sm:block relative z-10 px-0.5">
+                <div className={`hidden sm:block relative z-10 px-0.5 ${arrowFlip}`}>
                   <svg width="14" height="64" viewBox="0 0 14 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0L14 32L0 64Z" fill="#5C94ED" />
                   </svg>
@@ -303,7 +304,7 @@ export default function Solution() {
                 <div className="bg-[#5C94ED] rounded-[60px] w-[135px] sm:w-[145px] h-[215px] sm:h-[230px] flex flex-col items-center justify-center p-3 relative z-10 shadow-md">
                   <Image 
                     src="/step-view-prediction.png" 
-                    alt="View Prediction" 
+                    alt={lang === "ar" ? "عرض التنبؤات" : "View Prediction"} 
                     width={90} 
                     height={90} 
                     className="w-16 h-16 object-contain mb-2" 
@@ -333,7 +334,7 @@ export default function Solution() {
             <div className="relative">
               <div className="absolute -top-5 -right-5 z-20 pointer-events-none">
                 <div className="w-[79px] h-[79px] rounded-full overflow-hidden shadow-md">
-                  <Image src="/stat-img1.jpg" alt="Hands holding bottle" width={89} height={89} className="w-full h-full object-cover" />
+                  <Image src="/stat-img1.jpg" alt={lang === "ar" ? "يدان تمسكان زجاجة" : "Hands holding bottle"} width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-[#0C3D5E] bg-[#99ff99] relative z-10">
@@ -346,7 +347,7 @@ export default function Solution() {
             <div className="relative">
               <div className="absolute -top-5 -right-5 z-20 pointer-events-none">
                 <div className="w-[79px] h-[79px] rounded-full overflow-hidden shadow-md">
-                  <Image src="/stat-img2.jpg" alt="Shopping cart" width={89} height={89} className="w-full h-full object-cover" />
+                  <Image src="/stat-img2.jpg" alt={lang === "ar" ? "عربة تسوق" : "Shopping cart"} width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-[#0C3D5E] bg-[#99ff99] relative z-10">
@@ -359,7 +360,7 @@ export default function Solution() {
             <div className="relative">
               <div className="absolute -top-5 -right-5 z-20 pointer-events-none">
                 <div className="w-[79px] h-[79px] rounded-full overflow-hidden shadow-md">
-                  <Image src="/stat-img3.jpg" alt="Man in aisle" width={89} height={89} className="w-full h-full object-cover" />
+                  <Image src="/stat-img3.jpg" alt={lang === "ar" ? "رجل في ممر المتجر" : "Man in aisle"} width={89} height={89} className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="rounded-full flex flex-col justify-center items-center w-[200px] h-[200px] shadow-lg text-[#0C3D5E] bg-[#99ff99] relative z-10">
