@@ -646,7 +646,7 @@ export const translations: Record<Language, Translations> = {
       title: "تواصل معنا",
       description: "هل لديك استفسارات حول كيفية مساعدة زبون إكس لعملك في خفض الهدر وتحسين التوزيع؟ فريقنا جاهز للتواصل معك ومساعدتك فوراً.",
       emailUs: "راسلنا عبر البريد",
-      phoneDisplay: "٩٦٨ ٧٧٧٠ ٦٧٧٠+",
+      phoneDisplay: "+٩٦٨ ٧٧٧٠ ٦٧٧٠",
       callUs: "اتصل بنا",
       fullName: "الاسم الكامل",
       namePlaceholder: "محمد أحمد",
